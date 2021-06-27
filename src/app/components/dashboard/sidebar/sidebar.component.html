@@ -1,0 +1,100 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <img src="../../../../assets/img/logo2.png">
+    </div>
+    <ul class="list-unstyled components">
+
+    <li class="active"><a routerLink="/dashboardhome">Dashboard Home</a></li>
+    <div *ngFor="let uinfo of userinfo">
+      <li *ngIf="uinfo.name == 'Khaled Farouk'"><a routerLink="/announcement">Add Announcement</a></li>
+    </div>
+    <li><a routerLink="/forms">Forms</a></li>
+    <li>
+      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+      <ul class="collapse list-unstyled" id="homeSubmenu">
+        <li>
+          <a href="javascript:void(0)" routerLink="/managerReport">Manager Report</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" routerLink="/hrReport">HR Report</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#homeSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Manual</a>
+      <ul class="collapse list-unstyled" id="homeSubmenu11">
+        <li>
+          <a href="javascript:void(0)" routerLink="/manual">Job Description Manual</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" routerLink="/organizationChart">Organization Chart</a>
+        </li>
+      </ul>
+    </li>
+    <li><a routerLink="/requlations">Work Place Regulations</a></li>
+    <li><a routerLink="/events">Events & Photos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="javascript:void(0)">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+          <i class="fas fa-align-left"></i>
+          <span> Open / Close </span>
+        </button>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/" target="_blank">Website Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" *ngFor="let uinfo of userinfo">
+            <!--<a class="nav-link" href="javascriot:void(0)">{{ username }}</a>-->
+            <a class="nav-link" href="javascriot:void(0)">{{ uinfo.name }}</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item btn btn-danger" href="javascriot:void(0)" (click)="logout()">Logout</a>
+              <a class="dropdown-item" href="javascriot:void(0)" data-toggle="modal" data-target="#exampleModal">Final Logout</a>
+              <a class="dropdown-item" href="javascriot:void(0)">Change Password!</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Logout Form Registration</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Please Write Down What You Did Today?</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" #text rows="5"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="finalLogout(text.value)">Logout Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,141 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .inspect_list{
+    margin-top: 0px;
+  }
+  .inspect_list .inspect_list-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .inspect_list .inspect_list-header .text .title h1{
+    font-size: 30px;
+  }
+  .inspect_list .inspect_list-header .text .title p{
+    font-size: 16px;
+  }
+  .inspect_list .inspect_list-content .title h3{
+    font-size: 40px;
+  }
+  .inspect_list .brief .text p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .inspect_list .inspect_list-content .content .top h3{
+    font-size: 20px;
+  }
+  .content .row{
+    text-align: left;
+  }
+  .inspect_list .inspect_list-content .content1 .top h4{
+    font-size: 20px;
+  }
+  .inspect_list .inspect_list-content .content1 .right img{
+    width: 100%;
+  }
+  .inspect_list .inspect_list-content .content2 .left img{
+    width: 100%;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .inspect_list{
+    margin-top: 0px;
+  }
+  .inspect_list .inspect_list-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .inspect_list .inspect_list-header .text .title h1{
+    font-size: 35px;
+  }
+  .inspect_list .inspect_list-header .text .title p{
+    font-size: 17px;
+  }
+  .inspect_list .inspect_list-content .title h3{
+    font-size: 45px;
+  }
+  .inspect_list .brief .text p{
+    font-size: 19px;
+    text-align: center;
+  }
+  .inspect_list .inspect_list-content .content .top h3{
+    font-size: 21px;
+  }
+  .content .row{
+    text-align: left;
+  }
+  .inspect_list .inspect_list-content .content1 .top h4{
+    font-size: 21px;
+  }
+  .inspect_list .inspect_list-content .content1 .right img{
+    width: 100%;
+  }
+  .inspect_list .inspect_list-content .content2 .left img{
+    width: 100%;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .inspect_list{
+    margin-top: 0px;
+  }
+  .inspect_list .inspect_list-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .inspect_list .inspect_list-header .text .title h1{
+    font-size: 40px;
+  }
+  .inspect_list .inspect_list-header .text .title p{
+    font-size: 18px;
+  }
+  .inspect_list .inspect_list-content .title h3{
+    font-size: 50px;
+  }
+  .inspect_list .brief .text p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .content .row{
+    text-align: left;
+  }
+  .inspect_list .inspect_list-content .content1 .right img{
+    width: 100%;
+  }
+  .inspect_list .inspect_list-content .content2 .left img{
+    width: 100%;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .inspect_list .inspect_list-header .text .title{
+    left: 5%;
+  }
+  .inspect_list .inspect_list-header .text .title h1{
+    font-size: 50px;
+  }
+  .inspect_list .inspect_list-header .text .title p{
+    font-size: 19px;
+  }
+  .inspect_list .inspect_list-content .title h3{
+    font-size: 55px;
+  }
+  .inspect_list .brief .text p{
+    font-size: 21px;
+    text-align: center;
+  }
+  .content .row{
+    text-align: left;
+  }
+  .inspect_list .inspect_list-content .content1 .right img{
+    width: 100%;
+  }
+  .inspect_list .inspect_list-content .content2 .left img{
+    width: 100%;
+  }
+}
+
+@media (min-width: 1201px){
+  .inspect_list .inspect_list-header .text .title{
+    left: 5%;
+  }
+}

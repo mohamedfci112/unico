@@ -1,0 +1,608 @@
+.study{
+  margin-top: -48px;
+}
+.study-header{
+  background: url(../../../../assets/img/environment/env-studies.jpg) fixed center center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+.study-header .text{
+  height: 100%;
+  width: 100%;
+  background-color: #000000af;
+}
+.study .study-header .text .title{
+  position: absolute;
+  margin-top: 20%;
+  color: white;
+  left: 14%;
+}
+.study .study-header .text .title h1{
+  font-size: 60px;
+  font-weight: 800;
+  font-family: 'Gugi', cursive;
+
+}
+.study .study-content{
+  background: url(../../../../assets/img/state-shape-bg.png) fixed center center;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+.study .study-content .title{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.study .study-content .title h3{
+  font-family: 'Allerta Stencil', sans-serif;
+  font-weight: bolder;
+  font-size: 60px;
+  color: #212529;
+  text-align: center;
+}
+.study .study-content .content{
+  margin-bottom: 20px;
+}
+.study .study-content p{
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Cairo', sans-serif;
+}
+.study .study-content ul li{
+  list-style: none;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.study .study-content ul li img{
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+/********flowchart******
+
+.position {
+  text-align:center;
+  color: black;
+  line-height:22px;
+  padding-top:10px;
+   padding-bottom:10px;
+}
+@media (max-width:767px) {
+  
+ .level {
+  
+  text-align:center;
+}
+.level.lev-one.top-level {
+    margin-bottom: 70px;
+}
+  
+  .position {
+  display:block ;
+ background-color: rgba(255, 255, 255, 0.33);
+
+  max-width:200px;
+
+  }
+ .lev-two .position {
+   margin-left:100px;
+margin-bottom: 50px;
+    position:relative;
+ 
+}
+
+  .lev-two .position:before {
+    position:absolute;
+    content:"";
+    width:50px;
+    height:calc(100% + 50px);
+    border-bottom:1px solid 000;
+    border-left:1px solid #000;
+    left:-50px;
+    bottom:50%;
+  }
+
+  .lev-two .position:first-child:before {
+    height:100%;
+    
+    
+  } 
+  
+}
+
+
+
+@media (min-width:768px) {
+
+.level {
+  
+  text-align:center;
+
+
+}
+.top-level {
+    margin-bottom: 100px;
+}
+.position {
+  display:inline-block;
+
+width: calc(25.28% + 40px);
+
+  vertical-align:top;
+  position:relative;
+}
+
+.lev-two .position:nth-child(even) {
+
+margin-top:130px;
+  
+}
+
+.lev-two .position:nth-child(even):before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    border-left: 1px solid #000;
+    top: -180px;
+    left: -30%
+}
+
+
+.lev-two .position {
+  margin-left:-20px;
+  margin-right:-20px;
+}
+
+
+
+.lev-two .position:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    border-left: 1px solid #000;
+    top: -50px;
+    width: calc(200% - 40px);
+    border-top: 1px solid #000;
+    left:20%
+}
+
+.lev-two .position:nth-last-child(1):before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    border-left: 1px solid #000;
+    top: -50px;
+    width: calc(100% - 20px);
+    border-top: none;
+    left: 70%;
+}
+
+
+
+.flow-chart {
+    position: relative;
+  
+}
+
+.top-level .position:after {
+  content: "";
+    position: absolute;
+    height: 50px;
+    border-left: 1px solid #000;
+    bottom: -50px; 
+    width: calc(100% - 40px);
+    left: 50%;
+}
+}
+*/
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+}
+
+#container {
+    float: left;
+    padding: 1em;
+    width: 100%;
+}
+.site-name{padding: 10px 0 10px 0;border-radius: 10px;color: #fff;
+    background: #3e50b4;
+    background: -webkit-linear-gradient(left top, #3e50b4, #2196F3);
+    background: -o-linear-gradient(bottom right, #3e50b4, #2196F3);
+    background: -moz-linear-gradient(bottom right, #3e50b4, #2196F3);
+    background: linear-gradient(to bottom right, #3e50b4, #2196F3);}
+.outborder {display: inline-block;}
+.chart-text {display: block;padding:5px 0 8px 0 !important;font-size: 20px;color: #000;font-weight: bold}
+.subchart-text {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: url(../../../../assets/img/environment/chevron-right.png) no-repeat left;display: block;padding:5px 0 5px 20px !important;font-size: 14px;color: #484848;font-weight: bold}
+.subchart-text:hover {color: #3e50b4;}
+.site {background-position: -3654px 0;}
+.subdomain {background-position: -3919px 0;}
+.subdomain2 {background-position: -106px 0;}
+.redirects {background-position: -3389px 0;}
+.host {background-position: -4501.9px 0;}
+.email {background-position: -1483px 0}
+.email2 {background-position: -1325px 0;}
+.dns {background-position: -4713.9px 0;}
+
+@media screen and (max-width: 64em) {
+ol.organizational-chart > li > div:first-of-type:after , ol.organizational-chart > li > div:before {
+display: none;
+}
+ol.organizational-chart > li > ol:before {
+    left: 49.5%!important;
+    right: 0;
+} 
+    ol.organizational-chart > li > ol:after {
+    left: 0;
+    width: 50%!important;
+}
+    
+    }
+
+.text-holder{display: inline-block;font-size: 25px;font-weight:800;font-family:'Gugi', cursive;vertical-align: top;margin-top: 1px;margin-left: 10px;line-height: 22px;text-align: left}
+.text-holder span{font-size: 13px;display: block;}
+.img-holder{width: 30px;height: 30px;border-radius: 50%;display: inline-block;background: #fff;padding: 4px;}
+.img-holder img{width: 100%;}
+
+
+ol.organizational-chart,
+ol.organizational-chart ol,
+ol.organizational-chart li,
+ol.organizational-chart li > div {
+    position: relative;
+}
+
+ol.organizational-chart,
+ol.organizational-chart ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol.organizational-chart {
+    text-align: center;
+}
+
+ol.organizational-chart ol {
+    padding-top: 1em;
+}
+
+ol.organizational-chart ol:before,
+ol.organizational-chart ol:after,
+ol.organizational-chart li:before,
+ol.organizational-chart li:after,
+ol.organizational-chart > li > div:before,
+ol.organizational-chart > li > div:after {
+    background-color: #c6c6c6;
+    content: '';
+    position: absolute;
+}
+
+ol.organizational-chart ol > li {
+    padding: 1em 0 0 1em;
+}
+
+ol.organizational-chart > li ol:before {
+    height: 1em;
+    left: 50%;
+    top: 0;
+    width: 3px;
+}
+
+ol.organizational-chart > li ol:after {
+    height: 3px;
+    left: 3px;
+    top: 1em;
+    width: 50%;
+}
+
+ol.organizational-chart > li ol > li:not(:last-of-type):before {
+    height: 3px;
+    left: 0;
+    top: 1.7em;
+    width: 1em;
+}
+
+ol.organizational-chart > li ol > li:not(:last-of-type):after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 3px;
+}
+
+ol.organizational-chart > li ol > li:last-of-type:before {
+    height: 3px;
+    left: 0;
+    top: 1.7em;
+    width: 1em;
+}
+
+ol.organizational-chart > li ol > li:last-of-type:after {
+    height: 1.7em;
+    left: 0;
+    top: 0;
+    width: 3px;
+}
+ol.organizational-chart > li > div:before {
+    bottom: 2em;
+    height: 3px;
+    right: -1em;
+    width: 1em;
+}
+
+ol.organizational-chart > li > div:first-of-type:after {
+    bottom: 0;
+    height: 2em;
+    right: -1em;
+    width: 3px;
+}
+
+ol.organizational-chart > li > div + div {
+    margin-top: 1em;
+}
+
+ol.organizational-chart > li > div + div:after {
+    height: calc(100% + 1em);
+    right: -1em;
+    top: -1em;
+    width: 3px;
+}
+
+/*** SECONDARY ***/
+ol.organizational-chart > li > ol:before {
+    left: inherit;
+    right: 0;
+}
+
+ol.organizational-chart > li > ol:after {
+    left: 0;
+    width: 100%;
+}
+
+ol.organizational-chart > li > ol > li > div {
+   border: 3px solid #c6c6c6;
+        display: block;
+    border-radius: 10px;
+    padding: 10px 0 5px 0;
+}
+
+/*** TERTIARY ***/
+ol.organizational-chart > li > ol > li > ol > li > div {
+    display: list-item;text-align: left
+}
+
+/*** QUATERNARY ***/
+ol.organizational-chart > li > ol > li > ol > li > ol > li > div {
+    background-color: #fca858;
+}
+
+/*** QUINARY ***/
+ol.organizational-chart > li > ol > li > ol > li > ol > li > ol > li > div {
+    background-color: #fddc32;
+}
+
+/*** MEDIA QUERIES ***/
+@media only screen and ( min-width: 64em ) {
+
+    ol.organizational-chart {
+        margin-left: -1em;
+        margin-right: -1em;
+    }
+
+    /* PRIMARY */
+    ol.organizational-chart > li > div {
+        display: block;
+        float: none;
+        margin: 0 1em 1em 1em;
+        vertical-align: bottom;
+    }
+
+    ol.organizational-chart > li > div:only-of-type {
+        margin-bottom: 0;
+    }
+
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(2) ~ div {
+        width: calc((100% / 2) - 2em - 4px);
+    }
+
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(3) ~ div {
+        width: calc((100% / 3) - 2em - 4px);
+    }
+
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(4) ~ div {
+        width: calc((100% / 4) - 2em - 4px);
+    }
+
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5),
+    ol.organizational-chart > li > div:first-of-type:nth-last-of-type(5) ~ div {
+        width: calc((100% / 5) - 2em - 4px);
+    }
+
+    ol.organizational-chart > li > div:before,
+    ol.organizational-chart > li > div:after {
+        bottom: -1em!important;
+        top: inherit!important;
+    }
+
+    ol.organizational-chart > li > div:before {
+        height: 1em!important;
+        left: 50%!important;
+        width: 3px!important;
+    }
+
+    ol.organizational-chart > li > div:only-of-type:after {
+        display: none;
+    }
+
+    ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after,
+    ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+        bottom: -1em;
+        height: 3px;
+        width: calc(50% + 1em + 3px);
+    }
+
+    ol.organizational-chart > li > div:first-of-type:not(:only-of-type):after {
+        left: calc(50% + 3px);
+    }
+
+    ol.organizational-chart > li > div:last-of-type:not(:only-of-type):after {
+        left: calc(-1em - 3px);
+    }
+
+    ol.organizational-chart > li > div + div:not(:last-of-type):after {
+        height: 3px;
+        left: -2em;
+        width: calc(100% + 4em);
+    }
+
+    /* SECONDARY */
+    ol.organizational-chart > li > ol {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    ol.organizational-chart > li > ol:before,
+    ol.organizational-chart > li > ol > li:before {
+        height: 1em!important;
+        left: 50%!important;
+        top: 0!important;
+        width: 3px!important;
+    }
+
+    ol.organizational-chart > li > ol:after {
+        display: none;
+    }
+
+    ol.organizational-chart > li > ol > li {
+        flex-grow: 1;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+    }
+
+    ol.organizational-chart > li > ol > li:only-of-type {
+        padding-top: 0;
+    }
+
+    ol.organizational-chart > li > ol > li:only-of-type:before,
+    ol.organizational-chart > li > ol > li:only-of-type:after {
+        display: none;
+    }
+
+    ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after,
+    ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+        height: 3px;
+        top: 0;
+        width: 50%;
+    }
+
+    ol.organizational-chart > li > ol > li:first-of-type:not(:only-of-type):after {
+        left: 50%;
+    }
+
+    ol.organizational-chart > li > ol > li:last-of-type:not(:only-of-type):after {
+        left: 0;
+    }
+
+    ol.organizational-chart > li > ol > li + li:not(:last-of-type):after {
+        height: 3px;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  .study{
+    margin-top: 0px;
+  }
+  .study .study-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .study .study-header .text .title h1{
+    font-size: 40px;
+  }
+
+  .study .study-content .title h3{
+    font-size: 40px;
+  }
+  .study .study-content p{
+    font-size: 19px;
+  }
+  .study .study-content ul li{
+    font-size: 18px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .study{
+    margin-top: 0px;
+  }
+  .study .study-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .study .study-header .text .title h1{
+    font-size: 45px;
+  }
+
+  .study .study-content .title h3{
+    font-size: 45px;
+  }
+  .study .study-content p{
+    font-size: 20px;
+  }
+  .study .study-content ul li{
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .study{
+    margin-top: 0px;
+  }
+  .study .study-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .study .study-header .text .title h1{
+    font-size: 50px;
+  }
+
+  .study .study-content .title h3{
+    font-size: 50px;
+  }
+  .study .study-content p{
+    font-size: 23px;
+  }
+  .study .study-content ul li{
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .study .study-header .text .title h1{
+    font-size: 55px;
+  }
+
+  .study .study-content .title h3{
+    font-size: 55px;
+  }
+}
+
+@media (min-width: 1201px){
+}

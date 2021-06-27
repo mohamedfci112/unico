@@ -1,0 +1,11 @@
+.card{
+    padding: 15px;
+}
+.card-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+form label{
+  font-weight: 700;
+}

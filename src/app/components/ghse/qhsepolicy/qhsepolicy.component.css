@@ -1,0 +1,84 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .qhse{
+    margin-top: 0px;
+  }
+  .qhse .qhse-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .qhse .qhse-header .text .title h1{
+    font-size: 40px;
+  }
+  .qhse .qhse-content .title h3{
+    font-size: 40px;
+  }
+  .qhse .qhse-content .left p{
+    font-size: 18px;
+  }
+  .qhse .qhse-content .bottom p{
+    font-size: 18px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .qhse{
+    margin-top: 0px;
+  }
+  .qhse .qhse-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .qhse .qhse-header .text .title h1{
+    font-size: 45px;
+  }
+  .qhse .qhse-content .title h3{
+    font-size: 45px;
+  }
+  .qhse .qhse-content .left p{
+    font-size: 19px;
+  }
+  .qhse .qhse-content .bottom p{
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .qhse{
+    margin-top: 0px;
+  }
+  .qhse .qhse-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .qhse .qhse-header .text .title h1{
+    font-size: 50px;
+  }
+  .qhse .qhse-content .title h3{
+    font-size: 50px;
+  }
+  .qhse .qhse-content .left p{
+    font-size: 20px;
+  }
+  .qhse .qhse-content .bottom p{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .qhse .qhse-header .text .title h1{
+    font-size: 55px;
+  }
+  .qhse .qhse-content .title h3{
+    font-size: 55px;
+  }
+  .qhse .qhse-content .left p{
+    font-size: 21px;
+  }
+  .qhse .qhse-content .bottom p{
+    font-size: 21px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1201px){
+}

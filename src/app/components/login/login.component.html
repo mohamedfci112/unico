@@ -1,0 +1,19 @@
+<div class="login">
+  <div class="content">
+    <div class="logpad" data-aos="fade-left">
+      <div class="logo">
+        <img src="../../../assets/img/unico logo2.png" height="100" width="100">
+      </div>
+      <div>
+        <span>Login</span>
+      </div>
+      <div class="logbox">
+        <label>Email</label>
+        <input type="text" name="username" #email>
+        <label>Password</label>
+        <input type="password" name="password" #password>
+      </div>
+      <button (click)="onSignIn(email.value,password.value)">Log In</button>
+    </div>
+  </div>
+</div>

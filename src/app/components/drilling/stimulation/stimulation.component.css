@@ -1,0 +1,92 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .well{
+    margin-top: 0px;
+  }
+  .well .well-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .well .well-header .text .title h1{
+    font-size: 40px;
+  }
+  .well .well-content .content .img span{
+    font-size: 18px;
+  }
+  .well .well-content .content .text p{
+    font-size: 18px;
+  }
+  .well .well-content .content1 .text h4{
+    font-size: 20px;
+  }
+  .well .well-content .content1 .text ul li{
+    font-size: 18px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .well{
+    margin-top: 0px;
+  }
+  .well .well-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .well .well-header .text .title h1{
+    font-size: 45px;
+  }
+  .well .well-content .content .img span{
+    font-size: 19px;
+  }
+  .well .well-content .content .text p{
+    font-size: 19px;
+  }
+  .well .well-content .content1 .text h4{
+    font-size: 21px;
+  }
+  .well .well-content .content1 .text ul li{
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .well{
+    margin-top: 0px;
+  }
+  .well .well-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .well .well-header .text .title h1{
+    font-size: 50px;
+  }
+  .well .well-content .content .img span{
+    font-size: 20px;
+  }
+  .well .well-content .content .text p{
+    font-size: 20px;
+  }
+  .well .well-content .content1 .text h4{
+    font-size: 21px;
+  }
+  .well .well-content .content1 .text ul li{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .well .well-header .text .title h1{
+    font-size: 55px;
+  }
+  .well .well-content .content .img span{
+    font-size: 21px;
+  }
+  .well .well-content .content .text p{
+    font-size: 21px;
+  }
+  .well .well-content .content1 .text ul li{
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1201px){
+}

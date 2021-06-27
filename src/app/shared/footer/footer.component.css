@@ -1,0 +1,27 @@
+footer{
+font-family: 'Cairo', sans-serif;
+padding: 50px;
+}
+.footer-social{
+  margin-left: 0;
+}
+.logo-text{
+  margin-bottom: 15px;
+}
+.map{
+  margin-bottom: 15px;
+  text-align: left;
+}
+.map img{
+  margin-top: 25%;
+}
+.map .list-unstyled li{
+  margin-bottom: 8px;
+}
+.text-uppercase{
+  color: #fff;
+  font-weight: bolder;
+}
+.copy-link{
+  color: #fff;
+}

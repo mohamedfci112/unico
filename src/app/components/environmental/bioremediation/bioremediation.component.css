@@ -1,0 +1,75 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .bio{
+    margin-top: 0px;
+  }
+  .bio .bio-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .bio .bio-header .text .title h1{
+    font-size: 40px;
+  }
+  .bio .bio-content .title h3{
+    font-size: 35px;
+  }
+  .bio .bio-content .content .left p{
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .bio{
+    margin-top: 0px;
+  }
+  .bio .bio-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .bio .bio-header .text .title h1{
+    font-size: 45px;
+  }
+  .bio .bio-content .title h3{
+    font-size: 45px;
+  }
+  .bio .bio-content .content .left p{
+    font-size: 19px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .bio{
+    margin-top: 0px;
+  }
+  .bio .bio-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .bio .bio-header .text .title h1{
+    font-size: 50px;
+  }
+  .bio .bio-content .title h3{
+    font-size: 50px;
+  }
+  .bio .bio-content .content .left p{
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+
+  .bio .bio-header .text .title h1{
+    font-size: 55px;
+  }
+  .bio .bio-content .title h3{
+    font-size: 55px;
+  }
+  .bio .bio-content .content .left p{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1201px){
+}

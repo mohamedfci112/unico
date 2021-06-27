@@ -1,0 +1,301 @@
+/*video {
+  width: 100%;
+  height: auto;
+}*/
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border-radius: 5px;
+  background-attachment: scroll;
+  overflow: hidden;
+  margin-top: -48px;
+}
+.videoContainer video {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.videoContainer .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  color: white;
+  background: #000000af;
+  opacity: 0.7;
+}
+
+.videoContainer .content{
+  margin: 10%;
+  margin-top: 18%;
+  margin-left: 74px;
+}
+.videoContainer .content h1, .videoContainer .content h4{
+  font-weight: bolder;
+  color: white;
+  font-size: 60px;
+  font-family: 'Gugi', cursive;
+}
+.videoContainer .content p{
+  line-height: 2;
+  font-size: 22px;
+  font-weight: bolder;
+  padding: 20px;
+  padding-left: 0;
+  font-family: 'Cairo', sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  .videoContainer{
+    margin-top: 0;
+  }
+  .videoContainer .content{
+    margin: 0;
+    margin-top: 8%;
+    text-align: center;
+  }
+  .videoContainer .content h1, .videoContainer .content h4{
+    font-size: 25px;
+  }
+  .videoContainer .content p{
+    padding: 0;
+    font-size: 14px;
+  }
+  .listar-map-button-text span{
+    font-size: 25px;
+    height:auto;
+  }
+  .listar-map-button{
+    line-height: 120px;
+  }
+  .waste .content{
+    margin-top: 10px;
+  }
+  .waste .content h3{
+    text-align: center;
+  }
+  .waste .content p{
+    font-size: 18px;
+    text-align: justify;
+  }
+  .waste_cards .title h3{
+    font-size: 29px;
+  }
+  .waste_cards .card .side h1{
+    font-size: 30px;
+  }
+  .waste_cards .card .header:after{
+    bottom: 45px;
+  }
+  .waste_cards .card{
+    margin-bottom: 10px;
+  }
+  .portabl h3{
+    font-size: 30px;
+    text-align: center;
+  }
+  .portabl p, .vision p{
+    font-size: 17px;
+  }
+  .vision h3{
+    font-size: 35px;
+    text-align: center;
+    left: 0;
+  }
+  .plan .left h3{
+    font-size: 30px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .videoContainer{
+    margin-top: 0;
+  }
+  .videoContainer .content{
+    margin: 0;
+    margin-top: 8%;
+    text-align: center;
+  }
+  .videoContainer .content h1, .videoContainer .content h4{
+    font-size: 35px;
+  }
+  .videoContainer .content p{
+    padding: 0;
+    font-size: 17px;
+  }
+  .listar-map-button-text span{
+    font-size: 25px;
+    height:auto;
+  }
+  .listar-map-button{
+    line-height: 120px;
+  }
+  .waste .content{
+    margin-top: 10px;
+  }
+  .waste .content h3{
+    text-align: center;
+  }
+  .waste .content p{
+    font-size: 19px;
+    text-align: justify;
+  }
+  .waste_cards .title h3{
+    font-size: 35px;
+  }
+  .waste_cards .card .side h1{
+    font-size: 30px;
+  }
+  .waste_cards .card .header:after{
+    bottom: 45px;
+  }
+  .waste_cards .card{
+    margin-bottom: 10px;
+  }
+  .portabl h3{
+    font-size: 35px;
+    text-align: center;
+  }
+  .portabl p, .vision p{
+    font-size: 18px;
+  }
+  .vision h3{
+    font-size: 40px;
+    left: 0;
+    text-align: center;
+  }
+  .plan .left h3{
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .videoContainer{
+    margin-top: 0;
+  }
+  .videoContainer .content{
+    margin-top: 8%;
+  }
+  .videoContainer .content h1, .videoContainer .content h4{
+    font-size: 40px;
+  }
+  .videoContainer .content p{
+    padding: 0;
+    font-size: 18px;
+  }
+  .listar-map-button-text span{
+    font-size: 25px;
+    height:auto;
+  }
+  .listar-map-button{
+    line-height: 120px;
+  }
+  .waste .content{
+    margin-top: 10px;
+  }
+  .waste .content img{
+    height: 90%;
+  }
+  .waste iframe{
+    min-height: 450px;
+  }
+  .waste .content h3{
+    text-align: center;
+  }
+  .waste .content p{
+    font-size: 18px;
+    text-align: justify;
+  }
+  .waste_cards .title h3{
+    font-size: 45px;
+  }
+  .waste_cards .card .side h1{
+    font-size: 30px;
+  }
+  .waste_cards .card .header:after{
+    bottom: 45px;
+  }
+  .waste_cards .card{
+    margin-bottom: 10px;
+  }
+  .portabl h3{
+    font-size: 40px;
+  }
+  .portabl p, .vision p{
+    font-size: 19px;
+  }
+  .vision h3{
+    font-size: 50px;
+    left: 0;
+    text-align: center;
+  }
+  .plan .left h3{
+    font-size: 45px;
+  }
+  .vertical-timeline ul > li .vt-item{
+    width: calc(43vw - (var(--icon-size, 50px)/2 + 20px + var(--icon-gap, 5px) + 0.5rem));
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .videoContainer .content{
+    margin-top: 10%;
+  }
+  .videoContainer .content h1, .videoContainer .content h4{
+    font-size: 50px;
+  }
+  .videoContainer .content p{
+    padding: 0;
+    font-size: 18px;
+  }
+  .listar-map-button-text span{
+    font-size: 25px;
+    height:auto;
+  }
+  .listar-map-button{
+    line-height: 120px;
+  }
+  .waste .content{
+    margin-top: 10px;
+  }
+  .waste .content img{
+    height: 90%;
+  }
+  .waste iframe{
+    min-height: 450px;
+  }
+  .waste .content h3{
+    text-align: center;
+  }
+  .waste_cards .title h3{
+    font-size: 50px;
+  }
+  .waste_cards .card .side h1{
+    font-size: 35px;
+  }
+  .waste_cards .card .header:after{
+    bottom: 45px;
+  }
+  .waste_cards .card{
+    margin-bottom: 10px;
+  }
+  .portabl h3{
+    font-size: 45px;
+  }
+  .portabl p, .vision p{
+    font-size: 20px;
+  }
+  .vision h3{
+    font-size: 50px;
+  }
+  .plan .left h3{
+    font-size: 55px;
+  }
+}
+
+@media (min-width: 1201px){
+}

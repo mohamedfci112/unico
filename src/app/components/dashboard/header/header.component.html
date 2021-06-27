@@ -1,0 +1,32 @@
+<div>
+  <button class="btn btn-success btn-block" (click)="openPDF()">Download HR Report</button>
+</div>
+<hr>
+<hr>
+<div id="htmlData" class="container" #htmlData>
+  <div class="text-center">
+    <h2>HR Report For 6/2021 </h2>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Hours</th>
+        <th scope="col">Minutes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of uname; let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td >{{ uname[i] }}</td>
+        <td >{{ department[i] }}</td>
+        <td >{{ hours[i] }}</td>
+        <td >{{ min[i] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

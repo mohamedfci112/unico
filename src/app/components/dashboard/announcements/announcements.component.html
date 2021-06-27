@@ -1,0 +1,33 @@
+<app-addannounc></app-addannounc>
+<div *ngIf="announces?.length > 0;else noItems">
+  <div *ngFor="let announce of announces">
+    <div class="card">
+      <div class="card-header">
+        {{ announce.title }}
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ announce.description }}</p>
+        <a class="btn btn-primary">
+          <i class="fa fa-pencil" (click)="editItem($event,announce)" style="margin-right:10px;"></i>
+          <i *ngIf="editState && itemToEdit.id == announce.id" class="fa fa-compress" (click)="clearState()"></i>
+        </a>
+        <div *ngIf="editState && itemToEdit.id == announce.id">
+          <form (ngSubmit)="updateItem(announce)">
+            <div class="form-group">
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Add Announcement Title" [(ngModel)] = "announce.title" name="title">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add Announcement Description" [(ngModel)] = "announce.description" name="description"></textarea>
+              </div>
+              <input type="submit" value="Update Announcement" class="btn btn-success">
+              <button (click)="deleteAnnounce($event, announce)" class="btn btn-danger">Delete Announcement</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noItems>
+  <hr>
+  <h5>There are no announcements now!</h5>
+</ng-template>

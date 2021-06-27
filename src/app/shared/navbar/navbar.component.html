@@ -1,0 +1,139 @@
+<section class="topnavbar">
+  <div class="navtop row">
+    <div class="left col-md-5">
+      <div class="text">
+        <span>MORE THAN 25 YEARS OF EXPERIENCE</span>
+      </div>
+    </div>
+    <div class=" right col-md-7">
+      <div class="list">
+          <ul>
+            <li><a routerLink="/about"><img src="../../../assets/img/icons/about.png"/><span>ABOUT</span></a></li>
+            <li><a routerLink="/contact"><img src="../../../assets/img/icons/contact.png"/><span>CONTACT US</span></a></li>
+            <li><a routerLink="/news"><img src="../../../assets/img/icons/news.png"/><span>NEWS</span></a></li>
+            <li *ngIf="!islogin"><a routerLink="/login"><img src="https://img.icons8.com/material-outlined/30/ffffff/user--v1.png"/><span>LOGIN</span></a></li>
+            <li *ngIf="islogin"><a routerLink="/dashboardhome"><img src="https://img.icons8.com/fluent-systems-regular/30/ffffff/dashboard-layout.png"/><span>DASHBOARD</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="navmiddle">
+    <div class="">
+      <div class="row">
+        <div class="left col-md-4">
+          <div class="logo">
+            <a href="javascript:void(0)" routerLink = "/">
+              <img src="../../../assets/img/logo.jpg">
+            </a>
+          </div>
+        </div>
+        <div class="right container col-md-8">
+          <div class="row all">
+            <div class="list col-md-4">
+              <div class="row">
+                <span class="icon col-md-3">
+                  <i class="fas fa-map-marker-alt fa-3x"></i>
+                </span>
+                <div class="col-md-9 text-left">
+                  <span>LOCATION</span>
+                  <h6>6th Sector Zahraa El Maadi, Cairo Egypt</h6>
+                </div>
+              </div>
+            </div>
+            <div class="list col-md-4">
+              <div class="row">
+                <span class="icon col-md-3">
+                  <i class="fas fa-mobile-alt fa-3x"></i>
+                </span>
+                <div class="col-md-9">
+                  <span>CALL ON</span>
+                  <h6>+(202) 25218289<br>+(202) 25218345/6/7/8</h6>
+                </div>
+              </div>
+            </div>
+            <div class="list col-md-4">
+              <div class="row">
+                <span class="icon col-md-3">
+                  <i class="fas fa-envelope-open-text fa-3x"></i>
+                </span>
+                <div class="col-md-9">
+                  <span>EMAIL</span>
+                  <h6>info@unico-egypt.com</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="javascript:void(0)" routerLink = "/">
+      <img src="../../../assets/img/logo.jpg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="https://img.icons8.com/flat-round/55/000000/list--v1.png"/>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mcd-menu">
+        <li class="nav-item active">
+          <a class="nav-link linkli" href="javascript:void(0)" routerLink = "/"><span>HOME</span></a>
+        </li>
+        <li class="nav-item ENVIRONMENTAL">
+          <a class="nav-link linkli" href="javascript:void(0)"><span>ENVIRONMENTAL</span></a>
+          <ul>
+            <li><a routerLink = "/wastewatertreatment"><img src="../../../assets/img/icons/environmental.png" alt="."> Waste Water Treatment</a></li>
+            <li><a routerLink="/environmentalstudies"><img src="../../../assets/img/icons/environmental.png" alt="."> Environmental Studies</a></li>
+            <li><a routerLink = "/incenerator"><img src="../../../assets/img/icons/environmental.png" alt="."> Incenerators</a></li>
+            <li><a routerLink="/bioRemediation"><img src="../../../assets/img/icons/environmental.png" alt="."> Bio-Remediation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item NORM">
+          <a class="nav-link linkli" href="javascript:void(0)"><span>NORM</span></a>
+          <ul>
+            <li><a routerLink="/norm"><img src="../../../assets/img/icons/norm.png" alt=".">NORM Services</a></li>
+          </ul>
+        </li>
+        <li class="nav-item LIFTING">
+          <a class="nav-link linkli" href="javascript:void(0)"><span>LIFTING</span></a>
+          <ul>
+            <li><a routerLink="/lifting/supply"><img src="../../../assets/img/icons/lifting.png" alt="."> Supply</a></li>
+            <li>
+              <a href="javascript:void(0)"><img src="../../../assets/img/icons/lifting.png" alt=".">Inspection</a>
+              <ul>
+                <li><a routerLink="/lifting/about_inspection"><img src="../../../assets/img/icons/lifting.png" alt=".">About Inspection Services</a></li>
+                <li><a routerLink="/lifting/inspection_list"><img src="../../../assets/img/icons/lifting.png" alt=".">List of Inspection Services</a></li>
+              </ul>
+            </li>
+            <li><a routerLink="/lifting/lifting_training"><img src="../../../assets/img/icons/lifting.png" alt="."> Training</a></li>
+          </ul>
+        </li>
+        <li class="nav-item DRILLING">
+          <a class="nav-link linkli" href="javascript:void(0)"><span>DRILLING</span></a>
+          <ul>
+            <li><a routerLink="/drilling/downhole"><img src="../../../assets/img/icons/drilling.png" alt="."> Downhole Drilling Tools</a></li>
+            <li><a routerLink="/drilling/completion"><img src="../../../assets/img/icons/drilling.png" alt="."> Completion Products & Services</a></li>
+            <li><a routerLink="/drilling/solid_control"><img src="../../../assets/img/icons/drilling.png" alt="."> Solid Control Services</a></li>
+            <li><a routerLink="/drilling/well_stimulation"><img src="../../../assets/img/icons/drilling.png" alt="."> Well Stimulation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item PRODUCTION">
+          <a class="nav-link linkli" href="javascript:void(0)"><span>PRODUCTION</span></a>
+          <ul>
+            <li><a routerLink="/production"><img src="../../../assets/img/icons/production.png" alt="."> Products & Services</a></li>
+          </ul>
+        </li>
+        <li class="nav-item QHSE">
+          <a class="nav-link linkli" href="javascript:void(0)"><span>QHSE</span></a>
+          <ul>
+            <li><a routerLink="/qhse/cerifications"><i class="fas fa-certificate fa-3x"></i> Certificates</a></li>
+            <li><a routerLink="/qhse/qhse-policy"><i class="fas fa-user-shield fa-3x"></i> QHSE Policy</a></li>
+            <li><a routerLink="/qhse/covid19-policy"><i class="fas fa-user-shield fa-3x"></i> Covid-19 Policy</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!---->
+</section>

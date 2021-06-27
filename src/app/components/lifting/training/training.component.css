@@ -1,0 +1,111 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .ltraining{
+    margin-top: 0px;
+  }
+  .ltraining .ltraining-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .ltraining .ltraining-header .text .title h1{
+    font-size: 40px;
+  }
+  .ltraining .brief .text p{
+    font-size: 18px;
+  }
+  .ltraining .ltraining-content .title h3{
+    font-size: 40px;
+  }
+  .ltraining .ltraining-content .content1 .left p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .ltraining .ltraining-content .content .left ul li{
+    font-size: 18px;
+  }
+  .ltraining .ltraining-content .content .right img{
+    width: 100%;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .ltraining{
+    margin-top: 0px;
+  }
+  .ltraining .ltraining-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .ltraining .ltraining-header .text .title h1{
+    font-size: 45px;
+  }
+  .ltraining .brief .text p{
+    font-size: 19px;
+  }
+  .ltraining .ltraining-content .title h3{
+    font-size: 45px;
+  }
+  .ltraining .ltraining-content .content1 .left p{
+    font-size: 19px;
+    text-align: center;
+  }
+  .ltraining .ltraining-content .content .left ul li{
+    font-size: 19px;
+  }
+  .ltraining .ltraining-content .content .right img{
+    width: 100%;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .ltraining{
+    margin-top: 0px;
+  }
+  .ltraining .ltraining-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .ltraining .ltraining-header .text .title h1{
+    font-size: 50px;
+  }
+  .ltraining .brief .text p{
+    font-size: 20px;
+  }
+  .ltraining .ltraining-content .title h3{
+    font-size: 50px;
+  }
+  .ltraining .ltraining-content .content1 .left p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .ltraining .ltraining-content .content .left ul li{
+    font-size: 20px;
+  }
+  .ltraining .ltraining-content .content .right img{
+    width: 100%;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .ltraining .ltraining-header .text .title h1{
+    font-size: 55px;
+  }
+  .ltraining .brief .text p{
+    font-size: 21px;
+  }
+  .ltraining .ltraining-content .title h3{
+    font-size: 55px;
+  }
+  .ltraining .ltraining-content .content1 .left p{
+    font-size: 21px;
+    text-align: center;
+  }
+  .ltraining .ltraining-content .content .left ul li{
+    font-size: 21px;
+  }
+  .ltraining .ltraining-content .content .right img{
+    width: 100%;
+  }
+}
+
+@media (min-width: 1201px){
+}

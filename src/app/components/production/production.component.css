@@ -1,0 +1,107 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .production{
+    margin-top: 0px;
+  }
+  .production .production-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .production .production-header .text .title h1{
+    font-size: 40px;
+  }
+  .production .production-content .title h3{
+    font-size: 40px;
+  }
+  .production .production-content .title h4{
+    font-size: 21px;
+  }
+  .production .production-content .top h3{
+    font-size: 25px;
+  }
+  .production .production-content .content .text p{
+    font-size: 18px;
+  }
+  .production .production-content .content1 .text ul li{
+    font-size: 18px;
+  }
+  .production .production-content .content1 .img img{
+    margin-top: 0;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .production{
+    margin-top: 0px;
+  }
+  .production .production-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .production .production-header .text .title h1{
+    font-size: 45px;
+  }
+  .production .production-content .title h3{
+    font-size: 45px;
+  }
+  .production .production-content .title h4{
+    font-size: 22px;
+  }
+  .production .production-content .top h3{
+    font-size: 26px;
+  }
+  .production .production-content .content .text p{
+    font-size: 19px;
+  }
+  .production .production-content .content1 .text ul li{
+    font-size: 19px;
+  }
+  .production .production-content .content1 .img img{
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .production{
+    margin-top: 0px;
+  }
+  .production .production-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .production .production-header .text .title h1{
+    font-size: 50px;
+  }
+  .production .production-content .title h3{
+    font-size: 50px;
+  }
+  .production .production-content .content .text p{
+    font-size: 20px;
+  }
+  .production .production-content .content1 .text ul li{
+    font-size: 20px;
+  }
+  .production .production-content .content1 .img img{
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .production .production-header .text .title h1{
+    font-size: 55px;
+  }
+  .production .production-content .title h3{
+    font-size: 55px;
+  }
+  .production .production-content .content .text p{
+    font-size: 22px;
+  }
+  .production .production-content .content1 .text ul li{
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1201px){
+}
+.prog{
+  margin-top: 3%;
+}

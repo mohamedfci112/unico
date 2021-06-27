@@ -1,0 +1,21 @@
+<div *ngIf="announces?.length > 0;else noItems">
+  <h1 class="text-center">Latest Announcments</h1>
+  <div *ngFor="let announce of announces">
+    <div class="card">
+      <div class="card-header">
+        {{ announce.title }}
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ announce.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div>
+  <h1 class="text-center">Photos & Events</h1>
+</div>
+<ng-template #noItems>
+  <hr>
+  <h5>There are no announcements now!</h5>
+</ng-template>

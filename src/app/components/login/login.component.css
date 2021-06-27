@@ -1,0 +1,23 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .login{
+    margin-top: 0px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .login{
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .login{
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+}
+
+@media (min-width: 1201px){
+}

@@ -1,0 +1,120 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .supply{
+    margin-top: 0px;
+  }
+  .supply .supply-header .text .title{
+    text-align: center;
+    left: 0;
+  }
+  .supply .supply-header .text .title h1{
+    font-size: 40px;
+  }
+  .supply .supply-header .text .title p{
+    font-size: 17px;
+    text-align: center;
+  }
+  .supply .supply-content .title h3{
+    font-size: 40px;
+  }
+  .supply .brief .text p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .supply .supply-content .content .top h4{
+    font-size: 20px;
+  }
+  .supply .supply-content .content .left ul li{
+    font-size: 18px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .supply{
+    margin-top: 0px;
+  }
+  .supply .supply-header .text .title{
+    text-align: center;
+    left: 0;
+  }
+  .supply .supply-header .text .title h1{
+    font-size: 45px;
+  }
+  .supply .supply-header .text .title p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .supply .supply-content .title h3{
+    font-size: 45px;
+  }
+  .supply .brief .text p{
+    font-size: 19px;
+    text-align: center;
+  }
+  .supply .supply-content .content .top h4{
+    font-size: 21px;
+  }
+  .supply .supply-content .content .left ul li{
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .supply{
+    margin-top: 0px;
+  }
+  .supply .supply-header .text .title{
+    text-align: center;
+    left: 0;
+  }
+  .supply .supply-header .text .title h1{
+    font-size: 50px;
+  }
+  .supply .supply-header .text .title p{
+    font-size: 19px;
+    text-align: center;
+  }
+  .supply .supply-content .title h3{
+    font-size: 50px;
+  }
+  .supply .brief .text p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .supply .supply-content .content .top h4{
+    font-size: 22px;
+  }
+  .supply .supply-content .content .left ul li{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .supply .supply-header .text .title{
+    left: 5%;
+  }
+  .supply .supply-header .text .title h1{
+    font-size: 55px;
+  }
+  .supply .supply-header .text .title p{
+    font-size: 20px;
+  }
+  .supply .supply-content .title h3{
+    font-size: 55px;
+  }
+  .supply .brief .text p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .supply .supply-content .content .top h4{
+    font-size: 22px;
+  }
+  .supply .supply-content .content .left ul li{
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1201px){
+  .supply .supply-header .text .title{
+    left: 5%;
+  }
+}

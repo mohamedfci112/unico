@@ -1,0 +1,95 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .contact{
+    margin-top: 0px;
+  }
+  .contact .contact-header .text .title{
+  text-align: center;
+  left: 0;
+  }
+.contact .contact-header .text .title h1{
+  font-size: 40px;
+  }
+.contact .contact-content .title h3{
+  font-size: 40px;
+  }
+.contact .contact-content .title h4{
+  font-size: 25px;
+  }
+.contact .contact-content .title span{
+  font-size: 21px;
+  }
+.contact .contact-content .left ul li{
+  font-size: 18px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .contact{
+    margin-top: 0px;
+  }
+  .contact .contact-header .text .title{
+  text-align: center;
+  left: 0;
+  }
+.contact .contact-header .text .title h1{
+  font-size: 45px;
+  }
+.contact .contact-content .title h3{
+  font-size: 45px;
+  }
+.contact .contact-content .title h4{
+  font-size: 26px;
+  }
+.contact .contact-content .title span{
+  font-size: 22px;
+  }
+.contact .contact-content .left ul li{
+  font-size: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .contact{
+    margin-top: 0px;
+  }
+  .contact .contact-header .text .title{
+  text-align: center;
+  left: 0;
+  }
+.contact .contact-header .text .title h1{
+  font-size: 50px;
+  }
+.contact .contact-content .title h3{
+  font-size: 50px;
+  }
+.contact .contact-content .title h4{
+  font-size: 27px;
+  }
+.contact .contact-content .title span{
+  font-size: 23px;
+  }
+.contact .contact-content .left ul li{
+  font-size: 20px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+.contact .contact-header .text .title h1{
+  font-size: 55px;
+  }
+.contact .contact-content .title h3{
+  font-size: 55px;
+  }
+.contact .contact-content .title h4{
+  font-size: 29px;
+  }
+.contact .contact-content .title span{
+  font-size: 24px;
+  }
+.contact .contact-content .left ul li{
+  font-size: 21px;
+  }
+}
+
+@media (min-width: 1201px){
+}

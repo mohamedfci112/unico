@@ -1,0 +1,135 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .downhole{
+    margin-top: 0px;
+  }
+  .downhole .downhole-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .downhole .downhole-header .text .title h1{
+    font-size: 40px;
+  }
+  .downhole .downhole-content .title h3{
+    font-size: 40px;
+  }
+  .downhole .downhole-content .content .text p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .downhole .downhole-content .content .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content1 .text ul li{
+    font-size: 18px;
+  }
+  .downhole .downhole-content .content2 .text ul li{
+    font-size: 18px;
+  }
+  .downhole .downhole-content .content2 .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content3 .text ul li{
+    font-size: 18px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .downhole{
+    margin-top: 0px;
+  }
+  .downhole .downhole-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .downhole .downhole-header .text .title h1{
+    font-size: 45px;
+  }
+  .downhole .downhole-content .title h3{
+    font-size: 45px;
+  }
+  .downhole .downhole-content .content .text p{
+    font-size: 19px;
+    text-align: center;
+  }
+  .downhole .downhole-content .content .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content1 .text ul li{
+    font-size: 19px;
+  }
+  .downhole .downhole-content .content2 .text ul li{
+    font-size: 19px;
+  }
+  .downhole .downhole-content .content2 .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content3 .text ul li{
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .downhole{
+    margin-top: 0px;
+  }
+  .downhole .downhole-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .downhole .downhole-header .text .title h1{
+    font-size: 50px;
+  }
+  .downhole .downhole-content .title h3{
+    font-size: 50px;
+  }
+  .downhole .downhole-content .content .text p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .downhole .downhole-content .content .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content1 .text ul li{
+    font-size: 20px;
+  }
+  .downhole .downhole-content .content2 .text ul li{
+    font-size: 20px;
+  }
+  .downhole .downhole-content .content2 .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content3 .text ul li{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .downhole .downhole-header .text .title h1{
+    font-size: 55px;
+  }
+  .downhole .downhole-content .title h3{
+    font-size: 55px;
+  }
+  .downhole .downhole-content .content .text p{
+    font-size: 21px;
+    text-align: center;
+  }
+  .downhole .downhole-content .content .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content1 .text ul li{
+    font-size: 21px;
+  }
+  .downhole .downhole-content .content2 .text ul li{
+    font-size: 21px;
+  }
+  .downhole .downhole-content .content2 .img img{
+    width: 100%;
+  }
+  .downhole .downhole-content .content3 .text ul li{
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1201px){
+}

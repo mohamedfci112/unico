@@ -1,0 +1,87 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .solid{
+    margin-top: 0px;
+  }
+  .solid .solid-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .solid .solid-header .text .title h1{
+    font-size: 40px;
+  }
+  .solid .solid-content .title h3{
+    font-size: 40px;
+  }
+  .solid .solid-content .content .text p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .solid .solid-content .content1 .text ul li{
+    font-size: 18px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .solid{
+    margin-top: 0px;
+  }
+  .solid .solid-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .solid .solid-header .text .title h1{
+    font-size: 45px;
+  }
+  .solid .solid-content .title h3{
+    font-size: 45px;
+  }
+  .solid .solid-content .content .text p{
+    font-size: 19px;
+    text-align: center;
+  }
+  .solid .solid-content .content1 .text ul li{
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .solid{
+    margin-top: 0px;
+  }
+  .solid .solid-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .solid .solid-header .text .title h1{
+    font-size: 50px;
+  }
+  .solid .solid-content .title h3{
+    font-size: 50px;
+  }
+  .solid .solid-content .content .text p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .solid .solid-content .content1 .text ul li{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .solid .solid-header .text .title h1{
+    font-size: 55px;
+  }
+  .solid .solid-content .title h3{
+    font-size: 55px;
+  }
+  .solid .solid-content .content .text p{
+    font-size: 21px;
+    text-align: center;
+  }
+  .solid .solid-content .content1 .text ul li{
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1201px){
+}

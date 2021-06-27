@@ -1,0 +1,532 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .slider{
+    margin-top: 0;
+  }
+  .about-h .left img{
+    margin-top: 0;
+    height:auto;
+  }
+  .about-h h3{
+    font-size: 30px;
+  }
+  .about-h .right .text p{
+    font-size: 15px;
+  }
+  .about-h .right .bot{
+    margin-top: 25px;
+    text-align: center;
+  }
+  .about-h .right .bot button{
+    font-size: 13px;
+  }
+  .bf .title span{
+    font-size: 30px;
+  }
+  .ser .left .content{
+    padding-top: 15%;
+  }
+  .ser .left .content h3{
+    font-size: 35px;
+  }
+  .ser .left .content p{
+    font-size: 17px;
+    padding-right: 5px;
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  .ser .spec{
+    left:0;
+  }
+  .team .container{
+    margin-top: -65px;
+  }
+  .team .title h3{
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  .client .container{
+    margin-top: -70px;
+  }
+  .client .title{
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .client .title h3{
+    font-size: 30px;
+  }
+  .client .car{
+    margin-bottom: 0;
+  }
+  .map .img-map{
+    height: auto;
+  }
+  .map .text{
+    padding-left: 0;
+  }
+  .map .text h3{
+    font-size: 35px;
+  }
+  .pin1, .pin2, .pin3, .pin4, .pin5{
+    width: 80px;
+  }
+  .map .img-map .img{
+    width: 100%;
+    height: auto;
+  }
+  .map .img-map .card{
+    left: 1%;
+    z-index: 2;
+  }
+  .map .img-map .card .card-body{
+    padding: 5px;
+  }
+  .map .img-map .card .card-title{
+    font-size: 20px;
+  }
+  .map .img-map .pin1{
+    top: 5%;
+    left: 30%;
+  }
+  .map .img-map .pin1_text .card{
+    margin-top: 29%;
+    width: 70%;
+  }
+  .map .img-map .pin2{
+    top: 8%;
+  }
+  .map .img-map .pin2_text .card{
+    width: 70%;
+    margin-top: 40%;
+  }
+  .map .img-map .pin4{
+    top: 2%;
+    left: 39%;
+  }
+  .map .img-map .pin4_text .card{
+    width: 70%;
+    margin-top: 40%;
+  }
+  .map .img-map .pin5{
+    top:15%
+  }
+  .map .img-map .pin5_text .card{
+    margin-top: 40%;
+    width: 70%;
+  }
+  .map .img-map .pin3{
+    top: 13%;
+  }
+  .map .img-map .pin3_text .card{
+    margin-top: 40%;
+    width: 70%;
+  }
+  .carousel-caption{
+    bottom: 80px;
+  }
+  .carousel-caption h3{
+    font-size: 29px;
+    margin-bottom: 20px;
+  }
+  .carousel-caption p{
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 760px){
+  .slider{
+    margin-top: 0;
+  }
+  .about-h .left img{
+    margin-top: 0;
+    height:auto;
+  }
+  .about-h h3{
+    font-size: 40px;
+  }
+  .about-h .right .text p{
+    font-size: 18px;
+  }
+  .about-h .right .bot{
+    margin-top: 25px;
+    text-align: center;
+  }
+  .about-h .right .bot button{
+    font-size: 16px;
+  }
+  .bf .title span{
+    font-size: 40px;
+  }
+  .ser .left .content{
+    padding-top: 15%;
+  }
+  .ser .right .content{
+    padding-top: 2%;
+  }
+  .ser .left .content h3{
+    font-size: 45px;
+  }
+  .ser .left .content p{
+    font-size: 20px;
+    padding-right: 5px;
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  .ser .spec{
+    left:0;
+  }
+  .main{
+    margin-bottom: 50px;
+  }
+  .team .container{
+    margin-top: -65px;
+  }
+  .team .title h3{
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  .client .container{
+    margin-top: -70px;
+  }
+  .client .title{
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .client .title h3{
+    font-size: 40px;
+  }
+  .client .car{
+    margin-bottom: 0;
+  }
+  .map .img-map{
+    height: auto;
+  }
+  .map .text{
+    padding-left: 0;
+  }
+  .map .text h3{
+    font-size: 35px;
+  }
+  .pin1, .pin2, .pin3, .pin4, .pin5{
+    width: 90px;
+  }
+  .map .img-map .img{
+    width: 100%;
+    height: auto;
+  }
+  .map .img-map .card{
+    left: 1%;
+    z-index: 2;
+  }
+  .map .img-map .card .card-body{
+    padding: 5px;
+  }
+  .map .img-map .card .card-title{
+    font-size: 20px;
+  }
+  .map .img-map .pin1{
+    top: 8%;
+    left: 30%;
+  }
+  .map .img-map .pin1_text .card{
+    margin-top: 29%;
+    width: 80%;
+  }
+  .map .img-map .pin2{
+    top: 10%;
+  }
+  .map .img-map .pin2_text .card{
+    width: 80%;
+    margin-top: 40%;
+  }
+  .map .img-map .pin4{
+    top: 5%;
+    left: 39%;
+  }
+  .map .img-map .pin4_text .card{
+    width: 80%;
+    margin-top: 40%;
+  }
+  .map .img-map .pin5{
+    top:18%
+  }
+  .map .img-map .pin5_text .card{
+    margin-top: 40%;
+    width: 80%;
+  }
+  .map .img-map .pin3{
+    top: 16%;
+  }
+  .map .img-map .pin3_text .card{
+    margin-top: 40%;
+    width: 80%;
+  }
+  .carousel-caption h3{
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .carousel-caption p{
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .slider{
+    margin-top: 0;
+  }
+  .about-h .left img{
+    margin-top: 0;
+    height:auto;
+  }
+  .about-h h3{
+    font-size: 50px;
+  }
+  .about-h .right .text p{
+    font-size: 19px;
+  }
+  .about-h .right .bot{
+    margin-top: 25px;
+    text-align: center;
+  }
+  .about-h .right .bot button{
+    font-size: 17px;
+  }
+  .bf .title span{
+    font-size: 50px;
+  }
+  .ser .left .content{
+    padding-top: 15%;
+  }
+  .ser .right .content{
+    padding-top: 10%;
+  }
+  .ser .left .content h3{
+    font-size: 55px;
+  }
+  .ser .left .content p{
+    font-size: 21px;
+    padding-right: 5px;
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  .ser .spec{
+    left:0;
+  }
+  .main{
+    margin-bottom: 50px;
+  }
+  .team .container{
+    margin-top: -65px;
+  }
+  .team .title h3{
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .client .container{
+    margin-top: -70px;
+  }
+  .client .title{
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  .client .title h3{
+    font-size: 50px;
+  }
+  .client .car{
+    margin-bottom: 0;
+  }
+  .map .img-map{
+    height: auto;
+  }
+  .map .text{
+    padding-left: 0;
+  }
+  .map .text h3{
+    font-size: 35px;
+  }
+  .pin1, .pin2, .pin3, .pin4, .pin5{
+    width: 90px;
+  }
+  .map .img-map .img{
+    width: 100%;
+    height: auto;
+  }
+  .map .img-map .card{
+    left: 1%;
+    z-index: 2;
+  }
+  .map .img-map .card .card-body{
+    padding: 5px;
+  }
+  .map .img-map .card .card-title{
+    font-size: 20px;
+  }
+  .map .img-map .pin1{
+    top: 12%;
+    left: 33%;
+  }
+  .map .img-map .pin1_text .card{
+    margin-top: 55%;
+  }
+  .map .img-map .pin2{
+    top: 12%;
+  }
+  .map .img-map .pin2_text .card{
+    margin-top: 50%;
+  }
+  .map .img-map .pin4{
+    top: 9%;
+    left: 39%;
+  }
+  .map .img-map .pin4_text .card{
+    margin-top: 46%;
+  }
+  .map .img-map .pin5{
+    top:25%
+  }
+  .map .img-map .pin5_text .card{
+    margin-top: 60%;
+  }
+  .map .img-map .pin3{
+    top: 23%;
+    left: 59%;
+  }
+  .map .img-map .pin3_text .card{
+    margin-top: 70%;
+  }
+  .carousel-caption h3{
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .carousel-caption p{
+    font-size: 23px;
+  }
+  .carousel-caption{
+    bottom: 100px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .about-h h3{
+    font-size: 55px;
+  }
+  .about-h .right .text p{
+    font-size: 20px;
+  }
+  .bf .title span{
+    font-size: 55px;
+  }
+  .service{
+    padding: 10px;
+  }
+  .service h4{
+    font-size: 20px;
+  }
+  .service p{
+    font-size: 19px;
+  }
+  .main{
+    margin-bottom: 105px;
+  }
+  .ser .left .content p{
+    font-size: 21px;
+  }
+  .team .container{
+    margin-top: -285px;
+  }
+  .team .title h3{
+    font-size: 55px;
+    margin-top: 30px;
+  }
+  .client .container{
+    margin-top: -240px;
+  }
+  .client .title h3{
+    font-size: 55px;
+  }
+  .map .text h3{
+    font-size: 44px;
+  }
+  .pin1, .pin2, .pin3, .pin4, .pin5{
+    width: 105px;
+  }
+  .map .img-map .card .card-body{
+    padding: 5px;
+  }
+  .map .img-map .card .card-title{
+    font-size: 20px;
+  }
+  .map .img-map .pin1{
+    top: 8%;
+    left: 30%;
+  }
+  .map .img-map .pin1_text .card{
+    margin-top: 55%;
+  }
+  .map .img-map .pin2{
+    top: 8%;
+  }
+  .map .img-map .pin2_text .card{
+    margin-top: 20%;
+    left: 106%;
+  }
+  .map .img-map .pin4{
+    top: 5%;
+    left: 36%;
+  }
+  .map .img-map .pin4_text .card{
+    margin-top: 46%;
+  }
+  .map .img-map .pin5{
+    top:21%
+  }
+  .map .img-map .pin5_text .card{
+    margin-top: 65%;
+  }
+  .map .img-map .pin3{
+    top: 19%;
+    left: 57%;
+  }
+  .map .img-map .pin3_text .card{
+    margin-top: 65%;
+    left: 106%
+  }
+  .map .text .head span{
+    font-size: 17px;
+  }
+  .carousel-caption h3{
+    font-size: 40px;
+  }
+  .carousel-caption p{
+    font-size: 24px;
+  }
+    .carousel-caption{
+    bottom: 100px;
+  }
+}
+
+@media (min-width: 1201px){
+  .carousel-caption{
+    height: 100%;
+    background: #0000004a;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .carousel-caption h3{
+    font-size: 45px;
+    font-family: 'Gugi', cursive;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .carousel-caption p{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Cairo', sans-serif;
+  }
+  .carousel-caption .cpation-content{
+    position: relative;
+    margin-top: 20%;
+  }
+  
+}

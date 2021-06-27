@@ -1,0 +1,70 @@
+<div class="row">
+  <h1 class="col-md-12">Manager Reports</h1>
+  <hr>
+  <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let u of uname; let i=index">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ uname[i] }}</h5>
+        <input type="text" value="{{ uname[i] }}" #name hidden>
+        <p class="card-text">{{ department[i] }}</p>
+        <button data-toggle="modal" data-target="#exampleModal1" class="btn btn-primary" (click)="userPdf(name.value)">Download Report</button>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Work Done Report</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="htmlData" class="container" #htmlData>
+          <div class="text-center">
+            <h2>Report for Lask Week</h2>
+          </div>
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">Hours</th>
+                <th scope="col">Minutes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let u of uname1; let i=index">
+                <td >{{ uname1[0] }}</td>
+                <td >{{ department1[0] }}</td>
+                <td >{{ hours[0] }}</td>
+                <td >{{ min[0] }}</td>
+              </tr>
+
+            </tbody>
+            <thead>
+              <th scope="col" colspan="4" class="text-center">Work Done</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of workdescrip; let i=index">
+                <td colspan="4" >{{ d }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Large modal -->
+

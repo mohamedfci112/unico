@@ -1,0 +1,86 @@
+@media (min-width: 320px) and (max-width: 480px){
+  .norm{
+    margin-top: 0px;
+  }
+  .norm .norm-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .norm .norm-header .text .title h1{
+    font-size: 40px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 40px;
+  }
+  .norm .norm-content .content .text p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .norm .card{
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .norm{
+    margin-top: 0px;
+  }
+  .norm .norm-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .norm .norm-header .text .title h1{
+    font-size: 45px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 45px;
+  }
+  .norm .norm-content .content .text p{
+    font-size: 19px;
+    text-align: center;
+  }
+  .norm .card{
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 990px){
+  .norm{
+    margin-top: 0px;
+  }
+  .norm .norm-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .norm .norm-header .text .title h1{
+    font-size: 50px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 50px;
+  }
+  .norm .norm-content .content .text p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .norm .card{
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px){
+  .norm .norm-header .text .title h1{
+    font-size: 55px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 55px;
+  }
+  .norm .norm-content .content .text p{
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1201px){
+}
