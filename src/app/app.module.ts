@@ -48,6 +48,8 @@ import { AddannouncComponent } from './components/dashboard/addannounc/addannoun
 import { AnnouncementService } from './services/announcement.service';
 import { ManagerReportComponent } from './components/dashboard/manager-report/manager-report.component';
 import { ChartComponent } from './components/dashboard/chart/chart.component';
+import { ChangepassComponent } from './components/changepass/changepass.component';
+import { ResetpassComponent } from './components/resetpass/resetpass.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -83,6 +85,8 @@ const routes: Routes = [
   { path: 'hrReport', component : HeaderComponent, canActivate: [AuthGuardService] },
   { path: 'managerReport', component : ManagerReportComponent, canActivate: [AuthGuardService] },
   { path: 'organizationChart', component : ChartComponent, canActivate: [AuthGuardService] },
+  { path: 'changepass', component : ChangepassComponent },
+  { path: 'auth/resetpass', component : ChartComponent },
 
 ];
 
@@ -124,7 +128,9 @@ const routes: Routes = [
     EventsComponent,
     AddannouncComponent,
     ManagerReportComponent,
-    ChartComponent
+    ChartComponent,
+    ChangepassComponent,
+    ResetpassComponent
   ],
   imports: [
     BrowserModule,

@@ -36,6 +36,16 @@ constructor(public firebaseAuth: AngularFireAuth, public afs: AngularFirestore) 
   }
 
   // tslint:disable-next-line:typedef
+  getAuth() {
+    return this.firebaseAuth;
+  }
+  // tslint:disable-next-line:typedef
+  resetPasswordInit(email: string) {
+    return this.firebaseAuth.sendPasswordResetEmail(
+      email,
+      { url: 'https://unico-egypt.com/login' });
+    }
+  // tslint:disable-next-line:typedef
 async signin(email: string, password: string){
     await this.firebaseAuth.signInWithEmailAndPassword(email, password).then(res => {
       this.isLoggin = true;

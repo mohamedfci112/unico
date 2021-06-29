@@ -40,11 +40,11 @@
 
   <!-- Page Content  -->
   <div id="content">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="javascript:void(0)">
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <button type="button" id="sidebarCollapse" class="btn btn-info" style="background-color: #bf1e2d;">
           <i class="fas fa-align-left"></i>
-          <span> Open / Close </span>
+          <span></span>
         </button>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item btn btn-danger" href="javascriot:void(0)" (click)="logout()">Logout</a>
               <a class="dropdown-item" href="javascriot:void(0)" data-toggle="modal" data-target="#exampleModal">Final Logout</a>
-              <a class="dropdown-item" href="javascriot:void(0)">Change Password!</a>
+              <a class="dropdown-item" href="javascriot:void(0)" routerLink="/changepass">Change Password!</a>
             </div>
           </li>
         </ul>

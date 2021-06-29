@@ -1,0 +1,17 @@
+button{
+  background-color: #1a2628;
+  font-family: 'Cairo';
+  font-size: 25px;
+  font-weight: 600;
+}
+h2{
+  font-weight: bolder;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+}
+.table{
+  font-family: 'Cairo';
+  text-transform: capitalize;
+}

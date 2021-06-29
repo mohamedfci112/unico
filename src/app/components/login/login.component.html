@@ -9,9 +9,9 @@
       </div>
       <div class="logbox">
         <label>Email</label>
-        <input type="text" name="username" #email>
+        <input type="text" (keyup.enter)="onSignIn(email.value,password.value)" id="input" name="username" #email>
         <label>Password</label>
-        <input type="password" name="password" #password>
+        <input type="password" (keyup.enter)="onSignIn(email.value,password.value)" id="input" name="password" #password>
       </div>
       <button (click)="onSignIn(email.value,password.value)">Log In</button>
     </div>
