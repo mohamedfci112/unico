@@ -50,6 +50,7 @@ import { ManagerReportComponent } from './components/dashboard/manager-report/ma
 import { ChartComponent } from './components/dashboard/chart/chart.component';
 import { ChangepassComponent } from './components/changepass/changepass.component';
 import { ResetpassComponent } from './components/resetpass/resetpass.component';
+import { UnicoprofileComponent } from './components/dashboard/unicoprofile/unicoprofile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -86,7 +87,7 @@ const routes: Routes = [
   { path: 'managerReport', component : ManagerReportComponent, canActivate: [AuthGuardService] },
   { path: 'organizationChart', component : ChartComponent, canActivate: [AuthGuardService] },
   { path: 'changepass', component : ChangepassComponent },
-  { path: 'auth/resetpass', component : ChartComponent },
+  { path: 'unicoprofile', component : UnicoprofileComponent, canActivate: [AuthGuardService] },
 
 ];
 
@@ -130,7 +131,8 @@ const routes: Routes = [
     ManagerReportComponent,
     ChartComponent,
     ChangepassComponent,
-    ResetpassComponent
+    ResetpassComponent,
+    UnicoprofileComponent
   ],
   imports: [
     BrowserModule,

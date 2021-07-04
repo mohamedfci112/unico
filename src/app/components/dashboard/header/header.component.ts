@@ -37,9 +37,47 @@ export class HeaderComponent implements OnInit {
   prevYear;
   currDate;
   prevDate;
+  reportDate;
   constructor() { }
 
   public openPDF(): void {
+  // tslint:disable-next-line:prefer-const
+  let element = document.getElementById('htmlData');
+  // tslint:disable-next-line:variable-name
+  const HTML_Width = document.getElementById('htmlData').offsetWidth;
+  // tslint:disable-next-line:variable-name
+  const HTML_Height = document.getElementById('htmlData').offsetHeight;
+  // tslint:disable-next-line:variable-name
+  const top_left_margin = 15;
+  // tslint:disable-next-line:variable-name
+  const PDF_Width = HTML_Width + (top_left_margin * 2);
+  // tslint:disable-next-line:variable-name
+  const PDF_Height = (PDF_Width * 1.3) + (top_left_margin * 2);
+  // tslint:disable-next-line:variable-name
+  const canvas_image_width = HTML_Width;
+  // tslint:disable-next-line:variable-name
+  const canvas_image_height = HTML_Height;
+
+  const totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+  html2canvas(element, {allowTaint: true}).then((canvas) => {
+    canvas.getContext('2d');
+    console.log(canvas.height + '  ' + canvas.width);
+
+    // tslint:disable-next-line:prefer-const
+    const imgData = canvas.toDataURL('image/jpeg', 1.0);
+    // tslint:disable-next-line:prefer-const
+    const pdf = new jspdf('p', 'pt',  [PDF_Width, PDF_Height]);
+    pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+
+    for (let i = 1; i <= totalPDFPages; i++) {
+      pdf.addPage([PDF_Width, PDF_Height]);
+      pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
+    }
+
+    pdf.save('HTML-Document.pdf');
+      });
+  }
+/*  public openPDF(): void {
     // tslint:disable-next-line:prefer-const
     let element = document.getElementById('htmlData');
     html2canvas(element).then((canvas) => {
@@ -52,11 +90,18 @@ export class HeaderComponent implements OnInit {
       doc.addImage(imgData, 0, 0, 208, imgHeight);
       doc.save('doc.pdf');
     });
-  }
+  }*/
 
   ngOnInit(): void {
     this.hrReport();
-    // this.dateCalc();
+    this.dateCalc();
+    const d = new Date().toLocaleDateString();
+    if (d > this.currDate){
+      this.reportDate = (this.currMonth.toString() + 1).concat('/', this.currYear.toString());
+    }
+    else{
+      this.reportDate = (this.currMonth.toString()).concat('/', this.currYear.toString());
+    }
   }
 
   // tslint:disable-next-line:typedef

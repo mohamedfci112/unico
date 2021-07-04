@@ -60,6 +60,36 @@ export class ManagerReportComponent implements OnInit {
   });
   }
   // tslint:disable-next-line:typedef
+  getInfoDetails2week(xname: string){
+    this.prev2week();
+    this.currentweek();
+    this.managerReport = this.fireSQL.query(`
+    SELECT name, department, SUM(hoursWork) as h, SUM(minWork) as m
+    FROM logoutForm
+    WHERE name = '` + xname + `' AND todayDate >= '` + this.preweek + `' AND todayDate < '` + this.currweek + `'
+    GROUP BY name`
+    );
+    this.managerReport.then(cities => {
+    for (const city of cities) {
+      this.uname1.push(`${city.name}`);
+      this.department1.push(`${city.department}`);
+      const num = `${city.m}`;
+      // tslint:disable-next-line:radix
+      const hrs = (parseInt(num) / 60);
+      const nhrs = Math.floor(hrs);
+      const mins = (hrs - nhrs) * 60;
+      const nmins = Math.round(mins);
+      // tslint:disable-next-line:radix
+      const finalhours = (parseInt(`${city.h}`) + nhrs);
+        // tslint:disable-next-line:align
+        this.hours.push(finalhours);
+        // tslint:disable-next-line:align
+        this.min.push(nmins);
+    }
+  });
+  }
+
+  // tslint:disable-next-line:typedef
   getInfoDesc(xname: string){
     this.prevweek();
     this.currentweek();
@@ -67,6 +97,21 @@ export class ManagerReportComponent implements OnInit {
     SELECT workDesc
     FROM logoutForm
     WHERE name = '` + xname + `' AND todayDate > '` + this.preweek + `' AND todayDate < '` + this.currweek + `'`
+    );
+    this.managerReport.then(cities => {
+    for (const city of cities) {
+      this.workdescrip.push(`${city.workDesc}`);
+    }
+  });
+  }
+  // tslint:disable-next-line:typedef
+  getInfoDesc2week(xname: string){
+    this.prev2week();
+    this.currentweek();
+    this.managerReport = this.fireSQL.query(`
+    SELECT workDesc
+    FROM logoutForm
+    WHERE name = '` + xname + `' AND todayDate >= '` + this.preweek + `' AND todayDate < '` + this.currweek + `'`
     );
     this.managerReport.then(cities => {
     for (const city of cities) {
@@ -85,9 +130,24 @@ export class ManagerReportComponent implements OnInit {
     this.getInfoDesc(xuname);
   }
   // tslint:disable-next-line:typedef
+  userPdf2week(xuname: string){
+    this.uname1 = [];
+    this.department1 = [];
+    this.workdescrip = [];
+    this.hours = [];
+    this.min = [];
+    this.getInfoDetails2week(xuname);
+    this.getInfoDesc2week(xuname);
+  }
+  // tslint:disable-next-line:typedef
   prevweek(){
     const today = new Date();
     this.preweek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7).toLocaleDateString();
+  }
+  // tslint:disable-next-line:typedef
+  prev2week(){
+    const today = new Date();
+    this.preweek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 14).toLocaleDateString();
   }
   // tslint:disable-next-line:typedef
   currentweek(){

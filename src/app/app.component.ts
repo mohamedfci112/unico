@@ -27,7 +27,7 @@ export class AppComponent {
               if (event instanceof NavigationStart) {
                 this.currentRoute = event.url;
                 // tslint:disable-next-line:max-line-length
-                if (this.currentRoute === '/dashboard' || this.currentRoute === '/dashboardhome' || this.currentRoute === '/manual' || this.currentRoute === '/announcement' || this.currentRoute === '/forms' || this.currentRoute === '/requlations' || this.currentRoute === '/events' || this.currentRoute === '/addannounce' || this.currentRoute === '/hrReport' || this.currentRoute === '/managerReport' || this.currentRoute === '/organizationChart' || this.currentRoute === '/changepass' || this.currentRoute === '/resetpass'){
+                if (this.currentRoute === '/dashboard' || this.currentRoute === '/dashboardhome' || this.currentRoute === '/manual' || this.currentRoute === '/announcement' || this.currentRoute === '/forms' || this.currentRoute === '/requlations' || this.currentRoute === '/events' || this.currentRoute === '/addannounce' || this.currentRoute === '/hrReport' || this.currentRoute === '/managerReport' || this.currentRoute === '/organizationChart' || this.currentRoute === '/changepass' || this.currentRoute === '/unicoprofile'){
                   this.dash = true;
                   console.log(this.currentRoute);
                 }
