@@ -10,7 +10,8 @@ import { Announce } from '../../../models/announce';
 export class AddannouncComponent implements OnInit {
   item: Announce = {
     title: '',
-    description: ''
+    description: '',
+    date: ''
   };
   manager = false;
 
@@ -25,6 +26,8 @@ export class AddannouncComponent implements OnInit {
   onSubmit(){
     // tslint:disable-next-line:triple-equals
     if (this.item.title != '' && this.item.description != ''){
+      const creatDate = new Date().toString();
+      this.item.date = creatDate;
       this.announceServices.addAnnounce(this.item);
       this.item.title = '';
       this.item.description = '';

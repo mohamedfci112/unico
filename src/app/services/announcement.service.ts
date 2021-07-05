@@ -16,7 +16,7 @@ export class AnnouncementService {
   announceslimit: Observable<Announce[]>;
 
   constructor(public afs: AngularFirestore) {
-    this.announceCollection = this.afs.collection('announc', ref => ref.orderBy('title', 'desc'));
+    this.announceCollection = this.afs.collection('announc', ref => ref.orderBy('date', 'desc'));
     this.announces = this.announceCollection.snapshotChanges().pipe(map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Announce;
@@ -25,7 +25,7 @@ export class AnnouncementService {
       });
     }));
     // limit announce
-    this.announcelimitCollection = this.afs.collection('announc', ref => ref.orderBy('title', 'desc').limit(3));
+    this.announcelimitCollection = this.afs.collection('announc', ref => ref.orderBy('date', 'desc').limit(3));
     this.announceslimit = this.announcelimitCollection.snapshotChanges().pipe(map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Announce;
