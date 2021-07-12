@@ -7,6 +7,13 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 // import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { FormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -51,6 +58,11 @@ import { ChartComponent } from './components/dashboard/chart/chart.component';
 import { ChangepassComponent } from './components/changepass/changepass.component';
 import { ResetpassComponent } from './components/resetpass/resetpass.component';
 import { UnicoprofileComponent } from './components/dashboard/unicoprofile/unicoprofile.component';
+import { NotesComponent } from './components/dashboard/space/notes/notes.component';
+import { CalenderComponent } from './components/dashboard/space/calender/calender.component';
+import { TodolistComponent } from './components/dashboard/space/todolist/todolist.component';
+import { TaskComponent } from './components/dashboard/space/task/task.component';
+import { TaskDialogComponent } from './components/dashboard/space/task-dialog/task-dialog.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -88,6 +100,9 @@ const routes: Routes = [
   { path: 'organizationChart', component : ChartComponent, canActivate: [AuthGuardService] },
   { path: 'changepass', component : ChangepassComponent },
   { path: 'unicoprofile', component : UnicoprofileComponent, canActivate: [AuthGuardService] },
+  { path: 'notes', component : NotesComponent, canActivate: [AuthGuardService] },
+  { path: 'calender', component : CalenderComponent, canActivate: [AuthGuardService] },
+  { path: 'todolist', component : TodolistComponent, canActivate: [AuthGuardService] },
 
 ];
 
@@ -132,7 +147,12 @@ const routes: Routes = [
     ChartComponent,
     ChangepassComponent,
     ResetpassComponent,
-    UnicoprofileComponent
+    UnicoprofileComponent,
+    NotesComponent,
+    CalenderComponent,
+    TodolistComponent,
+    TaskComponent,
+    TaskDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -150,7 +170,14 @@ const routes: Routes = [
       messagingSenderId: '160445847490',
       appId: '1:160445847490:web:3a5bf4437a028c712f285b',
       measurementId: 'G-DP4LXGQRRX'
-    })
+    }),
+    DragDropModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDialogModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [FirebaseService, AnnouncementService],
   bootstrap: [AppComponent]

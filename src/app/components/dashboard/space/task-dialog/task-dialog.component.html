@@ -1,0 +1,47 @@
+<!--
+<div class="cdk-overlay-container">
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="text" matInput class="form-control" id="exampleInputEmail1" [(ngModel)]="data.task.title" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="text" matInput class="form-control" [(ngModel)]="data.task.description" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div mat-dialog-actions>
+      <button class="btn btn-primary" mat-button [mat-dialog-close]="{ task: data.task }">OK</button>
+      <button class="btn btn-primary" mat-button (click)="cancel()">Cancel</button>
+      <button class="btn btn-primary" mat-button *ngIf="data.enableDelete" [mat-dialog-close]="{ task: data.task, delete: true }">Delete</button>
+    </div>
+  </form>
+</div>
+-->
+
+<div class="cdk-overlay-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-form-field>
+          <label for="exampleInput">Title</label>
+          <input type="text" matInput class="form-control" id="exampleInput" [(ngModel)]="data.task.title">
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-12">
+        <mat-form-field>
+          <label for="exampleInputPassword1">Description</label>
+      <input type="text" matInput class="form-control" [(ngModel)]="data.task.description" id="exampleInputPassword1">
+        </mat-form-field>
+      </div>
+
+      <div mat-dialog-actions class="col-md-12">
+        <div class="row button">
+          <button class="btn btn-primary" mat-button [mat-dialog-close]="{ task: data.task }">OK</button>
+          <button class="btn btn-dark" mat-button (click)="cancel()">Cancel</button>
+          <button class="btn btn-danger" mat-button *ngIf="data.enableDelete" [mat-dialog-close]="{ task: data.task, delete: true }">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.cdk-overlay-container{
+  float: right;
+  top: 40%;
+  position: absolute;
+  left: 40%;
+  background-color: #1a2628;
+  color: white;
+  padding: 5px;
+}
+.mat-form-field{
+  width: 100%;
+}
+.mat-dialog-actions{
+  margin-bottom: 0;
+}
+.mat-input-element{
+  background: #fffdfd;
+  color: black;
+}
+.button{
+  margin: auto;
+}

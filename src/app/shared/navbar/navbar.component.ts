@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   islogin = false;
+  username;
 
   constructor() {
     if (localStorage.getItem('user')){
@@ -15,6 +16,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.username = localStorage.getItem('name');
   }
 
 }

@@ -6,13 +6,13 @@
     </div>
     <ul class="list-unstyled components">
 
-    <li class="active"><a routerLink="/dashboardhome">Dashboard Home</a></li>
+    <li class="active"><a routerLink="/dashboardhome"><img src="https://img.icons8.com/material-rounded/24/000000/home.png"> Dashboard Home</a></li>
     <div *ngFor="let uinfo of userinfo">
-      <li *ngIf="uinfo.name == 'Khaled Farouk'"><a routerLink="/announcement">Add Announcement</a></li>
+      <li *ngIf="uinfo.name == 'Khaled Farouk'"><a routerLink="/announcement"><img src="https://img.icons8.com/ios/24/ffffff/add-property.png"/> Add Announcement</a></li>
     </div>
-    <li><a routerLink="/forms">Forms</a></li>
+    <li><a routerLink="/forms"><img src="https://img.icons8.com/wired/24/ffffff/microsoft-forms.png"/> Forms</a></li>
     <li>
-      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reports</a>
+      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/carbon-copy/24/ffffff/business-report.png"/> Reports</a>
       <ul class="collapse list-unstyled" id="homeSubmenu">
         <li>
           <a href="javascript:void(0)" routerLink="/managerReport">Manager Report</a>
@@ -23,7 +23,7 @@
       </ul>
     </li>
     <li>
-      <a href="#homeSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Manual</a>
+      <a href="#homeSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/ios/24/ffffff/user-manual.png"/> Manual</a>
       <ul class="collapse list-unstyled" id="homeSubmenu11">
         <li>
           <a href="javascript:void(0)" routerLink="/manual">Job Description Manual</a>
@@ -36,8 +36,23 @@
         </li>
       </ul>
     </li>
-    <li><a routerLink="/requlations">Work Place Regulations</a></li>
-    <li><a routerLink="/events">Events & Photos</a></li>
+    <li><a routerLink="/requlations"><img src="https://img.icons8.com/dotty/24/ffffff/people-working-together.png"/> Work Place Regulations</a></li>
+    <li><a routerLink="/events" class="nav-link disabled"><img src="https://img.icons8.com/ios/24/ffffff/event-accepted.png"/> Events & Photos</a></li>
+    <hr>
+    <li>
+      <a href="#homeSubmenu111" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/ios/24/ffffff/user-manual.png"/> My Space</a>
+      <ul class="collapse list-unstyled" id="homeSubmenu111">
+        <li>
+          <a href="javascript:void(0)" routerLink="/notes">Notes</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" routerLink="/calender">Calender</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" routerLink="/todolist">To Do List</a>
+        </li>
+      </ul>
+    </li>
     </ul>
   </nav>
 
@@ -56,7 +71,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" routerLink="/" target="_blank">Website Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" routerLink="/">Website Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item" *ngFor="let uinfo of userinfo">
             <!--<a class="nav-link" href="javascriot:void(0)">{{ username }}</a>-->

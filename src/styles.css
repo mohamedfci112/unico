@@ -729,18 +729,12 @@ nav{
   width: 100%;
   height: auto;
 }
-.pin1,.pin2,.pin3,.pin4,.pin5{
+.pin1,.pin2,.pin3,.pin4,.pin5,.pin6,.pin7{
 width: 120px;
 height: auto;
 }
-.map .img-map .pin1{
-  position: absolute;
-  top: 9%;
-  cursor: pointer;
-  left: 30%;
-  transition: .5s;
-}
-.pin1_text,.pin2_text,.pin3_text,.pin4_text,.pin5_text{
+
+.pin1_text,.pin2_text,.pin3_text,.pin4_text,.pin5_text,.pin6_text,.pin7_text{
   position: absolute;
   opacity: 0;
   -webkit-transform: translate3d(0, -15px, 0);
@@ -752,11 +746,18 @@ height: auto;
   pointer-events: none;
   font-family: 'Allerta Stencil', sans-serif;
 }
+.map .img-map .pin1{
+  position: absolute;
+  top: 9%;
+  cursor: pointer;
+  left: 30%;
+  transition: .5s;
+}
 .map .img-map .pin1_text .card{
   width: 286px;
   z-index: 1;
-  left: 5%;
-  margin-top: 40%;
+  left: 0%;
+  margin-top: 0%;
 }
 .map .img-map .pin2{
   position: absolute;
@@ -768,8 +769,8 @@ height: auto;
 .map .img-map .pin2_text .card{
   width: 286px;
   z-index: 1;
-  margin-top: 25%;
-  left: 125%;
+  margin-top: 64%;
+  left: 10%;
 }
 .map .img-map .pin3{
   position: absolute;
@@ -795,7 +796,7 @@ height: auto;
   width: 286px;
   z-index: 1;
   margin-top: 6%;
-  left: 110%;
+  left: 0%;
 }
 .map .img-map .pin5{
   position: absolute;
@@ -807,8 +808,34 @@ height: auto;
 .map .img-map .pin5_text .card{
   width: 286px;
   z-index: 1;
-  margin-top: 80%;
+  margin-top: 0%;
   left: 60%;
+}
+.map .img-map .pin6{
+  position: absolute;
+  top: 5%;
+  cursor: pointer;
+  transition: .5s;
+  left: 52%;
+}
+.map .img-map .pin6_text .card{
+  width: 286px;
+  z-index: 1;
+  margin-top: 20%;
+  left: 143%;
+}
+.map .img-map .pin7{
+  position: absolute;
+  top: 13%;
+  cursor: pointer;
+  transition: .5s;
+  left: 13%;
+}
+.map .img-map .pin7_text .card{
+  width: 286px;
+  z-index: 1;
+  margin-top: 57%;
+  left: 24%;
 }
 .map .img-map .pin1:hover + .pin1_text{
   opacity: 1;
@@ -835,6 +862,18 @@ height: auto;
           transform: translate3d(0, 0, 0);
 }
 .map .img-map .pin5:hover + .pin5_text{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.map .img-map .pin6:hover + .pin6_text{
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.map .img-map .pin7:hover + .pin7_text{
   opacity: 1;
   visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);

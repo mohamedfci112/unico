@@ -40,7 +40,7 @@ export class SidebarComponent implements OnInit {
   // tslint:disable-next-line:typedef
 logout() {
     this.firebaseservice.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
   // tslint:disable-next-line:typedef
