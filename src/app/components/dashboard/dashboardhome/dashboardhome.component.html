@@ -1,3 +1,4 @@
+<!--
 <div *ngIf="announces?.length > 0;else noItems">
   <h1 class="text-center">Latest Announcments</h1>
   <div *ngFor="let announce of announces">
@@ -14,11 +15,57 @@
     </div>
   </div>
 </div>
+-->
+<div *ngIf="todoList?.length > 0;else noTodo" class="container todolimit">
+  <h1 class="text-center">Latest Your To Do List</h1>
+  <div class="row">
+    <div *ngFor="let todo of todoList" data-aos="fade-right" class="card-wrapper col-lg-4 col-md-6 col-sm-12">
+      <div class="card">
+      <div class="card-header">
+    </div>
+    <div data-aos="fade-down" class="content">
+      <h3>{{ todo.title }}</h3>
+      <p>{{ todo.description }}</p>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div *ngIf="calendarEvents?.length > 0;else noEvent" class="container cal_event">
+  <h1 class="text-center">Latest Your Calendar Events</h1>
+  <div class="row">
+    <div *ngFor="let event of calendarEvents" data-aos="fade-right" class="card-wrapper col-lg-4 col-md-6 col-sm-12">
+      <div class="card">
+        <h3>{{ event.text }}</h3>
+        <hr style="background-color: #58c7fa; width: 100%;">
+        <h4>From: {{ event.start }}</h4>
+        <br>
+        <h4>To: {{ event.end }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div *ngIf="announces?.length > 0;else noItems" class="container">
+  <h1 class="text-center">Latest Announcments</h1>
+  <div *ngFor="let announce of announces" class="all-ann">
+    <div class="go">
+      <div class="text-center">
+        <img src="../../../../assets/img/logo2.png" alt="unico" width="120px" height="auto">
+      </div>
+      <h2>{{ announce.title }}</h2>
+      <p>{{ announce.description }}</p>
+      <span>{{ announce.date }}</span>
+    </div>
+    <hr>
+  </div>
+</div>
 <hr>
 <div>
-  <h1 class="text-center">Photos & Events</h1>
+  <h1 class="text-center hidden">Photos & Events</h1>
 </div>
-<div class="row">
+<div class="row hidden">
   <div class="col-md-4 col-sm-12">
     <div class="feature-card" style="background-image: url(../../../../assets/img/about/about.jpg);">
       <div class="feature-card-tilte">
@@ -141,5 +188,13 @@
 </div>
 <ng-template #noItems>
   <hr>
-  <h5>There are no announcements now!</h5>
+  <h5>There Are No Announcements Till Now!</h5>
+</ng-template>
+<ng-template #noTodo>
+  <hr>
+  <h5>There Are No To Do List For You Till Now!</h5>
+</ng-template>
+<ng-template #noEvent>
+  <hr>
+  <h5>There Are No Calendar Events For You Till Now!</h5>
 </ng-template>

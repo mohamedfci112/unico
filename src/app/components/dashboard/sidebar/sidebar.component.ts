@@ -6,6 +6,8 @@ import { LogoutForm } from '../../../models/logoutForm';
 import { FireSQL } from 'firesql';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import { BnNgIdleService } from 'bn-ng-idle';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,8 +20,12 @@ export class SidebarComponent implements OnInit {
   logoutFormInfo: LogoutForm[];
   username;
   manager = false;
+  reportmanager = false;
+  reportshow = false;
+  hrreport = false;
+  loginDate;
 
-  constructor(public firebaseservice: FirebaseService, private router: Router) { }
+  constructor(public firebaseservice: FirebaseService, private router: Router, private bnIdle: BnNgIdleService) { }
 
   ngOnInit(): void {
   this.username = localStorage.getItem('email');
@@ -35,6 +41,63 @@ export class SidebarComponent implements OnInit {
   if (localStorage.getItem('name') === 'Khaled Farouk'){
     this.manager = true;
   }
+  if (localStorage.getItem('type') === 'manager'){
+    this.hrreport = true;
+  }
+  else if (localStorage.getItem('type') === 'hr'){
+    this.hrreport = true;
+  }
+  else{
+    this.hrreport = false;
+  }
+  if (localStorage.getItem('type') === 'manager'){
+    this.reportmanager = true;
+  }
+  else if (localStorage.getItem('type') === 'dmanager'){
+    this.reportmanager = true;
+  }
+  else{
+    this.reportmanager = false;
+  }
+  if (localStorage.getItem('depart') === 'hr'){
+    this.reportshow = true;
+  }
+  else if (localStorage.getItem('type') === 'manager'){
+    this.reportshow = true;
+  }
+  else if (localStorage.getItem('type') === 'dmanager'){
+    this.reportshow = true;
+  }
+  else{
+    this.reportshow = false;
+  }
+  this.sessionDay();
+  const timer = setInterval(() => {
+    this.sessionDay();
+    console.log('call session...');
+  }, 10000);
+  clearInterval(timer);
+
+  //
+  this.bnIdle.startWatching(3600).subscribe((isTimeout: boolean) => {
+    if (isTimeout) {
+      this.logout();
+    }
+  });
+  }
+  // tslint:disable-next-line:typedef
+  sessionDay(){
+    const today = new Date().toLocaleDateString();
+    this.loginDate = new Date(localStorage.getItem('loginDate')).toLocaleDateString();
+    if (today > this.loginDate){
+      this.finalLogout('Automatic logout after 1 day from log in');
+      localStorage.removeItem('user');
+      localStorage.removeItem('email');
+      localStorage.removeItem('loginDate');
+      localStorage.removeItem('depart');
+      localStorage.removeItem('name');
+      localStorage.removeItem('type');
+    }
   }
 
   // tslint:disable-next-line:typedef
@@ -46,7 +109,7 @@ logout() {
   // tslint:disable-next-line:typedef
 finalLogout(text: string) {
     this.firebaseservice.finalLogout(text);
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 
 }

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   // tslint:disable-next-line:typedef
   async onSignIn(email: string, password: string){
     await this.firebaseservice.signin(email, password);
-      if (this.firebaseservice.isLoggin){
+    if (this.firebaseservice.isLoggin){
         this.issignin = true;
         this.router.navigate(['/dashboardhome']);
       }

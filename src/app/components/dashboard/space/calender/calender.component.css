@@ -1,0 +1,12 @@
+.column-left {
+  width: 220px;
+  float: left;
+}
+
+.column-main {
+  margin-left: 220px;
+}
+
+.cal{
+  display: none;
+}

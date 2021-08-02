@@ -110,6 +110,7 @@ finalLogout(text: string){
     localStorage.removeItem('loginDate');
     localStorage.removeItem('depart');
     localStorage.removeItem('name');
+    localStorage.removeItem('type');
     this.item.email = '';
     this.item.todayDate = '';
     this.item.minWork = '';

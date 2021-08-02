@@ -1,1 +1,55 @@
-<p>calender works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" (click)="show1($event, text.value, start.value, end.value)" data-toggle="modal" data-target="#modalcalendar" class="btn btn-primary cal"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Note</button>
+      <!-- Modal -->
+      <div class="modal fade" id="modalcalendar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"><img src="https://img.icons8.com/material-outlined/24/000000/add.png"/> Add Event</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <form [formGroup]="form">
+            <div class="modal-body">
+              <h3>New Event</h3>
+              <div class="form-item">
+                <input formControlName="name" type="text" placeholder="Appointment Name" #text [(ngModel)] = "item.text" name="text"> <span
+                    *ngIf="!form.controls.name.valid">Event name required</span>
+            </div>
+            <div class="form-item">
+                <input formControlName="start" type="text" placeholder="Start" #start [(ngModel)] = "item.start" name="start"> <span
+                    *ngIf="!form.controls.start.valid">Invalid Event start</span>
+            </div>
+            <div class="form-item">
+                <input formControlName="end" type="text" placeholder="End" #end [(ngModel)] = "item.end" name="end"> <span
+                    *ngIf="!form.controls.end.valid">Invalid Event end</span>
+            </div>
+            </div>
+            <div class="modal-footer">
+              <div class="form-item">
+                <button id="save" (click)="submit()" [disabled]="!form.valid">Create</button>
+                &nbsp;
+                <button class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="column-left">
+  <daypilot-navigator [config]="navigatorConfig" [(date)]="calendarConfig.startDate"></daypilot-navigator>
+</div>
+<div class="column-main">
+  <daypilot-calendar #calendar [events]="events" [config]="calendarConfig" (viewChange)="viewChange()"></daypilot-calendar>
+</div>
+<!--
+<create-dialog #create (close)="createClosed($event)"></create-dialog>
+-->

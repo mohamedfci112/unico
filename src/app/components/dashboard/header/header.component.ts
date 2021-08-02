@@ -97,7 +97,7 @@ export class HeaderComponent implements OnInit {
     this.dateCalc();
     const d = new Date().toLocaleDateString();
     if (d > this.currDate){
-      this.reportDate = (this.currMonth.toString() + 1).concat('/', this.currYear.toString());
+      this.reportDate = ((this.currMonth + 1).toString()).concat('/', this.currYear.toString());
     }
     else{
       this.reportDate = (this.currMonth.toString()).concat('/', this.currYear.toString());

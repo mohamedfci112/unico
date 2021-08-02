@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" data-toggle="modal" data-target="#modalnotes" class="btn btn-primary"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Note</button>
+      <!-- Modal -->
+      <div class="modal fade" id="modalnotes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"><img src="https://img.icons8.com/material-outlined/24/000000/add.png"/> Add New Note</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form (ngSubmit)="onSubmit()">
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Add Note</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)] = "item.text" name="text"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save Note</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let note of notes" class="col-md-3 col-sm-12">
+      <div class="noteHolder">
+        <input type="checkbox" id="fold1">
+        <div class="note rounded">
+         <textarea id="note-1" [(ngModel)] = "note.text" name="text" disabled>{{ note.text }}</textarea>
+        </div>
+          <div class="action">
+            <button (click)="deleteNotes($event, note)" type="button" class="btn btn-del"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

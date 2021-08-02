@@ -6,7 +6,6 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 // import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,6 +13,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DataService} from './services/data.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DayPilotModule} from 'daypilot-pro-angular';
+import {HttpClientModule} from '@angular/common/http';
+import { BnNgIdleService } from 'bn-ng-idle';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -63,15 +67,21 @@ import { CalenderComponent } from './components/dashboard/space/calender/calende
 import { TodolistComponent } from './components/dashboard/space/todolist/todolist.component';
 import { TaskComponent } from './components/dashboard/space/task/task.component';
 import { TaskDialogComponent } from './components/dashboard/space/task-dialog/task-dialog.component';
+import { OverviewComponent } from './components/norm/overview/overview.component';
+import { SpoolermachineComponent } from './components/norm/technology/spoolermachine/spoolermachine.component';
+import { NorminatorComponent } from './components/norm/technology/norminator/norminator.component';
+import { RdmComponent } from './components/norm/technology/rdm/rdm.component';
+import { PumpssafeComponent } from './components/norm/technology/pumpssafe/pumpssafe.component';
+import { OnsiteComponent } from './components/environmental/onsite/onsite.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'wastewatertreatment', component : WatertreatmentComponent },
   { path: 'login', component : LoginComponent },
   { path: 'incenerator', component : InceneratorComponent },
+  { path: 'onsite_treatment', component : OnsiteComponent },
   { path: 'bioRemediation', component : BioremediationComponent },
   { path: 'environmentalstudies', component : EnvironmentalstudiesComponent },
-  { path: 'norm', component : NormComponent },
   { path: 'lifting/supply', component : SupplyComponent },
   { path: 'lifting/about_inspection', component : AboutinspectionComponent },
   { path: 'lifting/inspection_list', component : InspectionlistComponent },
@@ -103,6 +113,12 @@ const routes: Routes = [
   { path: 'notes', component : NotesComponent, canActivate: [AuthGuardService] },
   { path: 'calender', component : CalenderComponent, canActivate: [AuthGuardService] },
   { path: 'todolist', component : TodolistComponent, canActivate: [AuthGuardService] },
+  { path: 'norm_overview', component : OverviewComponent },
+  { path: 'norm_spooler_machine', component : SpoolermachineComponent },
+  { path: 'norminator', component : NorminatorComponent },
+  { path: 'norm_rdm', component : RdmComponent },
+  { path: 'norm_pumps_safe', component : PumpssafeComponent },
+  { path: 'norm_safety', component : NormComponent },
 
 ];
 
@@ -152,7 +168,13 @@ const routes: Routes = [
     CalenderComponent,
     TodolistComponent,
     TaskComponent,
-    TaskDialogComponent
+    TaskDialogComponent,
+    OverviewComponent,
+    SpoolermachineComponent,
+    NorminatorComponent,
+    RdmComponent,
+    PumpssafeComponent,
+    OnsiteComponent
   ],
   imports: [
     BrowserModule,
@@ -161,6 +183,7 @@ const routes: Routes = [
     IvyCarouselModule,
     // PdfViewerModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyCphx7ds-VDViVmQTZSQYwsK9vmYAbU8JA',
@@ -177,9 +200,11 @@ const routes: Routes = [
     MatIconModule,
     MatDialogModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DayPilotModule,
+    HttpClientModule
   ],
-  providers: [FirebaseService, AnnouncementService],
+  providers: [FirebaseService, AnnouncementService, DataService, BnNgIdleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

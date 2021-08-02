@@ -7,6 +7,14 @@ h1{
   text-align: center;
   font-family: 'Allerta Stencil', sans-serif;
   text-transform: uppercase;
+  margin-bottom: 15px;
+}
+h5{
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+  color: #bf1e2d;
 }
 .page-content {
   display: grid;
@@ -32,7 +40,7 @@ h1{
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0rem;
   width: 100%;
   text-align: center;
   color: black;
@@ -41,7 +49,7 @@ h1{
 }
 @media (min-width: 600px) {
   .card {
-    height: 200px;
+    height: 220px;
   }
 }
 .card:before {
@@ -80,7 +88,10 @@ h1{
   z-index: 1;
 }
 .content > * + * {
-  margin-top: 1rem;
+  margin-top: 0rem;
+}
+.content button{
+  margin-bottom: 5px;
 }
 
 .title {

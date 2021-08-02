@@ -26,11 +26,25 @@ app-new-task {
   opacity: 0.2;
 }
 .todo .list{
-background: #10ff006e;
+background: #bf1e2db0;
+color: white;
+font-family: 'Allerta Stencil', sans-serif;
 }
 .inprog .list{
-  background: #00c4ff7d;
+  background: #1c3261bf;
+  color: white;
+  font-family: 'Allerta Stencil', sans-serif;
 }
 .done .list{
-  background: #ff00006b;
+  background: #212529bf;
+  color: white;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+h2{
+  font-weight: bolder;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+}
+app-task{
+  word-break: break-all!important;
 }

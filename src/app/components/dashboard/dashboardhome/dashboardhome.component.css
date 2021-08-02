@@ -4,7 +4,9 @@ h1{
   text-align: center;
   font-family: 'Allerta Stencil', sans-serif;
   text-transform: uppercase;
+  margin-bottom: 3%;
 }
+/*
 .card{
   margin-bottom: 10px;
 }
@@ -19,6 +21,81 @@ h1{
   font-weight: 500;
   font-family: 'Cairo';
 }
+*/
+/***********/
+.go{
+width: 100%;
+background-color: #dddddd85;
+padding: 10px;
+position: relative;
+border-radius: 10px;
+box-shadow: 4px 13px 27px 1px rgb(0 0 0 / 23%);
+transition: all 0.5s linear;
+overflow: hidden;
+}
+
+.go img{
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  top: -15px;
+  background-color: #3131a5;
+}
+.go:hover{
+background-color: #e9e9f1;
+transition: all 0.5s linear;
+
+}
+.go::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 9%;
+  height: 20%;
+  background-color: #3131a5;
+  color: #fff;
+  border-radius: 10px;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+.go::after{
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  width: 9%;
+  height: 20%;
+  background-color: #bf1e2d;
+  color: #fff;
+  border-radius: 10px;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+.go h2{
+  border-bottom: 2px solid #c3bcbc;
+  padding-bottom: 5px;
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #bf1e2d;
+}
+.go p {
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Cairo';
+  border-bottom: 2px solid #c3bcbc;
+  text-align: justify;
+}
+.go span{
+  text-align: center;
+}
+
 /*********/
 a:hover { text-decoration: none }
 
@@ -97,4 +174,159 @@ a:hover { text-decoration: none }
 
 .feature-card:hover .feature-card-deatails {
     bottom: 0;
+}
+.hidden{
+  display: none;
+}
+/*******latest todo list********/
+.todolimit .card-wrapper {
+  height: 380px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #C0C0C0;
+  background: white;
+  overflow-y: auto;
+}
+.todolimit .card-wrapper::-webkit-scrollbar{
+  width: .4em;
+}
+.todolimit .card-wrapper::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.todolimit .card-wrapper::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+}
+.todolimit .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  margin-top: -80px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+   box-shadow: 10px 10px 30px #250f10,
+             -10px -10px 30px #331516;
+  transition: all .4s ease;
+  background-image: url('https://wallpaperaccess.com/full/1489353.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.todolimit .card .content{
+  position: absolute;
+  top: 100%;
+}
+.todolimit .card .content h3{
+  margin-top: 30px;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+.todolimit .card .content p{
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 20px;
+}
+.todolimit .card:hover {
+  transform: scale(1.1);
+}
+.todolimit .card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  transition: all .4s ease;
+}
+/********calendar limit ********/
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+.cal_event .card {
+  background: #191c29;
+  width: 100%;
+  height: 350px;
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 100%);
+  cursor: pointer;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+.cal_event .card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.cal_event .card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.cal_event .card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.cal_event .card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }

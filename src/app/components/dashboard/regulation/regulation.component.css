@@ -1,23 +1,33 @@
 * {
   box-sizing: border-box;
 }
+.reg{
+  position: relative;
+  top: 8%;
+}
 h1{
   font-weight: bolder;
   font-size: 40px;
   text-align: center;
   font-family: 'Allerta Stencil', sans-serif;
   text-transform: uppercase;
-  margin-top: 2%;
-
+  margin-bottom: 15px;
+}
+h5{
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+  color: #bf1e2d;
 }
 .page-content {
   display: grid;
   grid-gap: 1rem;
   padding: 1rem;
-  max-width: 1024px;
+  max-width: 100%;
   margin: 0 auto;
   font-family: var(--font-sans);
-  margin-top: 5%;
+  margin-top: 3%;
 }
 @media (min-width: 600px) {
   .page-content {
@@ -35,7 +45,7 @@ h1{
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0rem;
   width: 100%;
   text-align: center;
   color: black;
@@ -44,7 +54,7 @@ h1{
 }
 @media (min-width: 600px) {
   .card {
-    height: 200px;
+    height: 220px;
   }
 }
 .card:before {
@@ -83,7 +93,7 @@ h1{
   z-index: 1;
 }
 .content > * + * {
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 
 .title {

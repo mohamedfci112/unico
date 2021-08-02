@@ -1,0 +1,298 @@
+.norm{
+    margin-top: -48px;
+  }
+  .norm-header{
+    background: url(../../../../assets/img/norm/norm-back.jpg) fixed center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+  }
+  .norm-header .text{
+    height: 100%;
+    width: 100%;
+    background-color: #000000af;
+  }
+  .norm .norm-header .text .title{
+    position: absolute;
+    margin-top: 20%;
+    color: white;
+    left: 14%;
+  }
+  .norm .norm-header .text .title h1{
+    font-size: 60px;
+    font-weight: 800;
+    font-family: 'Gugi', cursive;
+
+  }
+  .norm .norm-content{
+    background: url(../../../../assets/img/state-shape-bg.png) fixed center center;
+    background-size: cover;
+  }
+  .norm .norm-content .title{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .norm .norm-content .title h3{
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    color: #212529;
+    text-align: center;
+  }
+  .overview{
+    margin-top: 50px;
+  }
+
+  .norm .norm-content .content{
+    margin-bottom: 20px;
+  }
+  .norm .norm-content .content .img{
+    width:100%;
+    height: auto;
+  }
+  .norm .norm-content .content .text p{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Cairo', sans-serif;
+  }
+  .s{
+    line-height: 2;
+  }
+  .norm .norm-content .content .img img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+/************************history timeline****************************************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.main-timeline {
+  font-family: "Poppins", sans-serif;
+}
+.main-timeline:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.main-timeline .timeline {
+  width: calc(50% + 58px);
+  border-top: 2px solid #404247;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+.main-timeline .timeline a {
+  text-decoration: none;
+}
+.main-timeline .timeline:before {
+  content: "";
+  background: #404247;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  position: absolute;
+  top: -5px;
+  right: 0;
+}
+.main-timeline .timeline-content {
+  color: #404247;
+  text-align: center;
+  padding: 15px 80px 15px 10px;
+  display: block;
+  position: relative;
+}
+.main-timeline .timeline-content:hover {
+  text-decoration: none;
+}
+.main-timeline .timeline-content:before {
+  content: "";
+  background: #1a2628;
+  width: 15px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+.main-timeline .timeline-year {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 700;
+  transform: translateY(-50%) rotate(90deg);
+  position: absolute;
+  top: 50%;
+  right: -15px;
+}
+.main-timeline .title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.main-timeline .description {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+}
+.main-timeline .timeline:nth-child(even) {
+  float: right;
+}
+.main-timeline .timeline:nth-child(even):before {
+  right: auto;
+  left: 0;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content {
+  padding: 15px 10px 15px 80px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:before {
+  right: auto;
+  left: 51px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-year {
+  right: auto;
+  left: -15px;
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before {
+  background: #bf1e2d;
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before {
+  background: #1c3261;
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before {
+  background: #202e31;
+}
+
+@media screen and (max-width: 767px) {
+  .main-timeline .timeline {
+    width: 100%;
+  }
+}
+
+/****************************************************************/
+
+  /*
+  .cen-cards{
+    margin-bottom: 20px;
+  }
+  .norm .flex {
+  }
+
+  .norm .card .header img {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .norm .card {
+    margin-left: 10px;
+    width: 100%;
+    height: 650px;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #FAFAFA;
+    box-shadow: 0 19px 48px rgba(0, 0, 0, 0.3), 0 15px 32px rgba(0, 0, 0, 0.22);
+  }
+
+  .norm .card .header {
+    height: 55%;
+    width: 100%;
+    background-color: #4426a8;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  }
+  .norm .one .header{
+    background: url("./assets/img/norm/normservices.jpeg") center center;
+    background-size: cover;
+  }
+  .norm .two .header{
+    background: url("./assets/img/norm/normtechnique.jpeg") right center;
+    background-size: cover;
+  }
+  .norm .card .header.collapse {
+    height: 0px;
+  }
+  .norm .card .header .title {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 15px;
+  }
+  .norm .card .header .title h1 {
+    margin: 0px;
+    font-size: xx-large;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #0000009e;
+  }
+  .norm .card .header .title h6 {
+    font-size: 16px;
+    color: #644cad;
+    margin: 0;
+  }
+  .norm .card .header .title h6 span {
+    color: #FFF;
+  }
+
+  .norm .card .content {
+    height: 70%;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #FAFAFA;
+    overflow-y: auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  }
+  .norm .card .content .nested{
+    padding-left: 40px;
+    margin-top: 7px;
+  }
+  .norm .card .content .nested img{
+    padding-right: 4px;
+  }
+  .norm .card .content h3{
+    text-align: center;
+    margin-top: 5px;
+  }
+  .norm .card .content ul{
+    list-style: none;
+    padding: 15px
+  }
+  .norm .card .content ul li{
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .norm .card .content ul li::before{
+    content: "";
+    background-image: url(./assets/img/list-icon.png);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.1rem;
+    margin-right: 0.2rem;
+  }
+  .norm .card .content::-webkit-scrollbar{
+    width: .5em;
+  }
+  .norm .card .content::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+  }
+  .norm .card .content::-webkit-scrollbar-thumb{
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 20px;
+  }
+  .norm .card .content.full {
+    height: 600px;
+    overflow-y: scroll;
+  }
+*/

@@ -1,3 +1,6 @@
+.normlist{
+  margin-left: 18px;
+}
 @media (max-width: 991px) {
   .navbar-brand img{
     display: block;

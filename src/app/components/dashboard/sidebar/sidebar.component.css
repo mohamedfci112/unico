@@ -35,7 +35,13 @@ a:focus {
 }
 .navbar-nav .nav-item{
   margin-right: 5%;
-    margin-left: 5%;
+  margin-left: 5%;
+  min-width: 20%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.bg-dark img{
+  width: auto;
 }
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -54,8 +60,9 @@ a:focus {
     background: #202E31;
     color: #fff;
     transition: all 0.3s;
-     width: 100%; 
+     width: 100%;
      margin-left: 0;
+     text-transform: uppercase;
 }
 
 #sidebar.active {
@@ -147,6 +154,8 @@ a.article:hover {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
+    background: url("https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?size=626&ext=jpg") fixed center center;
+  background-size: cover;
 }
 
 /* ---------------------------------------------------

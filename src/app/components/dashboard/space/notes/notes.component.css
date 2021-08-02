@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+*
+{
+  box-sizing: border-box;
+}
+
+.noteHolder {
+  position:relative;
+  display:inline-block;
+ width: 100%;
+  height: 12em;
+  font-family: 'Handlee', cursive;
+  margin:15px;
+  cursor: all-scroll;
+  z-index:600;
+  overflow:hidden;
+/* 	box-shadow: 0px 0px 10px 2px #00000010; */
+}
+.noteHolder input[type="checkbox"] {
+  position:absolute;
+  z-index:0;
+  width:12em;
+  height:12em;
+  opacity:0;
+  cursor:pointer;
+  marign:0;
+  padding:0;
+}
+.note {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #4c4e67;
+  overflow: hidden;
+  padding:0;
+  font-size:16px;
+  background: #202e31;
+}
+
+
+.note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #fff0 #fff0 #ffffffe6 #ffffffe6;
+  background: #fff;
+  -webkit-box-shadow:0px 0px 15px 4px #0c0f4180;
+  -moz-box-shadow: 0px 0px 15px 4px #0c0f4180;
+  box-shadow: 0px 0px 15px 4px #0c0f4180;
+  /* Firefox 3.0 damage limitation */
+  display: block;
+  width: 0;
+}
+.note.rounded {
+  -moz-border-radius: 5px 0 5px 5px;
+  border-radius: 5px 36px 5px 5px;
+}
+
+.note.rounded:before {
+  border-width: 12px;
+  border-color: #fff #fff transparent transparent;
+  -moz-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+  transition: border .4s ease-in;
+}
+#fold1:checked + .note.rounded::before
+{
+  border-width: 100px;
+  box-shadow:none;
+  animation: folding .4s;
+  animation-delay: .4s;
+}
+/* @keyframes folding{
+  0%{
+    border-color: #fff #fff transparent transparent;
+  }
+  40%{
+    border-color: #fff #fff #fff transparent;
+  }
+  100%{
+    border-color: #fff;
+  }
+} */
+.note textarea
+{
+  border:none;
+  background-color:transparent;
+  width:100%;
+  height:100%;
+  resize: none;
+  font-family: 'Handlee', cursive;
+  margin:0px;
+  padding:10px;
+  color: #fff;
+  font-size:20px;
+}
+.note textarea:focus
+{
+  outline:none;
+}
+.btn
+{
+  box-shadow:none;
+  cursor:pointer;
+}
+.btn:focus
+{
+  outline:none;
+}
+.btn-edit
+{
+  background-color:#fff;
+  border:none;
+  color:#1c7fff;
+  padding:0px;
+  margin: 5px 2px;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+	box-shadow: 0px 0px 10px 5px #0c0f411a;
+}
+.btn-del
+{
+  background-color:#fff;
+  border:none;
+  color:#fd1f1f;
+  padding:0px;
+  margin: 5px 2px;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+	box-shadow: 0px 0px 10px 5px #0c0f411a;
+}
+.noteHolder .action
+{
+  position: absolute;
+  right: 0px;
+  left: 0;
+  bottom: 0px;
+  text-align:right;
+  padding: 0 5px;
+  transition: all  .4s;
+}
+.colors
+{
+  display:flex;
+  width:100%;
+  height:0px;
+  padding:0px;
+  background-color:#fff;
+  flex-wrap:wrap;
+  transition: height .3s;
+}
+.colors.act
+{
+  height:30px;
+  padding: 5px 0;
+	box-shadow: 0px 0px 10px 5px #0c0f411a;
+}
+.colors div
+{
+  display:block;
+  flex:1;
+  height:100%;
+  margin: 0 5px;
+  cursor:pointer;
+}
+.colors div:first-child,.note.note-yellow
+{
+  background-color:#f1e000;
+}
+.colors div:nth-child(2),.note.note-green
+{
+  background-color:#63d816;
+}
+.colors div:nth-child(3),.note.note-levendor
+{
+  background-color:#bb38f5;
+}
+.colors div:last-child,.note.note-orange
+{
+  background-color:#f18e00;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(96,57,224, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(96,57,224, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(96,57,224, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(96,57,224, 0.4);
+    box-shadow: 0 0 0 0 rgba(96,57,224, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(96,57,224, 0);
+      box-shadow: 0 0 0 10px rgba(96,57,224, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(96,57,224, 0);
+      box-shadow: 0 0 0 0 rgba(96,57,224, 0);
+  }
+}

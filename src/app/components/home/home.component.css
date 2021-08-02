@@ -1,3 +1,6 @@
+.txt{
+  top: 20px;
+}
 @media (min-width: 320px) and (max-width: 480px){
   .slider{
     margin-top: 0;
@@ -66,16 +69,11 @@
   .map .text h3{
     font-size: 35px;
   }
-  .pin1, .pin2, .pin3, .pin4, .pin5{
-    width: 80px;
+  .txt{
+    top: -200px;
   }
-  .map .img-map .img{
-    width: 100%;
-    height: auto;
-  }
-  .map .img-map .card{
-    left: 1%;
-    z-index: 2;
+  .pin1, .pin2, .pin3, .pin4, .pin5, .pin6, .pin7{
+    width: 24px;
   }
   .map .img-map .card .card-body{
     padding: 5px;
@@ -84,43 +82,45 @@
     font-size: 20px;
   }
   .map .img-map .pin1{
-    top: 5%;
-    left: 30%;
+    top: 16%;
+    left: 38%;
   }
   .map .img-map .pin1_text .card{
-    margin-top: 29%;
-    width: 70%;
+    margin-top: 75%;
   }
   .map .img-map .pin2{
-    top: 8%;
-  }
-  .map .img-map .pin2_text .card{
-    width: 70%;
-    margin-top: 40%;
-  }
-  .map .img-map .pin4{
-    top: 2%;
-    left: 39%;
-  }
-  .map .img-map .pin4_text .card{
-    width: 70%;
-    margin-top: 40%;
-  }
-  .map .img-map .pin5{
-    top:15%
-  }
-  .map .img-map .pin5_text .card{
-    margin-top: 40%;
-    width: 70%;
-  }
-  .map .img-map .pin3{
     top: 13%;
   }
-  .map .img-map .pin3_text .card{
-    margin-top: 40%;
-    width: 70%;
+  .map .img-map .pin2_text .card{
+    margin-top: 75%;
   }
-  .carousel-caption{
+  .map .img-map .pin4{
+    top: 11%;
+    left: 44%;
+  }
+  .map .img-map .pin4_text .card{
+    margin-top: 75%;
+  }
+  .map .img-map .pin5{
+    top:20%
+  }
+  .map .img-map .pin5_text .card{
+    margin-top: 65%;
+  }
+  .map .img-map .pin6{
+    top:12%
+  }
+  .map .img-map .pin6_text .card{
+    margin-top: 75%;
+  }
+  .map .img-map .pin3{
+    top: 19%;
+    left: 65%;
+  }
+  .map .img-map .pin3_text .card{
+    margin-top: 65%;
+    left: 90%
+  }  .carousel-caption{
     bottom: 80px;
   }
   .carousel-caption h3{
@@ -206,16 +206,11 @@
   .map .text h3{
     font-size: 35px;
   }
-  .pin1, .pin2, .pin3, .pin4, .pin5{
-    width: 90px;
+  .txt{
+    top: -100px;
   }
-  .map .img-map .img{
-    width: 100%;
-    height: auto;
-  }
-  .map .img-map .card{
-    left: 1%;
-    z-index: 2;
+  .pin1, .pin2, .pin3, .pin4, .pin5, .pin6, .pin7{
+    width: 30px;
   }
   .map .img-map .card .card-body{
     padding: 5px;
@@ -224,41 +219,44 @@
     font-size: 20px;
   }
   .map .img-map .pin1{
-    top: 8%;
-    left: 30%;
+    top: 19%;
+    left: 38%;
   }
   .map .img-map .pin1_text .card{
-    margin-top: 29%;
-    width: 80%;
+    margin-top: 75%;
   }
   .map .img-map .pin2{
-    top: 10%;
-  }
-  .map .img-map .pin2_text .card{
-    width: 80%;
-    margin-top: 40%;
-  }
-  .map .img-map .pin4{
-    top: 5%;
-    left: 39%;
-  }
-  .map .img-map .pin4_text .card{
-    width: 80%;
-    margin-top: 40%;
-  }
-  .map .img-map .pin5{
-    top:18%
-  }
-  .map .img-map .pin5_text .card{
-    margin-top: 40%;
-    width: 80%;
-  }
-  .map .img-map .pin3{
     top: 16%;
   }
+  .map .img-map .pin2_text .card{
+    margin-top: 75%;
+  }
+  .map .img-map .pin4{
+    top: 13%;
+    left: 44%;
+  }
+  .map .img-map .pin4_text .card{
+    margin-top: 75%;
+  }
+  .map .img-map .pin5{
+    top:23%
+  }
+  .map .img-map .pin5_text .card{
+    margin-top: 65%;
+  }
+  .map .img-map .pin6{
+    top:14%
+  }
+  .map .img-map .pin6_text .card{
+    margin-top: 75%;
+  }
+  .map .img-map .pin3{
+    top: 25%;
+    left: 65%;
+  }
   .map .img-map .pin3_text .card{
-    margin-top: 40%;
-    width: 80%;
+    margin-top: 65%;
+    left: 90%
   }
   .carousel-caption h3{
     font-size: 35px;
@@ -344,16 +342,8 @@
   .map .text h3{
     font-size: 35px;
   }
-  .pin1, .pin2, .pin3, .pin4, .pin5{
-    width: 90px;
-  }
-  .map .img-map .img{
-    width: 100%;
-    height: auto;
-  }
-  .map .img-map .card{
-    left: 1%;
-    z-index: 2;
+  .pin1, .pin2, .pin3, .pin4, .pin5, .pin6, .pin7{
+    width: 30px;
   }
   .map .img-map .card .card-body{
     padding: 5px;
@@ -362,37 +352,47 @@
     font-size: 20px;
   }
   .map .img-map .pin1{
-    top: 12%;
-    left: 33%;
+    top: 20%;
+    left: 38%;
   }
   .map .img-map .pin1_text .card{
-    margin-top: 55%;
+    margin-top: 75%;
   }
   .map .img-map .pin2{
-    top: 12%;
+    top: 18%;
   }
   .map .img-map .pin2_text .card{
-    margin-top: 50%;
+    margin-top: 75%;
   }
   .map .img-map .pin4{
-    top: 9%;
-    left: 39%;
+    top: 15%;
+    left: 44%;
   }
   .map .img-map .pin4_text .card{
-    margin-top: 46%;
+    margin-top: 75%;
   }
   .map .img-map .pin5{
     top:25%
   }
   .map .img-map .pin5_text .card{
-    margin-top: 60%;
+    margin-top: 65%;
+  }
+  .map .img-map .pin6{
+    top:16%
+  }
+  .map .img-map .pin6_text .card{
+    margin-top: 75%;
   }
   .map .img-map .pin3{
-    top: 23%;
-    left: 59%;
+    top: 28%;
+    left: 65%;
   }
   .map .img-map .pin3_text .card{
-    margin-top: 70%;
+    margin-top: 65%;
+    left: 90%
+  }
+  .map .text .head span{
+    font-size: 17px;
   }
   .carousel-caption h3{
     font-size: 38px;
@@ -444,11 +444,14 @@
   .client .title h3{
     font-size: 55px;
   }
+  .txt{
+    top: 0px;
+  }
   .map .text h3{
     font-size: 44px;
   }
-  .pin1, .pin2, .pin3, .pin4, .pin5{
-    width: 105px;
+  .pin1, .pin2, .pin3, .pin4, .pin5, .pin6, .pin7{
+    width: 30px;
   }
   .map .img-map .card .card-body{
     padding: 5px;
@@ -457,42 +460,50 @@
     font-size: 20px;
   }
   .map .img-map .pin1{
-    top: 8%;
-    left: 30%;
+    top: 19%;
+    left: 38%;
   }
   .map .img-map .pin1_text .card{
-    margin-top: 55%;
+    margin-top: 75%;
   }
   .map .img-map .pin2{
-    top: 8%;
+    top: 18%;
   }
   .map .img-map .pin2_text .card{
-    margin-top: 20%;
-    left: 106%;
+    margin-top: 75%;
   }
   .map .img-map .pin4{
-    top: 5%;
-    left: 36%;
+    top: 14%;
+    left: 44%;
   }
   .map .img-map .pin4_text .card{
-    margin-top: 46%;
+    margin-top: 75%;
   }
   .map .img-map .pin5{
-    top:21%
+    top:25%
   }
   .map .img-map .pin5_text .card{
     margin-top: 65%;
   }
+  .map .img-map .pin6{
+    top:15%
+  }
+  .map .img-map .pin6_text .card{
+    margin-top: 75%;
+  }
   .map .img-map .pin3{
-    top: 19%;
-    left: 57%;
+    top: 25%;
+    left: 65%;
   }
   .map .img-map .pin3_text .card{
     margin-top: 65%;
-    left: 106%
+    left: 90%
   }
   .map .text .head span{
     font-size: 17px;
+  }
+  .map .head{
+    margin-bottom: 8px;
   }
   .carousel-caption h3{
     font-size: 40px;
@@ -528,5 +539,6 @@
     position: relative;
     margin-top: 20%;
   }
-  
+
 }
+
