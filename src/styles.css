@@ -1577,6 +1577,10 @@ header .footer-wave {
   background: url("./assets/img/environment/incinerator/abuRdis.jpeg") right center;
   background-size: cover;
 }
+.cen .three .header{
+  background: url("./assets/img/environment/onsite/assad.jpeg") right center;
+  background-size: cover;
+}
 
 .cen .card .header.collapse {
   height: 0px;

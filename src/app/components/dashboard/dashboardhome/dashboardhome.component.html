@@ -16,51 +16,67 @@
   </div>
 </div>
 -->
-<div *ngIf="todoList?.length > 0;else noTodo" class="container todolimit">
-  <h1 class="text-center">Latest Your To Do List</h1>
+<section class="container">
   <div class="row">
-    <div *ngFor="let todo of todoList" data-aos="fade-right" class="card-wrapper col-lg-4 col-md-6 col-sm-12">
-      <div class="card">
-      <div class="card-header">
+    <div class="col-md-6 todo">
+      <div class="content" *ngIf="todoList?.length > 0;else noTodo">
+        <div class="todo-title">
+          <h3><img src="https://img.icons8.com/ios/40/3131a5/reminders.png" alt="unico"> To Do List</h3>
+        </div>
+        <div class="todo-content">
+          <div style="margin:10px">
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let item of todoList">
+                {{item.title}}
+                <span class="hover-cursor pull-right" [class.text-success]="item.isChecked" (click)="alterCheck($key,item)">
+                  <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+                </span>
+              </li>
+            </ul>
+            <span class="alert alert-danger" style="color: #bf1e2d;font-size: 15px;">*Point will not be visible on dashboard once checked!</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div data-aos="fade-down" class="content">
-      <h3>{{ todo.title }}</h3>
-      <p>{{ todo.description }}</p>
-    </div>
-    </div>
-    </div>
-  </div>
-</div>
-<hr>
-<div *ngIf="calendarEvents?.length > 0;else noEvent" class="container cal_event">
-  <h1 class="text-center">Latest Your Calendar Events</h1>
-  <div class="row">
-    <div *ngFor="let event of calendarEvents" data-aos="fade-right" class="card-wrapper col-lg-4 col-md-6 col-sm-12">
-      <div class="card">
-        <h3>{{ event.text }}</h3>
-        <hr style="background-color: #58c7fa; width: 100%;">
-        <h4>From: {{ event.start }}</h4>
-        <br>
-        <h4>To: {{ event.end }}</h4>
+    <div class="col-md-6 calendr">
+      <div class="content" *ngIf="calendarEvents?.length > 0;else noEvent">
+        <div class="cal-title">
+          <h3><img src="https://img.icons8.com/ios/40/3131a5/timeline-week.png" alt="unico"> Calendar Events</h3>
+        </div>
+        <div class="cal-content">
+          <div style="margin:10px">
+            <ul class="list-group">
+              <li class="list-group-item row" *ngFor="let item of calendarEvents">
+                <div class="part-one col-md-12">
+                  <div class="row">
+                    <h3 class="col-md-6" style="color: #bf1e2d;">{{ validDateFormat(item.start) | date: 'EEEE' }}</h3>
+                    <h3 class="col-md-6">{{ validDateFormat(item.start) | date: 'longDate' }}</h3>
+                  </div>
+                </div>
+                <h3 class="part-two col-md-12"> {{item.text}} at  <span style="color: #bf1e2d;">{{ validDateFormat(item.start) | date: 'shortTime' }}</span></h3>
+              </li>
+            </ul>
+            <span class="alert alert-danger" style="color: #bf1e2d;font-size: 15px;">*If you want to delete an event go to <a routerLink="/calender">calendar page</a></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 <hr>
-<div *ngIf="announces?.length > 0;else noItems" class="container">
-  <h1 class="text-center">Latest Announcments</h1>
-  <div *ngFor="let announce of announces" class="all-ann">
-    <div class="go">
-      <div class="text-center">
-        <img src="../../../../assets/img/logo2.png" alt="unico" width="120px" height="auto">
+<section class="container">
+  <div *ngIf="announces?.length > 0;else noItems" class="all-annou">
+    <h1 class="text-center"><img src="https://img.icons8.com/ios/50/3131a5/commercial.png"/> Latest Announcments</h1>
+    <div *ngFor="let announce of announces" class="all-ann">
+      <div class="go">
+        <h2><img src="https://img.icons8.com/ios/30/3131a5/loudspeaker.png"/> {{ announce.title }}</h2>
+        <p>{{ announce.description }}</p>
+        <span>{{ announce.date }}</span>
       </div>
-      <h2>{{ announce.title }}</h2>
-      <p>{{ announce.description }}</p>
-      <span>{{ announce.date }}</span>
+      <hr>
     </div>
-    <hr>
   </div>
-</div>
+</section>
 <hr>
 <div>
   <h1 class="text-center hidden">Photos & Events</h1>
@@ -188,13 +204,13 @@
 </div>
 <ng-template #noItems>
   <hr>
-  <h5>There Are No Announcements Till Now!</h5>
+  <h5 class="noo">There Are No Announcements Till Now!</h5>
 </ng-template>
 <ng-template #noTodo>
   <hr>
-  <h5>There Are No To Do List For You Till Now!</h5>
+  <h5 class="noo">There Are No To Do List For You Till Now!<br><a href="javascript:void(0);" routerLink="/todolist">Create Your Todo List Now</a></h5>
 </ng-template>
 <ng-template #noEvent>
   <hr>
-  <h5>There Are No Calendar Events For You Till Now!</h5>
+  <h5 class="noo">There Are No Calendar Events For You Till Now!<br><a href="javascript:void(0);" routerLink="/calender">Add First Event Now</a></h5>
 </ng-template>

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnouncementService } from '../../../services/announcement.service';
 import { CalendarService } from '../../../services/calendar.service';
+import { TodoService } from '../../../services/todo.service';
 import { Announce } from '../../../models/announce';
 import { Calendar } from '../../../models/calendar';
+import { Todo } from '../../../models/todo';
 import { Task } from '../../../components/dashboard/space/task/task';
 
 @Component({
@@ -13,10 +15,23 @@ import { Task } from '../../../components/dashboard/space/task/task';
 export class DashboardhomeComponent implements OnInit {
   announces: Announce[];
   calendarEvents: Calendar[];
-  todoList: Task[];
+  todoList: Todo[];
 
-  constructor(private announcServices: AnnouncementService, private cal: CalendarService) { }
+  constructor(private announcServices: AnnouncementService, private cal: CalendarService, private todoServices: TodoService) { }
 
+  // tslint:disable-next-line:typedef
+  validDateFormat(dateString) {
+  if (dateString) {
+    return dateString.replace(/\s/, 'T');
+  }
+
+  return null;
+}
+// tslint:disable-next-line:typedef
+alterCheck(event, announce: Todo) {
+  announce.isChecked = !announce.isChecked;
+  this.todoServices.checkOrUnCheckTitle(announce);
+}
   ngOnInit(): void {
     this.announcServices.getAnnouncelimit().subscribe(announce => {
       this.announces = announce;
@@ -26,7 +41,7 @@ export class DashboardhomeComponent implements OnInit {
       this.calendarEvents = event;
     });
     //
-    this.cal.getTodolimit().subscribe(todo => {
+    this.todoServices.getAnnounceLimit().subscribe(todo => {
       this.todoList = todo;
     });
   }

@@ -73,6 +73,7 @@ import { NorminatorComponent } from './components/norm/technology/norminator/nor
 import { RdmComponent } from './components/norm/technology/rdm/rdm.component';
 import { PumpssafeComponent } from './components/norm/technology/pumpssafe/pumpssafe.component';
 import { OnsiteComponent } from './components/environmental/onsite/onsite.component';
+import { TodoComponent } from './components/dashboard/todo/todo.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -112,7 +113,7 @@ const routes: Routes = [
   { path: 'unicoprofile', component : UnicoprofileComponent, canActivate: [AuthGuardService] },
   { path: 'notes', component : NotesComponent, canActivate: [AuthGuardService] },
   { path: 'calender', component : CalenderComponent, canActivate: [AuthGuardService] },
-  { path: 'todolist', component : TodolistComponent, canActivate: [AuthGuardService] },
+  { path: 'todolist', component : TodoComponent, canActivate: [AuthGuardService] },
   { path: 'norm_overview', component : OverviewComponent },
   { path: 'norm_spooler_machine', component : SpoolermachineComponent },
   { path: 'norminator', component : NorminatorComponent },
@@ -174,7 +175,8 @@ const routes: Routes = [
     NorminatorComponent,
     RdmComponent,
     PumpssafeComponent,
-    OnsiteComponent
+    OnsiteComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

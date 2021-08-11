@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <button type="button" (click)="show1($event, text.value, start.value, end.value)" data-toggle="modal" data-target="#modalcalendar" class="btn btn-primary cal"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Note</button>
+      <button type="button" (click)="show1($event, text.value, start.value, end.value)" data-toggle="modal" data-target="#modalcalendar" class="btn btn-primary cal"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Event</button>
       <!-- Modal -->
       <div class="modal fade" id="modalcalendar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -50,6 +50,4 @@
 <div class="column-main">
   <daypilot-calendar #calendar [events]="events" [config]="calendarConfig" (viewChange)="viewChange()"></daypilot-calendar>
 </div>
-<!--
-<create-dialog #create (close)="createClosed($event)"></create-dialog>
--->
+

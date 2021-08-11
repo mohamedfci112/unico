@@ -87,6 +87,9 @@ logout(){
     localStorage.removeItem('depart');
     localStorage.removeItem('name');
     localStorage.removeItem('email');
+    localStorage.removeItem('type');
+    localStorage.removeItem('notifycalnum');
+    localStorage.removeItem('notifyannounum');
   }
 
   // tslint:disable-next-line:typedef
@@ -111,6 +114,8 @@ finalLogout(text: string){
     localStorage.removeItem('depart');
     localStorage.removeItem('name');
     localStorage.removeItem('type');
+    localStorage.removeItem('notifycalnum');
+    localStorage.removeItem('notifyannounum');
     this.item.email = '';
     this.item.todayDate = '';
     this.item.minWork = '';

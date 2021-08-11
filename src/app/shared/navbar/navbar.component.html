@@ -12,7 +12,7 @@
             <li><a routerLink="/contact"><img src="../../../assets/img/icons/contact.png"/><span>CONTACT US</span></a></li>
             <li><a routerLink="/news"><img src="../../../assets/img/icons/news.png"/><span>NEWS</span></a></li>
             <li *ngIf="!islogin"><a href="/login"><img src="https://img.icons8.com/material-outlined/30/ffffff/user--v1.png"/><span>LOGIN</span></a></li>
-            <li *ngIf="islogin"><a href="/dashboardhome"><img src="https://img.icons8.com/fluent-systems-regular/30/ffffff/dashboard-layout.png"/><span>{{ username }}</span></a></li>
+            <li *ngIf="islogin"><a href="/dashboardhome"><img src="https://img.icons8.com/fluent-systems-regular/30/ffffff/dashboard-layout.png"/><span>{{ username }} <span style="background-color: #bf1e2d;border-radius: 50%;padding: 2px 7px;font-weight: 700;">{{allnotify}}</span> </span></a></li>
           </ul>
         </div>
     </div>

@@ -39,20 +39,13 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
     viewType: 'Week',
     eventDeleteHandling: 'Update',
     onEventDeleted: args => {
-      this.ds.deleteEvent(args.e.id()).subscribe(result => this.calendar.control.message('Deleted'));
+      this.ds.deleteEvent(args.e.id());
     },
     onTimeRangeSelected: args => {
       this.show(args);
       document.querySelector<HTMLElement>('.cal').style.display = 'block';
     }
   };
-  // tslint:disable-next-line:typedef
-  createClosed(result) {
-    if (result) {
-      this.events.push(result);
-    }
-    this.calendar.control.clearSelection();
-  }
 
 
   constructor(private fb: FormBuilder, private ds: DataService) {
@@ -102,21 +95,21 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
         if (starthrs < 10){
           if (startDay < 10){
             // tslint:disable-next-line:max-line-length
-          this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', '0', startDay.toString(), 'M', '0', starthrs.toString(), ':', '00', ':', '00');
+          this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', '0', startDay.toString(), ' ', '0', starthrs.toString(), ':', '00', ':', '00');
           }
           else{
             // tslint:disable-next-line:max-line-length
-          this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', startDay.toString(), 'M', '0', starthrs.toString(), ':', '00', ':', '00');
+          this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', startDay.toString(), ' ', '0', starthrs.toString(), ':', '00', ':', '00');
           }
         }
         else{
           if (startDay < 10){
             // tslint:disable-next-line:max-line-length
-            this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', '0', startDay.toString(), 'M', starthrs.toString(), ':', '00', ':', '00');
+            this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', '0', startDay.toString(), ' ', starthrs.toString(), ':', '00', ':', '00');
           }
           else{
             // tslint:disable-next-line:max-line-length
-            this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', startDay.toString(), 'M', starthrs.toString(), ':', '00', ':', '00');
+            this.item.start = startYear.toString().concat('-', '0', startMonth.toString(), '-', startDay.toString(), ' ', starthrs.toString(), ':', '00', ':', '00');
           }
         }
       }
@@ -124,20 +117,20 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
         if (starthrs < 10){
           if (startDay < 10){
             // tslint:disable-next-line:max-line-length
-            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', '0', startDay.toString(), 'M', '0', starthrs.toString(), ':', '00', ':', '00');
+            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', '0', startDay.toString(), ' ', '0', starthrs.toString(), ':', '00', ':', '00');
           }
           else{
             // tslint:disable-next-line:max-line-length
-            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', startDay.toString(), 'M', '0', starthrs.toString(), ':', '00', ':', '00');
+            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', startDay.toString(), ' ', '0', starthrs.toString(), ':', '00', ':', '00');
           }
         }
         else{
           if (startDay < 10){
             // tslint:disable-next-line:max-line-length
-            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', '0', startDay.toString(), 'M', starthrs.toString(), ':', '00', ':', '00');
+            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', '0', startDay.toString(), ' ', starthrs.toString(), ':', '00', ':', '00');
           }
           else{
-            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', startDay.toString(), 'M', starthrs.toString(), ':', '00', ':', '00');
+            this.item.start = startYear.toString().concat('-', startMonth.toString(), '-', startDay.toString(), ' ', starthrs.toString(), ':', '00', ':', '00');
           }
         }
       }
@@ -145,21 +138,21 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
         if (endhrs < 10){
           if (endDay < 10){
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', '0', endDay.toString(), 'M', '0', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', '0', endDay.toString(), ' ', '0', endhrs.toString(), ':', '00', ':', '00');
           }
           else{
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', endDay.toString(), 'M', '0', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', endDay.toString(), ' ', '0', endhrs.toString(), ':', '00', ':', '00');
           }
         }
         else{
           if (endDay < 10){
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', '0', endDay.toString(), 'M', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', '0', endDay.toString(), ' ', endhrs.toString(), ':', '00', ':', '00');
           }
           else{
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', endDay.toString(), 'M', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', '0', endMonth.toString(), '-', endDay.toString(), ' ', endhrs.toString(), ':', '00', ':', '00');
           }
         }
       }
@@ -168,21 +161,21 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
         if (endhrs < 10){
           if (endDay < 10){
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', '0', endDay.toString(), 'M', '0', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', '0', endDay.toString(), ' ', '0', endhrs.toString(), ':', '00', ':', '00');
           }
           else{
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', endDay.toString(), 'M', '0', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', endDay.toString(), ' ', '0', endhrs.toString(), ':', '00', ':', '00');
           }
         }
         else{
           if (endDay < 10){
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', '0', endDay.toString(), 'M', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', '0', endDay.toString(), ' ', endhrs.toString(), ':', '00', ':', '00');
           }
           else{
             // tslint:disable-next-line:max-line-length
-          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', endDay.toString(), 'M', endhrs.toString(), ':', '00', ':', '00');
+          this.item.end = endYear.toString().concat('-', endMonth.toString(), '-', endDay.toString(), ' ', endhrs.toString(), ':', '00', ':', '00');
           }
         }
       }
@@ -213,8 +206,6 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
   }
 
   ngAfterViewInit(): void {
-    // tslint:disable-next-line:max-line-length
-    // this.ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd()).subscribe(result => this.events = result);
   }
   // tslint:disable-next-line:typedef
   viewChange() {

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Announce } from '../models/announce';
+import { AnnounceNotificationUser } from '../models/anouncNotify';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -11,8 +12,11 @@ export class AnnouncementService {
 
   announceCollection: AngularFirestoreCollection<Announce>;
   announcelimitCollection: AngularFirestoreCollection<Announce>;
+  announceNotification: AngularFirestoreCollection<AnnounceNotificationUser>;
   announceDoc: AngularFirestoreDocument<Announce>;
+  announceNotifyDoc: AngularFirestoreDocument<AnnounceNotificationUser>;
   announces: Observable<Announce[]>;
+  announcesNotify: Observable<AnnounceNotificationUser[]>;
   announceslimit: Observable<Announce[]>;
 
   constructor(public afs: AngularFirestore) {
@@ -33,6 +37,14 @@ export class AnnouncementService {
         return data;
       });
     }));
+    this.announceNotification = this.afs.collection('announcnotify', ref => ref.where('user', '==', localStorage.getItem('email')));
+    this.announcesNotify = this.announceNotification.snapshotChanges().pipe(map(changes => {
+      return changes.map(a => {
+        const data = a.payload.doc.data() as AnnounceNotificationUser;
+        data.id = a.payload.doc.id;
+        return data;
+      });
+    }));
   }
   // tslint:disable-next-line:typedef
   getAnnounce(){
@@ -46,6 +58,14 @@ export class AnnouncementService {
   addAnnounce(item: Announce){
     this.announceCollection.add(item);
   }
+  // tslint:disable-next-line:typedef
+  getAnnounceNotification(){
+    return this.announcesNotify;
+  }
+  // tslint:disable-next-line:typedef
+  addNotifyAnnounceForUser(item: AnnounceNotificationUser){
+    this.announceNotification.add(item);
+  }
 
   // tslint:disable-next-line:typedef
   updateItem(announce: Announce){
@@ -57,5 +77,10 @@ export class AnnouncementService {
   deleteItem(announce: Announce){
     this.announceDoc = this.afs.doc(`announc/${announce.id}`);
     this.announceDoc.delete();
+  }
+  // tslint:disable-next-line:typedef
+  deleteAnnoNotifyItem(item: AnnounceNotificationUser){
+    this.announceNotifyDoc = this.afs.doc(`announcnotify/${item.id}`);
+    this.announceNotifyDoc.delete();
   }
 }

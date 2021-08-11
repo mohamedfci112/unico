@@ -24,6 +24,7 @@ export class DataService {
   // tslint:disable-next-line:typedef
   getEvents(start: DayPilot.Date, end: DayPilot.Date) {
      const email = localStorage.getItem('email');
+     // tslint:disable-next-line:max-line-length
      this.usersinfo = this.afs.collection('calendar', x => x.where('user' , '==', email.toString())).snapshotChanges().pipe(
       map(
         changes => {
@@ -42,9 +43,10 @@ export class DataService {
     this.calendarCollection.add(item);
   }
 
-  deleteEvent(id: string): Observable<BackendResult> {
-    // tslint:disable-next-line:object-literal-shorthand
-    return this.http.post('../../../angular-calendar-php-backend/api/backend_delete.php', {id: id}) as Observable<BackendResult>;
+  // tslint:disable-next-line:typedef
+  deleteEvent(id: string){
+    this.gtCalendarDoc = this.afs.doc(`calendar/${id}`);
+    this.gtCalendarDoc.delete();
   }
 
   // tslint:disable-next-line:typedef

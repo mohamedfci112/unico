@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from 'src/app/services/firebase.service';
+import { AnnouncementService } from 'src/app/services/announcement.service';
+import { CalendarService } from 'src/app/services/calendar.service';
 import { Router } from '@angular/router';
 import { UsersInfo } from '../../../models/usersInfo';
 import { LogoutForm } from '../../../models/logoutForm';
+import { AnnounceNotificationUser } from '../../../models/anouncNotify';
+import { Calendar } from '../../../models/calendar';
 import { FireSQL } from 'firesql';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { BnNgIdleService } from 'bn-ng-idle';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
+declare var $: any;
 
 @Component({
   selector: 'app-sidebar',
@@ -24,10 +29,42 @@ export class SidebarComponent implements OnInit {
   reportshow = false;
   hrreport = false;
   loginDate;
+  announceNotify: AnnounceNotificationUser[];
+  calendarNotify: Calendar[];
+  announcenotificationNumber = 0;
+  calendarnotificationNumber = 0;
+  allnotificationNumber = 0;
+  newCalendarNotify: Calendar[] = [];
 
-  constructor(public firebaseservice: FirebaseService, private router: Router, private bnIdle: BnNgIdleService) { }
+  // tslint:disable-next-line:max-line-length
+  constructor(public firebaseservice: FirebaseService, private router: Router, private bnIdle: BnNgIdleService, private annoService: AnnouncementService, private calService: CalendarService) { }
 
   ngOnInit(): void {
+  this.calService.getCalendarNotify().subscribe(cal => {
+    this.calendarNotify = [];
+    this.newCalendarNotify = [];
+    this.calendarNotify = cal;
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.calendarNotify.length; i++){
+      const startDate = new Date(this.calendarNotify[i].start).toLocaleDateString();
+      const today = new Date().toLocaleDateString();
+      if (startDate === today){
+        this.newCalendarNotify.push(this.calendarNotify[i]);
+        this.calendarnotificationNumber = this.newCalendarNotify.length;
+      }
+    }
+    localStorage.setItem('notifycalnum', this.calendarnotificationNumber.toString());
+    this.calendarNotify = [];
+  });
+  this.annoService.getAnnounceNotification().subscribe(notify => {
+    this.announceNotify = notify;
+    this.announcenotificationNumber = this.announceNotify.length;
+    localStorage.setItem('notifyannounum', this.announcenotificationNumber.toString());
+  });
+  $(document).on('click', '.dropdown-menu', (e) => {
+    e.stopPropagation();
+  });
+  //
   this.username = localStorage.getItem('email');
   this.firebaseservice.userInfo().subscribe(uinfo => {
     this.userinfo = uinfo;
@@ -84,6 +121,18 @@ export class SidebarComponent implements OnInit {
       this.logout();
     }
   });
+  }
+  // tslint:disable-next-line:typedef
+  announceNotifyDel(item: AnnounceNotificationUser){
+    this.annoService.deleteAnnoNotifyItem(item);
+  }
+  // tslint:disable-next-line:typedef
+  calNotifyDel(item: Calendar){
+    const index = this.newCalendarNotify.indexOf(item);
+    if (index !== -1) { this.newCalendarNotify.splice(index, 1); }
+    this.calendarnotificationNumber = this.newCalendarNotify.length - 1;
+    if (this.calendarnotificationNumber === -1) { this.calendarnotificationNumber = 0; }
+    this.calService.deleteCalNotifyItem(item);
   }
   // tslint:disable-next-line:typedef
   sessionDay(){

@@ -34,9 +34,9 @@ a:focus {
     border: none;
 }
 .navbar-nav .nav-item{
-  margin-right: 5%;
-  margin-left: 5%;
-  min-width: 20%;
+  margin-right: 0%;
+  margin-left: 0%;
+  min-width: 25%;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -112,7 +112,7 @@ a[data-toggle="collapse"] {
     display: block;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 20%;
     transform: translateY(-50%);
 }
 
@@ -172,4 +172,36 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+}
+/*************************************************/
+.all-notify{
+  z-index: 1;
+  padding: 3px;
+  position: relative;
+  top: 0px;
+  border-radius: 30%;
+  background-color: #bf1e2d;
+}
+.btn-link{
+  text-decoration: none;
+  color: #3131a5;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-link span{
+  color: white;
+  position: absolute;
+  right: 10%;
+  border-radius: 30%;
+  background-color: #bf1e2d;
+  padding: 4px;
+}
+#accordion ul{
+  list-style: none;
+  padding: 0;
+}
+#accordion .card-body span{
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
 }

@@ -1,0 +1,24 @@
+.hover-cursor{
+    cursor: pointer;
+    margin: 10px;
+}
+.todo-all{
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  min-height: 500px;
+}
+.todo-all .title{
+  padding:30px 0px;
+  font-weight: 700;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+  color: #bf1e2d;
+}
+.input-group input{
+  margin: 10px;
+}
+.list-group-item{
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: 18px;
+}

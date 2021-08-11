@@ -1,0 +1,29 @@
+<section class="container">
+  <div class="todo-all">
+    <div class="title">
+      <h2 class="text-center">To Do List App</h2>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control" #itemTitle>
+      <div class="input-group-addon hover-cursor" (click)="onAdd(itemTitle)">
+        <i class="fa fa-plus-circle fa-2x"></i>
+      </div>
+    </div>
+
+    <div style="margin:10px">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of toDoListArray">
+          <span class="hover-cursor" [class.text-success]="item.isChecked" (click)="alterCheck($key,item)">
+            <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+          </span>
+          {{item.title}}
+          <span class="hover-cursor text-danger pull-right" (click)="onDelete($event, item)">
+            <i class="fa fa-trash-o fa-lg"></i>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
