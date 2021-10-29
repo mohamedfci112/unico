@@ -41,7 +41,8 @@ export class LoginComponent implements OnInit {
     await this.firebaseservice.signin(email, password);
     if (this.firebaseservice.isLoggin){
         this.issignin = true;
-        this.router.navigate(['/dashboardhome']);
+        // this.router.navigate(['/dashboardhome']);
+        window.location.href = '/dashboardhome';
       }
   }
 

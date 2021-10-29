@@ -9,9 +9,11 @@ import { Task } from '../components/dashboard/space/task/task';
   providedIn: 'root'
 })
 export class CalendarService {
+  calendarCollection: AngularFirestoreCollection<Calendar>;
   calendarlimitCollection: AngularFirestoreCollection<Calendar>;
   calendarNotifyCollection: AngularFirestoreCollection<Calendar>;
   calendarDoc: AngularFirestoreDocument<Calendar>;
+  calendar: Observable<Calendar[]>;
   calendarlimit: Observable<Calendar[]>;
   calendarNotify: Observable<Calendar[]>;
   //
@@ -19,8 +21,16 @@ export class CalendarService {
   todolimit: Observable<Task[]>;
 
   constructor(public afs: AngularFirestore) {
-    // limit calendar events
-    // this.validDateFormat(date);
+    //
+    // tslint:disable-next-line:max-line-length
+    this.calendarCollection = this.afs.collection('calendar', ref => ref.where('user' , '==', localStorage.getItem('email')));
+    this.calendar = this.calendarCollection.snapshotChanges().pipe(map(changes => {
+      return changes.map(a => {
+        const data = a.payload.doc.data() as Calendar;
+        data.id = a.payload.doc.id;
+        return data;
+      });
+    }));
     // tslint:disable-next-line:max-line-length
     this.calendarlimitCollection = this.afs.collection('calendar', ref => ref.where('user' , '==', localStorage.getItem('email')).orderBy('start', 'desc').limit(3));
     this.calendarlimit = this.calendarlimitCollection.snapshotChanges().pipe(map(changes => {
@@ -67,6 +77,10 @@ export class CalendarService {
     return this.calendarNotify;
   }
 
+  // tslint:disable-next-line:typedef
+  getCalendar(){
+    return this.calendar;
+  }
   // tslint:disable-next-line:typedef
   getCalendarlimit(){
     return this.calendarlimit;

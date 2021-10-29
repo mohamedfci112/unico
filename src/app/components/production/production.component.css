@@ -2,27 +2,34 @@
   .production{
     margin-top: 0px;
   }
+  .production .production-header{
+    height: 70vh;
+  }
   .production .production-header .text .title{
     left: 0;
     text-align: center;
   }
   .production .production-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .production .production-content .title h3{
-    font-size: 40px;
+    font-size: 37px;
   }
   .production .production-content .title h4{
     font-size: 21px;
   }
   .production .production-content .top h3{
-    font-size: 25px;
+    font-size: 20px;
+  }
+  .production .production-content .content{
+    margin-top: 0;
   }
   .production .production-content .content .text p{
     font-size: 18px;
+    text-align: center;
   }
   .production .production-content .content1 .text ul li{
-    font-size: 18px;
+    font-size: 15px;
   }
   .production .production-content .content1 .img img{
     margin-top: 0;
@@ -33,15 +40,18 @@
   .production{
     margin-top: 0px;
   }
+  .production .production-header{
+    height: 70vh;
+  }
   .production .production-header .text .title{
     left: 0;
     text-align: center;
   }
   .production .production-header .text .title h1{
-    font-size: 45px;
+    font-size: 40px;
   }
   .production .production-content .title h3{
-    font-size: 45px;
+    font-size: 40px;
   }
   .production .production-content .title h4{
     font-size: 22px;

@@ -1,48 +1,95 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <div class="text-center">
+        <h1 class="not-title">Sticky Notes</h1>
+      </div>
+      <div class="text-center">
       <button type="button" data-toggle="modal" data-target="#modalnotes" class="btn btn-primary"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Note</button>
+      </div>
       <!-- Modal -->
       <div class="modal fade" id="modalnotes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"><img src="https://img.icons8.com/material-outlined/24/000000/add.png"/> Add New Note</h5>
+              <h5 style="color: #bf1e2d;font-family: 'Allerta Stencil', sans-serif;" class="modal-title" id="exampleModalLabel"><img src="https://img.icons8.com/material-outlined/24/000000/add.png"/> Add New Note</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <form (ngSubmit)="onSubmit()">
+            <form>
             <div class="modal-body">
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Add Note</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)] = "item.text" name="text"></textarea>
-                </div>
+              <div class="form-group">
+                <label style="font-weight: 500;color: #bf1e2d;" for="exampleInputEmail1">Note Title</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Title" [(ngModel)] = "item.title" name="title">
+              </div>
+              <div class="form-group">
+                <label style="font-weight: 500;color: #bf1e2d;" for="exampleFormControlTextarea1">Note Text</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)] = "item.text" name="text"></textarea>
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Save Note</button>
+              <button (click)="onSubmit()" class="btn btn-primary" data-dismiss="modal" >Save Note</button>
             </div>
           </form>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
 <hr>
 <div class="container">
   <div class="row">
-    <div *ngFor="let note of notes" class="col-md-3 col-sm-12">
+    <div *ngFor="let note of notes" class="col-md-4 col-sm-12">
       <div class="noteHolder">
         <input type="checkbox" id="fold1">
-        <div class="note rounded">
-         <textarea id="note-1" [(ngModel)] = "note.text" name="text" disabled>{{ note.text }}</textarea>
+        <div class="note rounded form-group">
+          <div class="form-control text-area" id="note-1"  name="text">
+            <h3 style="font-size: 20px;color: wheat;border-bottom: 1px groove;word-break: break-word;">{{ note.title }}</h3>
+            <span style="word-break: break-word;">{{note.text}}</span>
+          </div>
         </div>
           <div class="action">
+            <button type="button" data-toggle="modal" data-target="#modalnotesupdate" (click)="openNotes($event, note)" class="btn btn-del"><i class="far fa-edit"></i></button>
             <button (click)="deleteNotes($event, note)" type="button" class="btn btn-del"><i class="fa fa-trash"></i></button>
           </div>
         </div>
     </div>
+    <!--update niote modal-->
+    <div class="modal fade" id="modalnotesupdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 style="color: #bf1e2d;font-family: 'Allerta Stencil', sans-serif;" class="modal-title" id="exampleModalLabel"><img src="https://img.icons8.com/material-outlined/24/000000/add.png"/> Add New Note</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form [formGroup]="form1">
+          <div class="modal-body">
+            <div class="form-item form-group text-left">
+              <input class="form-control" formControlName="id" type="hidden" #id >
+            </div>
+            <div class="form-group">
+              <label style="font-weight: 500;color: #bf1e2d;" for="exampleInputEmail1">Note Title</label>
+              <input type="text" class="form-control" formControlName="title" id="exampleInputEmail1" placeholder="Enter Title" #notetitle>
+            </div>
+            <div class="form-group">
+              <label style="font-weight: 500;color: #bf1e2d;" for="exampleFormControlTextarea1">Note Text</label>
+              <textarea class="form-control" formControlName="text" id="exampleFormControlTextarea1" rows="3" #notetext></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button (click)="update(id.value, notetitle.value, notetext.value)" class="btn btn-primary" data-dismiss="modal" >Update Note</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    <!---->
   </div>
 </div>

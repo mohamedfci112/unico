@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-icons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
 html,body{
   overflow-x: hidden;
 }
@@ -187,6 +196,15 @@ nav{
   border-left: 4px solid #9c9b9e;
   min-width: 300px;
   margin-top: 25px
+}
+.submenue1{
+  margin-top: 0!important;
+}
+.submenue1:before{
+  top: 20px!important;
+}
+.submenue2{
+  margin-top: 75px!important;
 }
 
 .mcd-menu li ul li ul:before {
@@ -1479,7 +1497,8 @@ header .footer-wave {
 }
 @media(max-width: 720px){
   .logpad{
-    max-width: 240px;
+    max-width: 300px;
+    padding: 25px;
   }
   .login{
     background-size: 300% 200%;
@@ -2008,7 +2027,7 @@ header .footer-wave {
 }
 .supply .supply-header .text .title{
   position: absolute;
-  margin-top: 10%;
+  margin-top: 20%;
   color: white;
   left: 14%;
 }
@@ -2088,6 +2107,84 @@ header .footer-wave {
   border-radius: 5px;
 }
 /*************/
+
+.about_inspection-content{
+  background: url(./assets/img/state-shape-bg.png) fixed center center;
+  background-size: cover;
+}
+.about_inspection-content .title{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.about_inspection-content .title h3{
+  font-family: 'Allerta Stencil', sans-serif;
+  font-weight: bolder;
+  font-size: 60px;
+  color: #212529;
+  text-align: center;
+}
+.supply .brief{
+  background: url(./assets/img/lifting/supply/supply-back1.jpg) fixed center center;
+  background-size: cover;
+}
+.supply .brief .text{
+  background-color: rgba(0, 0, 0, 0.719);
+  text-align: center;
+}
+.supply .brief .text p{
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Cairo', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.about_inspection-content .content{
+  margin-bottom: 20px;
+}
+.about_inspection-content .content .left h2{
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+.about_inspection-content .content .left p{
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Cairo', sans-serif;
+}
+.about_inspection-content .content .right{
+  width: 100%;
+  height: auto;
+}
+.about_inspection-content .content .right img{
+  width: 100%;
+  height: 100%!important;
+  border-radius: 5px;
+}
+
+.about_inspection-content .content1{
+  margin-bottom: 20px;
+}
+.about_inspection-content .content1 .left{
+  width: 100%;
+  height: 400px;
+}
+.about_inspection-content .content1 .left img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.about_inspection-content .content1 .right h2{
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Allerta Stencil', sans-serif;
+}
+.about_inspection-content .content1 .right p{
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Cairo', sans-serif;
+}
+/*********/
 .tools{
   margin-bottom: 20px;
 }
@@ -2226,116 +2323,7 @@ figure.effect-hera:hover h2 {
 	transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
 }
 /*************************************about inspection*******************************************************/
-.about_inspection{
-  margin-top: -48px;
-}
-.about_inspection-header{
-  background: url(./assets/img/lifting/about/about-inspection-back2.jpg) fixed center center;
-  background-size: cover;
-  width: 100%;
-  height: 500px;
-}
-.about_inspection-header .text{
-  height: 100%;
-  width: 100%;
-  background-color: #000000af;
-}
-.about_inspection .about_inspection-header .text .title{
-  position: absolute;
-  margin-top: 10%;
-  color: white;
-  left: 14%;
-}
-.about_inspection .about_inspection-header .text .title h1{
-  font-size: 60px;
-  font-weight: 800;
-  font-family: 'Gugi', cursive;
 
-}
-.about_inspection .about_inspection-header .text .title p{
-  line-height: 2;
-  font-size: 22px;
-  font-weight: bolder;
-  padding: 20px;
-  padding-left: 0;
-  font-family: 'Cairo', sans-serif;
-}
-.about_inspection .about_inspection-content{
-  background: url(./assets/img/state-shape-bg.png) fixed center center;
-  background-size: cover;
-}
-.about_inspection .about_inspection-content .title{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.about_inspection .about_inspection-content .title h3{
-  font-family: 'Allerta Stencil', sans-serif;
-  font-weight: bolder;
-  font-size: 60px;
-  color: #212529;
-  text-align: center;
-}
-.about_inspection .brief{
-  background: url(./assets/img/lifting/supply/supply-back1.jpg) fixed center center;
-  background-size: cover;
-}
-.about_inspection .brief .text{
-  background-color: rgba(0, 0, 0, 0.719);
-  text-align: center;
-}
-.about_inspection .brief .text p{
-  color: white;
-  font-size: 22px;
-  font-weight: 700;
-  font-family: 'Cairo', sans-serif;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.about_inspection .about_inspection-content .content{
-  margin-bottom: 20px;
-}
-.about_inspection .about_inspection-content .content .left h2{
-  text-align: center;
-  font-weight: 600;
-  font-family: 'Allerta Stencil', sans-serif;
-}
-.about_inspection .about_inspection-content .content .left p{
-  font-size: 22px;
-  font-weight: 500;
-  font-family: 'Cairo', sans-serif;
-}
-.about_inspection .about_inspection-content .content .right{
-  width: 100%;
-  height: auto;
-}
-.about_inspection .about_inspection-content .content .right img{
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-}
-
-.about_inspection .about_inspection-content .content1{
-  margin-bottom: 20px;
-}
-.about_inspection .about_inspection-content .content1 .left{
-  width: 100%;
-  height: 400px;
-}
-.about_inspection .about_inspection-content .content1 .left img{
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-}
-.about_inspection .about_inspection-content .content1 .right h2{
-  text-align: center;
-  font-weight: 600;
-  font-family: 'Allerta Stencil', sans-serif;
-}
-.about_inspection .about_inspection-content .content1 .right p{
-  font-size: 22px;
-  font-weight: 500;
-  font-family: 'Cairo', sans-serif;
-}
 /*************************************List inspection*******************************************************/
 .inspect_list{
   margin-top: -48px;
@@ -2353,7 +2341,7 @@ figure.effect-hera:hover h2 {
 }
 .inspect_list .inspect_list-header .text .title{
   position: absolute;
-  margin-top: 10%;
+  margin-top: 20%;
   color: white;
   left: 14%;
 }
@@ -2435,7 +2423,7 @@ figure.effect-hera:hover h2 {
   list-style: none;
   font-size: 21px;
   font-family: 'Cairo', sans-serif;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
 }
 .inspect_list .inspect_list-content .content1 ul li img{
   margin-right: 10px;
@@ -2446,36 +2434,119 @@ figure.effect-hera:hover h2 {
 .inspect_list .inspect_list-content .content1 .right img{
   height: auto;
   width: 90%;
-  margin-top: 10%;
 }
 .inspect_list .inspect_list-content .content2{
   margin-bottom: 20px;
 }
-.inspect_list .inspect_list-content .content2 h4{
+.inspect_list .inspect_list-content .content2 h3{
+  font-family: 'Allerta Stencil', sans-serif;
+  font-weight: bolder;
+  font-size: 60px;
+  color: #212529;
   text-align: center;
-  margin-bottom: 20px;
-  font-family: 'Cairo', sans-serif;
-  font-weight: 600;
 }
-.inspect_list .inspect_list-content .content2 ul{
-  margin-bottom: 30px;
+
+/**/
+.inspect_list .inspect_list-content .card-wrapper {
+  height: 450px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #C0C0C0;
+  background: white;
+  overflow-y: auto;
 }
-.inspect_list .inspect_list-content .content2 ul li{
+.inspect_list .inspect_list-content .card-wrapper::-webkit-scrollbar{
+  width: .4em;
+}
+.inspect_list .inspect_list-content .card-wrapper::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.inspect_list .inspect_list-content .card-wrapper::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+}
+.inspect_list .inspect_list-content .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  margin-top: -80px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+   box-shadow: 10px 10px 30px #250f10,
+             -10px -10px 30px #331516;
+  transition: all .4s ease;
+}
+.inspect_list .inspect_list-content .one{
+  background-image: url('./assets/img/lifting/list/mpi.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inspect_list .inspect_list-content .two{
+  background-image: url('./assets/img/lifting/list/ut.jpg');
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inspect_list .inspect_list-content .three{
+  background-image: url('./assets/img/lifting/list/rt.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inspect_list .inspect_list-content .four{
+  background-image: url('./assets/img/lifting/list/dpi.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inspect_list .inspect_list-content .five{
+  background-image: url('./assets/img/lifting/list/VT.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inspect_list .inspect_list-content .card .content{
+  position: absolute;
+  top: 100%;
+  width: 145%;
+}
+.inspect_list .inspect_list-content .card .content h3{
+  margin-top: 30px;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: initial;
+}
+.inspect_list .inspect_list-content .card .content p{
   list-style: none;
-  font-size: 21px;
+  text-align: center;
+  line-height: 2;
+  font-size: 20px;
+  font-weight: 500;
   font-family: 'Cairo', sans-serif;
-  margin-bottom: 2px;
 }
-.inspect_list .inspect_list-content .content2 ul li img{
-  margin-right: 10px;
+.inspect_list .inspect_list-content .card:hover {
+  transform: scale(1.1);
 }
-.inspect_list .inspect_list-content .content2 .left{
-  height: auto;
+.inspect_list .inspect_list-content .card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  transition: all .4s ease;
 }
-.inspect_list .inspect_list-content .content2 .left img{
-  height: auto;
-  width: 92%;
-}
+
 /***************************************Lifting Training*********************************************/
 .ltraining{
   margin-top: -48px;
@@ -2541,6 +2612,7 @@ figure.effect-hera:hover h2 {
   line-height: 2;
   font-weight: 500;
   font-family: 'Cairo', sans-serif;
+  margin-top: 50px;
 }
 .ltraining .ltraining-content .content1 .right{
   width: 100%;
@@ -2548,8 +2620,8 @@ figure.effect-hera:hover h2 {
 }
 .ltraining .ltraining-content .content1 .right img{
   border-radius: 5px;
-  width: 98%;
-  height: 470px;
+  width: 95%;
+  height: 550px;
 }
 .ltraining .ltraining-content .content{
   margin-bottom: 20px;
@@ -2579,6 +2651,113 @@ figure.effect-hera:hover h2 {
   height: auto;
   border-radius: 5px;
 }
+/**/
+.ltraining .ltraining-content .content .card-wrapper {
+  height: 450px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #C0C0C0;
+  background: white;
+  overflow-y: auto;
+}
+.ltraining .ltraining-content .content .card-wrapper::-webkit-scrollbar{
+  width: .4em;
+}
+.ltraining .ltraining-content .content .card-wrapper::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.ltraining .ltraining-content .content .card-wrapper::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 20px;
+}
+.ltraining .ltraining-content .content .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  margin-top: -80px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+   box-shadow: 10px 10px 30px #250f10,
+             -10px -10px 30px #331516;
+  transition: all .4s ease;
+}
+.ltraining .ltraining-content .content .one{
+  background-image: url('./assets/img/lifting/training/rigging.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ltraining .ltraining-content .content .two{
+  background-image: url('./assets/img/lifting/training/cargo.jpg');
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ltraining .ltraining-content .content .three{
+  background-image: url('./assets/img/lifting/training/overhead.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ltraining .ltraining-content .content .four{
+  background-image: url('./assets/img/lifting/training/forklift.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ltraining .ltraining-content .content .five{
+  background-image: url('./assets/img/lifting/training/mobile.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ltraining .ltraining-content .content .six{
+  background-image: url('./assets/img/lifting/training/loler.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ltraining .ltraining-content .content .card .content{
+  position: absolute;
+  top: 100%;
+  width: 145%;
+}
+.ltraining .ltraining-content .content .card .content h3{
+  margin-top: 30px;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size: initial;
+}
+.ltraining .ltraining-content .content .card .content p{
+  list-style: none;
+  text-align: center;
+  line-height: 2;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Cairo', sans-serif;
+}
+.ltraining .ltraining-content .content .card:hover {
+  transform: scale(1.1);
+}
+.ltraining .ltraining-content .content .card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  transition: all .4s ease;
+}
+
 /************************************Downhole Drilling**************************************************/
 .downhole{
   margin-top: -48px;
@@ -2727,52 +2906,7 @@ figure.effect-hera:hover h2 {
   height: 100%;
   border-radius: 5px;
 }
-/*
-.downhole .downhole-content .cards .card-header{
-  text-align: center;
-  font-size: 20px;
-  font-weight: 600;
-  font-family: 'Cairo', sans-serif;
-}
-.downhole .downhole-content .cards .card-body ul{
-  padding: 0;
-  vertical-align: middle;
-}
-.downhole .downhole-content .cards .card-body ul li{
-  list-style: none;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-family: 'Cairo', sans-serif;
-}
-.downhole .downhole-content .cards .card-body{
-  height: 140px;
-  overflow-y: auto;
-}
-.downhole .downhole-content .two .card-body{
-  height: 170px;
-  overflow-y: auto;
-}
-.downhole .downhole-content .cards .card-body::-webkit-scrollbar{
-  width: .3em;
-}
-.downhole .downhole-content .cards .card-body::-webkit-scrollbar-track{
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-}
-.downhole .downhole-content .cards .card-body::-webkit-scrollbar-thumb{
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-  border-radius: 20px;
-}
 
-.downhole .downhole-content .cards .card-body ul li img{
-  width: 15px;
-  height: 15px;
-  margin-right: 5px;
-  background-color: white;
-  border-radius: 50%;
-}
-*/
 .downhole .downhole-content .card-wrapper {
   height: 380px;
   width: 400px;
@@ -3227,17 +3361,20 @@ figure.effect-hera:hover h2 {
 }
 .production .production-content .content .img{
   width:100%;
-  height: 400px;
+  height: auto;
 }
-
+.production .production-content .content .text{
+  margin-top: 3%;
+}
 .production .production-content .content .text p{
   font-size: 22px;
   font-weight: 500;
   font-family: 'Cairo', sans-serif;
+  line-height: 2;
 }
 .production .production-content .content .img img{
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: auto;
   border-radius: 5px;
 }
 /**/
@@ -3246,7 +3383,7 @@ figure.effect-hera:hover h2 {
 }
 .production .production-content .content1 .img{
   width:100%;
-  height: 500px;
+  height: auto;
 }
 .production .production-content .services .img{
   height: auto;
@@ -3279,7 +3416,6 @@ figure.effect-hera:hover h2 {
 .production .production-content .content1 .img img{
   width: 100%;
   height: 100%;
-  margin-top: 5%;
   border-radius: 5px;
 }
 .production .production-content .services .img img{

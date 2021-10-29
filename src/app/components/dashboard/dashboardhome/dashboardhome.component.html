@@ -1,27 +1,60 @@
-<!--
-<div *ngIf="announces?.length > 0;else noItems">
-  <h1 class="text-center">Latest Announcments</h1>
-  <div *ngFor="let announce of announces">
-    <div class="card">
-      <div class="card-header">
-        {{ announce.title }}
+
+<section class="container all-totals">
+  <div class="row totals">
+    <div class="col-md-3 col-sm-12">
+      <div class="row totalCart">
+        <h4 class="col-md-12">Total To-do</h4>
+        <div class="col-md-6 col-sm-6 col-xs-6 left">
+          <span>{{ totalTodo }}</span>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 right">
+          <img src="https://img.icons8.com/fluency/50/000000/tasklist.png" alt="unico"/>
+        </div>
       </div>
-      <div class="card-body">
-        <p class="card-text">{{ announce.description }}</p>
-      </div>
-      <div class="card-footer text-muted">
-        {{ announce.date }}
+    </div>
+    <a class="col-md-6 weatherwidget-io" href="https://forecast7.com/en/26d8230d80/egypt/" data-label_1="EGYPT" data-label_2="WEATHER" data-icons="Climacons Animated" data-days="3" data-theme="original" >EGYPT WEATHER</a>
+    <div class="col-md-3 col-sm-12">
+      <div class="row totalCart">
+        <h4 class="col-md-12">Total Events</h4>
+        <div class="col-md-6 col-sm-6 col-xs-6 left">
+          <span>{{ totalEvents }}</span>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 right">
+          <img src="https://img.icons8.com/office/41/000000/overtime.png" alt="unico"/>
+        </div>
       </div>
     </div>
   </div>
-</div>
--->
-<section class="container">
+</section>
+<hr>
+<section class="container all-totals">
+  <div *ngIf="announces?.length > 0;else noItems" class="all-annou">
+    <h1 id="lastannounce" class="text-center"><img src="https://img.icons8.com/ios/40/9b1e2a/commercial.png"/> Latest Announcments</h1>
+    <!---->
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let announce of announces;">
+        <div class="go">
+          <div class="row">
+            <div class="col-md-12 hedr">
+              <span class="last_ann_title"> {{ announce.title }}</span>
+              <span class=""><img src="https://img.icons8.com/office/15/000000/clock.png"/> {{announce.date | date:'EEE'}}, {{ announce.date | date: 'medium' }}</span>
+            </div>
+          </div>
+          <hr>
+          <p [innerHTML] = "announce.description | slice:0:500">  </p><span style="font-weight: bolder;" *ngIf="announce.description.length > 501">.... <a data-toggle="modal" data-target="#anndet" (click)="getAnnouDet(announce.date)" style="color: #155490;position: relative;margin-left: 20px;text-decoration: underline;cursor: pointer;">See More</a></span>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+    <!---->
+  </div>
+</section>
+<hr>
+<section class="container all-totals">
   <div class="row">
     <div class="col-md-6 todo">
       <div class="content" *ngIf="todoList?.length > 0;else noTodo">
         <div class="todo-title">
-          <h3><img src="https://img.icons8.com/ios/40/3131a5/reminders.png" alt="unico"> To Do List</h3>
+          <h3><img src="https://img.icons8.com/ios/30/1F567C/reminders.png" alt="unico"> To Do List</h3>
         </div>
         <div class="todo-content">
           <div style="margin:10px">
@@ -33,7 +66,7 @@
                 </span>
               </li>
             </ul>
-            <span class="alert alert-danger" style="color: #bf1e2d;font-size: 15px;">*Point will not be visible on dashboard once checked!</span>
+            <span class="alert alert-danger alert-msg">*Point will not be visible on dashboard once checked!</span>
           </div>
         </div>
       </div>
@@ -41,7 +74,7 @@
     <div class="col-md-6 calendr">
       <div class="content" *ngIf="calendarEvents?.length > 0;else noEvent">
         <div class="cal-title">
-          <h3><img src="https://img.icons8.com/ios/40/3131a5/timeline-week.png" alt="unico"> Calendar Events</h3>
+          <h3><img src="https://img.icons8.com/ios/30/1F567C/timeline-week.png" alt="unico"> Calendar Events</h3>
         </div>
         <div class="cal-content">
           <div style="margin:10px">
@@ -49,14 +82,14 @@
               <li class="list-group-item row" *ngFor="let item of calendarEvents">
                 <div class="part-one col-md-12">
                   <div class="row">
-                    <h3 class="col-md-6" style="color: #bf1e2d;">{{ validDateFormat(item.start) | date: 'EEEE' }}</h3>
+                    <h3 class="col-md-6" style="color: #1F567C;">{{ validDateFormat(item.start) | date: 'EEEE' }}</h3>
                     <h3 class="col-md-6">{{ validDateFormat(item.start) | date: 'longDate' }}</h3>
                   </div>
                 </div>
                 <h3 class="part-two col-md-12"> {{item.text}} at  <span style="color: #bf1e2d;">{{ validDateFormat(item.start) | date: 'shortTime' }}</span></h3>
               </li>
             </ul>
-            <span class="alert alert-danger" style="color: #bf1e2d;font-size: 15px;">*If you want to delete an event go to <a routerLink="/calender">calendar page</a></span>
+            <span class="alert alert-danger alert-msg">*If you want to delete an event go to <a routerLink="/calender">calendar page</a></span>
           </div>
         </div>
       </div>
@@ -64,19 +97,24 @@
   </div>
 </section>
 <hr>
-<section class="container">
-  <div *ngIf="announces?.length > 0;else noItems" class="all-annou">
-    <h1 class="text-center"><img src="https://img.icons8.com/ios/50/3131a5/commercial.png"/> Latest Announcments</h1>
-    <div *ngFor="let announce of announces" class="all-ann">
-      <div class="go">
-        <h2><img src="https://img.icons8.com/ios/30/3131a5/loudspeaker.png"/> {{ announce.title }}</h2>
-        <p>{{ announce.description }}</p>
-        <span>{{ announce.date }}</span>
+
+<!-- Modal -->
+<div class="modal fade" id="anndet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" *ngFor="let ann of announceDet">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ ann.title }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <hr>
+      <div class="modal-body" [innerHTML]="ann.description"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn" data-dismiss="modal" style="background-color: #1a2628; color: #fff;">Close</button>
+      </div>
     </div>
   </div>
-</section>
+</div>
 <hr>
 <div>
   <h1 class="text-center hidden">Photos & Events</h1>
@@ -208,9 +246,28 @@
 </ng-template>
 <ng-template #noTodo>
   <hr>
-  <h5 class="noo">There Are No To Do List For You Till Now!<br><a href="javascript:void(0);" routerLink="/todolist">Create Your Todo List Now</a></h5>
+  <h5 id="add-todo" class="noo">There Are No To-Do List For You Till Now!<br><a href="javascript:void(0);" routerLink="/todolist">Create Your To-do List Now</a></h5>
 </ng-template>
 <ng-template #noEvent>
   <hr>
-  <h5 class="noo">There Are No Calendar Events For You Till Now!<br><a href="javascript:void(0);" routerLink="/calender">Add First Event Now</a></h5>
+  <h5 id="add-ev" class="noo">There Are No Calendar Events For You Till Now!<br><a href="javascript:void(0);" routerLink="/calender">Add First Event Now</a></h5>
 </ng-template>
+<div id="demo-modal" class="modal">
+  <div class="modal__content">
+    <div class="text-center">
+      <img src="../../../../assets/img/logo.jpg" alt="" id="logo">
+      <h4>{{visitorName}}</h4>
+      <h3>WELCOME TO YOUR PERSONAL DASHBOARD AND VIRTUAL WORKSPACE</h3>
+      <p>USE THIS PORTAL TO :</p>
+      <ul>
+        <li><img src="https://img.icons8.com/windows/20/000000/fire-alt.png"/> STAY CONNECTED WITH YOUR COLLEGUES </li>
+        <li><img src="https://img.icons8.com/windows/20/000000/fire-alt.png"/> PRINT AND PREVIEW IMPORTANT FORMS</li>
+        <li><img src="https://img.icons8.com/windows/20/000000/fire-alt.png"/> KEEP NOTES AND CREATE TO-DO LISTS</li>
+        <li><img src="https://img.icons8.com/windows/20/000000/fire-alt.png"/> RECORD PROGRESS AND DAILY ACCOMPLISHMENTS</li>
+      </ul>
+      <span style="color: #7c2727;font-weight: 600;position: relative;top: 30px;">*PLEASE CHANGE YOUR PASSWORD SETTINGS ONCE LOGGED IN</span><br><br>
+      <span>ENJOY!</span><br><br>
+    </div>
+    <a data-dismiss="modal" class="modal__close btn" (click)="close()">&times;</a>
+  </div>
+</div>

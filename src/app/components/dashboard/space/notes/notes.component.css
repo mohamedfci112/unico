@@ -3,15 +3,20 @@
 {
   box-sizing: border-box;
 }
-
+.not-title{
+  font-weight: bolder;
+  font-size: 50px;
+  font-family: 'Allerta Stencil', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
 .noteHolder {
   position:relative;
   display:inline-block;
  width: 100%;
-  height: 12em;
+  height: 13em;
   font-family: 'Handlee', cursive;
   margin:15px;
-  cursor: all-scroll;
   z-index:600;
   overflow:hidden;
 /* 	box-shadow: 0px 0px 10px 2px #00000010; */
@@ -84,20 +89,20 @@
     border-color: #fff;
   }
 } */
-.note textarea
+.note .text-area
 {
   border:none;
   background-color:transparent;
   width:100%;
   height:100%;
-  resize: none;
-  font-family: 'Handlee', cursive;
+  font-family: 'Cairo';
   margin:0px;
   padding:10px;
   color: #fff;
   font-size:20px;
+  overflow-y: scroll;
 }
-.note textarea:focus
+.note .text-area:focus
 {
   outline:none;
 }
@@ -137,7 +142,7 @@
 .noteHolder .action
 {
   position: absolute;
-  right: 0px;
+  right: 15px;
   left: 0;
   bottom: 0px;
   text-align:right;
@@ -208,5 +213,18 @@
   100% {
       -moz-box-shadow: 0 0 0 0 rgba(96,57,224, 0);
       box-shadow: 0 0 0 0 rgba(96,57,224, 0);
+  }
+}
+
+/*Media*/
+@media (min-width: 320px) and (max-width: 480px){
+  .not-title{
+    font-size: 40px;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .not-title{
+    font-size: 46px;
   }
 }

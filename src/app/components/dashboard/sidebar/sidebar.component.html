@@ -1,58 +1,60 @@
 <div class="wrapper">
   <!-- Sidebar  -->
   <nav id="sidebar">
-    <div class="sidebar-header">
+    <div class="sidebar-header" id="header">
       <img src="../../../../assets/img/logo2.png">
     </div>
     <ul class="list-unstyled components">
 
-    <li class="active"><a routerLink="/dashboardhome"><img src="https://img.icons8.com/material-rounded/24/000000/home.png"> Dashboard Home</a></li>
+    <li id="h" class="active"><a href="/dashboardhome"><img src="https://img.icons8.com/material-rounded/24/000000/home.png"> Dashboard Home</a></li>
     <hr>
     <div *ngFor="let uinfo of userinfo">
-      <li *ngIf="uinfo.name == 'Khaled Farouk'"><a routerLink="/announcement"><img src="https://img.icons8.com/ios/24/ffffff/add-property.png"/> Add Announcement</a></li>
+      <li id="add-announce" *ngIf="uinfo.name == 'Khaled Farouk' || uinfo.name == 'Fatma Farouk' || uinfo.name == 'Mohamed Bauomy' || uinfo.name == 'Manal'"><a routerLink="/announcement"><img src="https://img.icons8.com/ios/24/ffffff/add-property.png"/> Add Announcement</a></li>
     </div>
     <hr>
-    <li><a routerLink="/forms"><img src="https://img.icons8.com/wired/24/ffffff/microsoft-forms.png"/> Forms</a></li>
+    <li id="form"><a routerLink="/forms"><img src="https://img.icons8.com/wired/24/ffffff/microsoft-forms.png"/> Forms</a></li>
     <hr>
-    <li *ngIf="reportshow">
-      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/carbon-copy/24/ffffff/business-report.png"/> Reports</a>
-      <ul class="collapse list-unstyled" id="homeSubmenu">
-        <li *ngIf="reportmanager">
-          <a href="javascript:void(0)" routerLink="/managerReport"><img src="https://img.icons8.com/ios/24/ffffff/agreement.png"/> Manager Report</a>
-        </li>
-        <li *ngIf="hrreport">
-          <a href="javascript:void(0)" routerLink="/hrReport"><img src="https://img.icons8.com/ios/24/ffffff/test-results.png"/> HR Report</a>
-        </li>
-      </ul>
-    </li>
+    <div *ngFor="let uinfo of userinfo">
+      <li id="report" *ngIf="uinfo.type == 'manager' || uinfo.type == 'dmanager'">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/carbon-copy/24/ffffff/business-report.png"/> Reports</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+          <li *ngIf="uinfo.type == 'manager' || uinfo.type == 'dmanager'">
+            <a href="javascript:void(0)" routerLink="/managerReport"><img src="https://img.icons8.com/ios/24/ffffff/agreement.png"/> Manager Report</a>
+          </li>
+          <li *ngIf="uinfo.type == 'manager' || uinfo.type == 'hr'">
+            <a href="javascript:void(0)" routerLink="/hrReport"><img src="https://img.icons8.com/ios/24/ffffff/test-results.png"/> HR Report</a>
+          </li>
+        </ul>
+      </li>
+    </div>
     <hr>
-    <li>
+    <li id="manual">
       <a href="#homeSubmenu11" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/ios/24/ffffff/user-manual.png"/> Manual</a>
       <ul class="collapse list-unstyled" id="homeSubmenu11">
-        <li>
+        <!--<li>
           <a href="javascript:void(0)" class="nav-link disabled" routerLink="/manual"><img src="https://img.icons8.com/ios/24/ffffff/book.png"/> Job Description Manual</a>
         </li>
         <li>
-          <a href="javascript:void(0)" routerLink="/organizationChart"><img src="https://img.icons8.com/ios/24/ffffff/organization-chart-people.png"/> Organization Chart</a>
-        </li>
+          <a href="javascript:void(0)" class="nav-link disabled" routerLink="/organizationChart"><img src="https://img.icons8.com/ios/24/ffffff/organization-chart-people.png"/> Organization Chart</a>
+        </li>-->
         <li>
           <a href="javascript:void(0)" routerLink="/unicoprofile"><img src="https://img.icons8.com/ios/24/ffffff/classroom.png"/> Unico Profile</a>
         </li>
       </ul>
     </li>
     <hr>
-    <li><a routerLink="/requlations"><img src="https://img.icons8.com/dotty/24/ffffff/people-working-together.png"/> Work Regulations</a></li>
+    <li id="regulation"><a routerLink="/requlations"><img src="https://img.icons8.com/dotty/24/ffffff/people-working-together.png"/> Work Regulations</a></li>
     <hr>
-    <li><a routerLink="/events" class="nav-link disabled"><img src="https://img.icons8.com/ios/24/ffffff/event-accepted.png"/> Events & Photos</a></li>
-    <hr>
-    <li>
-      <a href="#homeSubmenu111" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/ios/24/ffffff/ball-point-pen.png"/> My Space</a>
+    <!--<li><a routerLink="/events" class="nav-link disabled"><img src="https://img.icons8.com/ios/24/ffffff/event-accepted.png"/> Events & Photos</a></li>
+    <hr>-->
+    <li id="space">
+      <a style="font-weight: 700;" href="#homeSubmenu111" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><img src="https://img.icons8.com/ios/24/ffffff/ball-point-pen.png"/> My Space</a>
       <ul class="collapse list-unstyled" id="homeSubmenu111">
         <li>
           <a href="javascript:void(0)" routerLink="/notes"><img src="https://img.icons8.com/ios/24/ffffff/notepad.png"/> Notes</a>
         </li>
         <li>
-          <a href="javascript:void(0)" routerLink="/todolist"><img src="https://img.icons8.com/ios/24/ffffff/reminders.png"/> To Do List</a>
+          <a href="javascript:void(0)" routerLink="/todolist"><img src="https://img.icons8.com/ios/24/ffffff/reminders.png"/> To-Do List</a>
         </li>
         <li>
           <a href="javascript:void(0)" routerLink="/calender"><img src="https://img.icons8.com/ios/24/ffffff/timeline-week.png"/> Calendar</a>
@@ -79,15 +81,15 @@
           <li class="nav-item active">
             <a class="nav-link" routerLink="/"><img src="https://img.icons8.com/material-rounded/40/ffffff/home.png"> Website Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item" *ngFor="let uinfo of userinfo">
+          <!--<li class="nav-item" *ngFor="let uinfo of userinfo">
             <a style="cursor: none;" class="nav-link" href="javascriot:void(0)"><img src="https://img.icons8.com/ios/40/ffffff/employee-card.png"/> {{ uinfo.name }}</a>
-          </li>
+          </li>-->
           <!---->
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" id="notification">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true">
-              <img src="https://img.icons8.com/ios/40/ffffff/push-notifications.png"/> Notifications <span class="all-notify">{{ calendarnotificationNumber + announcenotificationNumber }}</span>
+              <img src="https://img.icons8.com/ios/40/ffffff/push-notifications.png"/> Notifications <span class="all-notify">{{ calendarnotificationNumber + announcenotificationNumber }}</span> <img style="width: auto;margin-top: -5px;" src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png"/>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1" style="width: 200%;">
+            <div class="dropdown-menu dropdown-menu-notfy" aria-labelledby="navbarDropdownMenuLink1">
 
                 <div id="accordion">
                   <div class="card">
@@ -103,7 +105,7 @@
                       <div class="card-body">
                         <ul>
                           <li *ngFor="let not of announceNotify" class="row">
-                            <p class="col-md-8" style="color: #1a2628;font-weight: 400;line-height: 1.1em;">{{ not.title }}</p>
+                            <p class="col-md-8" style="color: #202e31;font-weight: 400;line-height: 1.8em;text-transform: capitalize;"><img src="https://img.icons8.com/color/15/000000/circled-dot.png" alt="unico-egypt"> {{ not.title }}</p>
                             <span class="col-md-4" (click)="announceNotifyDel(not)">Mark as read</span>
                             <hr class="col-md-12">
                           </li>
@@ -124,8 +126,8 @@
                       <div class="card-body">
                         <ul>
                           <li *ngFor="let cal of newCalendarNotify" class="row">
-                            <p class="col-md-8" style="color: #1a2628;font-weight: 400;line-height: 1.1em;">{{ cal.text }}</p>
-                            <span class="col-md-4" (click)="calNotifyDel(cal)">Mark as read</span>
+                            <p class="col-md-12" style="color: #202e31;font-weight: 400;line-height: 1.8em;text-transform: capitalize;"><img src="https://img.icons8.com/color/15/000000/circled-dot.png" alt="unico-egypt"> Today you have an event is {{ cal.text }}</p>
+                            <!--<span class="col-md-4" (click)="calNotifyDel(cal)">Mark as read</span>-->
                             <hr class="col-md-12">
                           </li>
 
@@ -138,13 +140,13 @@
             </div>
           </li>
           <!---->
-          <li class="nav-item dropdown">
+          <li id="nameuser" class="nav-item dropdown" *ngFor="let uinfo of userinfo">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="https://img.icons8.com/ios/40/ffffff/user-menu-male.png"/> Profile
+              <img src="https://img.icons8.com/ios/40/ffffff/user-menu-male.png"/> {{ uinfo.name }} <img style="width: auto;margin-top: -5px;" src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png"/>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item btn btn-danger" href="javascriot:void(0)" (click)="logout()"><img src="https://img.icons8.com/ios/24/000000/logout-rounded--v1.png"/> Logout</a>
-              <a class="dropdown-item" href="javascriot:void(0)" data-toggle="modal" data-target="#exampleModal"><img src="https://img.icons8.com/ios/24/000000/power-off-button--v2.png"/> Final Logout</a>
+              <a style="display: none;" class="dropdown-item" href="javascriot:void(0)" data-toggle="modal" data-target="#exampleModal"><img src="https://img.icons8.com/ios/24/000000/power-off-button--v2.png"/> Final Logout</a>
               <hr>
               <a class="dropdown-item" href="javascriot:void(0)" routerLink="/changepass"><img src="https://img.icons8.com/ios/24/000000/re-enter-pincode.png"/> Change Password!</a>
             </div>
@@ -175,6 +177,6 @@
         </div>
       </div>
     </div>
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
   </div>
 </div>

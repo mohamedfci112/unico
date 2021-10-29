@@ -1,11 +1,11 @@
 <section class="container">
   <div class="todo-all">
     <div class="title">
-      <h2 class="text-center">To Do List App</h2>
+      <h2 class="text-center">To-Do List</h2>
     </div>
 
     <div class="input-group">
-      <input type="text" class="form-control" #itemTitle>
+      <input type="text" class="form-control" #itemTitle placeholder="What are you going to do?" (keyup.enter)="onAdd(itemTitle)">
       <div class="input-group-addon hover-cursor" (click)="onAdd(itemTitle)">
         <i class="fa fa-plus-circle fa-2x"></i>
       </div>

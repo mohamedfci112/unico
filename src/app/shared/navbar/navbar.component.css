@@ -44,7 +44,7 @@
   }
   .topnavbar .navtop .right .list ul li{
     margin: 0;
-    font-size: 10px;
+    font-size: 11px;
     margin-right: 5px;
   }
   .navbar-brand img{
@@ -72,9 +72,11 @@
   }
   .NORM ul{
     top: 50%;
+    left: 10%;
   }
   .LIFTING ul{
     top: 60%;
+    left: 10%;
   }
   .DRILLING ul{
     top: 72%;

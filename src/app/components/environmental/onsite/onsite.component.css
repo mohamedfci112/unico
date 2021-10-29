@@ -2,12 +2,15 @@
   .onsite{
     margin-top: 0px;
   }
+  .onsite-header{
+    height: 70vh;
+  }
   .onsite .onsite-header .text .title{
     left: 0;
     text-align: center;
   }
   .onsite .onsite-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .onsite .onsite-content .title h3{
     font-size: 35px;
@@ -25,6 +28,9 @@
 @media (min-width:481px) and (max-width: 760px){
   .onsite{
     margin-top: 0px;
+  }
+  .onsite-header{
+    height: 70vh;
   }
   .onsite .onsite-header .text .title{
     left: 0;

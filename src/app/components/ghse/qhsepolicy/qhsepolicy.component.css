@@ -2,21 +2,26 @@
   .qhse{
     margin-top: 0px;
   }
+  .qhse .qhse-header{
+    height: 70vh;
+  }
   .qhse .qhse-header .text .title{
     left: 0;
     text-align: center;
   }
   .qhse .qhse-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .qhse .qhse-content .title h3{
-    font-size: 40px;
+    font-size: 37px;
   }
   .qhse .qhse-content .left p{
     font-size: 18px;
+    text-align: center;
   }
   .qhse .qhse-content .bottom p{
     font-size: 18px;
+    text-align: center;
   }
 }
 
@@ -24,20 +29,25 @@
   .qhse{
     margin-top: 0px;
   }
+  .qhse .qhse-header{
+    height: 70vh;
+  }
   .qhse .qhse-header .text .title{
     left: 0;
     text-align: center;
   }
   .qhse .qhse-header .text .title h1{
-    font-size: 45px;
+    font-size: 40px;
   }
   .qhse .qhse-content .title h3{
-    font-size: 45px;
+    font-size: 40px;
   }
   .qhse .qhse-content .left p{
+    text-align: center;
     font-size: 19px;
   }
   .qhse .qhse-content .bottom p{
+    text-align: center;
     font-size: 19px;
   }
 }

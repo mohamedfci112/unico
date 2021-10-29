@@ -18,6 +18,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DayPilotModule} from 'daypilot-pro-angular';
 import {HttpClientModule} from '@angular/common/http';
 import { BnNgIdleService } from 'bn-ng-idle';
+import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -74,6 +75,13 @@ import { RdmComponent } from './components/norm/technology/rdm/rdm.component';
 import { PumpssafeComponent } from './components/norm/technology/pumpssafe/pumpssafe.component';
 import { OnsiteComponent } from './components/environmental/onsite/onsite.component';
 import { TodoComponent } from './components/dashboard/todo/todo.component';
+import { OnlinesystemComponent } from './components/lifting/onlinesystem/onlinesystem.component';
+import { InhomeComponent } from './components/lifting/inhome/inhome.component';
+import { LiftingcertificationComponent } from './components/lifting/liftingcertification/liftingcertification.component';
+import { OverviewliftingComponent } from './components/lifting/overviewlifting/overviewlifting.component';
+import { InspectionquoteComponent } from './components/lifting/inspectionquote/inspectionquote.component';
+import { FilterPipe } from './filter.pipe';
+import { HtmlrPipe } from './htmlr.pipe';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -84,9 +92,13 @@ const routes: Routes = [
   { path: 'bioRemediation', component : BioremediationComponent },
   { path: 'environmentalstudies', component : EnvironmentalstudiesComponent },
   { path: 'lifting/supply', component : SupplyComponent },
-  { path: 'lifting/about_inspection', component : AboutinspectionComponent },
+  { path: 'lifting/overview', component : OverviewliftingComponent },
   { path: 'lifting/inspection_list', component : InspectionlistComponent },
   { path: 'lifting/lifting_training', component : TrainingComponent },
+  { path: 'lifting/in_home', component : InhomeComponent },
+  { path: 'lifting/online_system', component : OnlinesystemComponent },
+  { path: 'lifting/supply_quotation', component : LiftingcertificationComponent },
+  { path: 'lifting/inspection_quotation', component : InspectionquoteComponent },
   { path: 'drilling/downhole', component : DownholeComponent },
   { path: 'drilling/completion', component : CompletionComponent },
   { path: 'drilling/solid_control', component : SolidComponent },
@@ -112,7 +124,7 @@ const routes: Routes = [
   { path: 'changepass', component : ChangepassComponent },
   { path: 'unicoprofile', component : UnicoprofileComponent, canActivate: [AuthGuardService] },
   { path: 'notes', component : NotesComponent, canActivate: [AuthGuardService] },
-  { path: 'calender', component : CalenderComponent, canActivate: [AuthGuardService] },
+  { path: 'calender', component : DashboardComponent, canActivate: [AuthGuardService] },
   { path: 'todolist', component : TodoComponent, canActivate: [AuthGuardService] },
   { path: 'norm_overview', component : OverviewComponent },
   { path: 'norm_spooler_machine', component : SpoolermachineComponent },
@@ -176,7 +188,14 @@ const routes: Routes = [
     RdmComponent,
     PumpssafeComponent,
     OnsiteComponent,
-    TodoComponent
+    TodoComponent,
+    OnlinesystemComponent,
+    InhomeComponent,
+    LiftingcertificationComponent,
+    OverviewliftingComponent,
+    InspectionquoteComponent,
+    FilterPipe,
+    HtmlrPipe
   ],
   imports: [
     BrowserModule,
@@ -204,7 +223,8 @@ const routes: Routes = [
     MatInputModule,
     BrowserAnimationsModule,
     DayPilotModule,
-    HttpClientModule
+    HttpClientModule,
+    RichTextEditorModule
   ],
   providers: [FirebaseService, AnnouncementService, DataService, BnNgIdleService],
   bootstrap: [AppComponent]

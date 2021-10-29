@@ -2,15 +2,18 @@
   .downhole{
     margin-top: 0px;
   }
+  .downhole .downhole-header{
+    height: 70vh;
+  }
   .downhole .downhole-header .text .title{
     left: 0;
     text-align: center;
   }
   .downhole .downhole-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .downhole .downhole-content .title h3{
-    font-size: 40px;
+    font-size: 35px;
   }
   .downhole .downhole-content .content .text p{
     font-size: 18px;
@@ -37,15 +40,18 @@
   .downhole{
     margin-top: 0px;
   }
+  .downhole .downhole-header{
+    height: 70vh;
+  }
   .downhole .downhole-header .text .title{
     left: 0;
     text-align: center;
   }
   .downhole .downhole-header .text .title h1{
-    font-size: 45px;
+    font-size: 40px;
   }
   .downhole .downhole-content .title h3{
-    font-size: 45px;
+    font-size: 38px;
   }
   .downhole .downhole-content .content .text p{
     font-size: 19px;

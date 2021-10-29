@@ -5,3 +5,11 @@ h1{
     font-family: 'Allerta Stencil', sans-serif;
     text-transform: uppercase;
   }
+.loader{
+  background:url(https://upload.wikimedia.org/wikipedia/commons/5/54/Ajux_loader.gif) center center no-repeat;
+}
+embed{
+  background:url(https://upload.wikimedia.org/wikipedia/commons/5/54/Ajux_loader.gif) center center no-repeat;
+  height: 100vh;
+  padding: 15px;
+}

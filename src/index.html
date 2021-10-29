@@ -5,7 +5,11 @@
   <title>Unico</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="United Oil Services (UNICO Group) is an oil field company established in 1993, as a stock-holding free zone company, our facilities are located all along Egypt ranging from the Mediterranean coast to the Red Sea with our Head Quarters centered in Maadi, Cairo.">
+  <meta name="keywords" content="Waste Water Treatment, Environmental, Environmental Studies, Incenerators, On Site Treatment, Bio-Remediation, Unico Technologies, Safety Policy, Supply, Inspection, Training, Downhole Drilling Tools, Completion Products & Services, Solid Control Services, Well Stimulation, Products & Services, Certificates, QHSE Policy, Covid-19 Policy, unico, unico egypt, unico-egypt, petrol, gas">
   <link rel="icon" type="image/x-icon" href="./assets/img/fire.ico">
+  <!--<link href="./assets/css/bootstrap-tour-standalone.min.css" rel="stylesheet">-->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -21,6 +25,8 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" />
   <link rel="stylesheet" type="text/css" href="https://printjs-4de6.kxcdn.com/print.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./assets/css/bootstrap-tourist.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
   <style>
     #loader {
@@ -190,20 +196,45 @@
   </app-root>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!--<script src="./assets/js/bootstrap-tour-standalone.min.js"></script>-->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
   <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+  <script async type="text/javascript" charset="utf-8" src="https://world-weather.info/wwinformer.php?userid=748770b74617d3392d9117bee44d6b2f"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/bootstrap-tourist.js"></script>
 
+  <!---->
   <script>
     $(document).ready(function(){
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+
     AOS.init();
 
     $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+
+      function bannerSwitcher() {
+        next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+        if (next.length) next.prop('checked', true);
+        else $('.sec-1-input').first().prop('checked', true);
+      }
+
+      var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+      $('nav .controls label').click(function() {
+        clearInterval(bannerTimer);
+        bannerTimer = setInterval(bannerSwitcher, 5000)
+      });
 
     });
   </script>

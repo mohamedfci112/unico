@@ -2,12 +2,15 @@
   .bio{
     margin-top: 0px;
   }
+  .bio-header{
+    height: 70vh;
+  }
   .bio .bio-header .text .title{
     left: 0;
     text-align: center;
   }
   .bio .bio-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .bio .bio-content .title h3{
     font-size: 35px;
@@ -21,6 +24,9 @@
 @media (min-width:481px) and (max-width: 760px){
   .bio{
     margin-top: 0px;
+  }
+  .bio-header{
+    height: 70vh;
   }
   .bio .bio-header .text .title{
     left: 0;

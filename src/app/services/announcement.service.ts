@@ -12,12 +12,14 @@ export class AnnouncementService {
 
   announceCollection: AngularFirestoreCollection<Announce>;
   announcelimitCollection: AngularFirestoreCollection<Announce>;
+  announceDetCollection: AngularFirestoreCollection<Announce>;
   announceNotification: AngularFirestoreCollection<AnnounceNotificationUser>;
   announceDoc: AngularFirestoreDocument<Announce>;
   announceNotifyDoc: AngularFirestoreDocument<AnnounceNotificationUser>;
   announces: Observable<Announce[]>;
   announcesNotify: Observable<AnnounceNotificationUser[]>;
   announceslimit: Observable<Announce[]>;
+  announcesDet: Observable<Announce[]>;
 
   constructor(public afs: AngularFirestore) {
     this.announceCollection = this.afs.collection('announc', ref => ref.orderBy('date', 'desc'));
@@ -45,6 +47,7 @@ export class AnnouncementService {
         return data;
       });
     }));
+
   }
   // tslint:disable-next-line:typedef
   getAnnounce(){
@@ -53,6 +56,19 @@ export class AnnouncementService {
   // tslint:disable-next-line:typedef
   getAnnouncelimit(){
     return this.announceslimit;
+  }
+  // tslint:disable-next-line:typedef
+  getAnnounceDet(id: string){
+    // announce details
+    this.announceDetCollection = this.afs.collection('announc', ref => ref.where('date', '==', id));
+    this.announcesDet = this.announceDetCollection.snapshotChanges().pipe(map(changes => {
+      return changes.map(a => {
+        const data = a.payload.doc.data() as Announce;
+        data.id = a.payload.doc.id;
+        return data;
+      });
+    }));
+    return this.announcesDet;
   }
   // tslint:disable-next-line:typedef
   addAnnounce(item: Announce){

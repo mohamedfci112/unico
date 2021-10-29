@@ -2,6 +2,9 @@
   .supply{
     margin-top: 0px;
   }
+  .supply .supply-header{
+    height: 70vh;
+  }
   .supply .supply-header .text .title{
     text-align: center;
     left: 0;
@@ -24,6 +27,19 @@
     font-size: 20px;
   }
   .supply .supply-content .content .left ul li{
+    font-size: 18px;
+  }
+  .about_inspection-content .title h3{
+    font-size: 35px;
+  }
+  .brief .text p{
+    font-size: 18px;
+  }
+  .about_inspection-content .content .left h2{
+    font-size: 20px;
+  }
+  .about_inspection-content .content .left p,
+  .about_inspection-content .content1 .right p{
     font-size: 18px;
   }
 }
@@ -56,6 +72,19 @@
   .supply .supply-content .content .left ul li{
     font-size: 19px;
   }
+  .about_inspection-content .title h3{
+    font-size: 40px;
+  }
+  .brief .text p{
+    font-size: 19px;
+  }
+  .about_inspection-content .content .left h2{
+    font-size: 21px;
+  }
+  .about_inspection-content .content .left p,
+  .about_inspection-content .content1 .right p{
+    font-size: 19px;
+  }
 }
 
 @media (min-width: 761px) and (max-width: 990px){
@@ -86,6 +115,19 @@
   .supply .supply-content .content .left ul li{
     font-size: 20px;
   }
+  .about_inspection-content .title h3{
+    font-size: 45px;
+  }
+  .brief .text p{
+    font-size: 20px;
+  }
+  .about_inspection-content .content .left h2{
+    font-size: 22px;
+  }
+  .about_inspection-content .content .left p,
+  .about_inspection-content .content1 .right p{
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1200px){
@@ -111,10 +153,21 @@
   .supply .supply-content .content .left ul li{
     font-size: 21px;
   }
+  .about_inspection-content .title h3{
+    font-size: 50px;
+  }
+  .brief .text p{
+    font-size: 20px;
+  }
+  .about_inspection-content .content .left p,
+  .about_inspection-content .content1 .right p{
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1201px){
   .supply .supply-header .text .title{
-    left: 5%;
+    left: 14%;
   }
+
 }

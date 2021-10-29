@@ -3,11 +3,11 @@
   <h5>Preview or Print Out Any of the Following Forms</h5>
 </div>
 <main class="page-content">
-  <div class="card">
+  <div class="card" id="formbox">
     <div class="content">
       <h2 class="title">طلب اجازة <br> Vacation Form</h2>
       <button class="btn" data-toggle="modal" data-target="#vacation"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
-      <button class="btn" onclick="printJS({printable:'https://unico-egypt.com/assets/forms/talab_agaza.pdf', type:'pdf', showModal:true})"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
+      <button class="btn" (click)="printPdf('talab_agaza.pdf')"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
 
     </div>
   </div>
@@ -38,7 +38,7 @@
     <div class="content">
       <h2 class="title">طلب إذن <br> Permission Form</h2>
       <button class="btn" data-toggle="modal" data-target="#vacation1"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
-      <button class="btn" onclick="printJS({printable:'https://unico-egypt.com/assets/forms/talab_ezn.pdf', type:'pdf', showModal:true})"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
+      <button class="btn" (click)="printPdf('talab_ezn.pdf')"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
     </div>
   </div>
   <!--Modal-->
@@ -68,7 +68,7 @@
     <div class="content">
       <h2 class="title">طلب استقالة <br> Resignation Form</h2>
       <button class="btn" data-toggle="modal" data-target="#vacation2"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
-      <button class="btn" onclick="printJS({printable:'https://unico-egypt.com/assets/forms/estekala.pdf', type:'pdf', showModal:true})"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
+      <button class="btn" (click)="printPdf('estekala.pdf')"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
     </div>
   </div>
   <!--Modal-->
@@ -98,7 +98,7 @@
     <div class="content">
       <h2 class="title">نموذج مأموريات <br> Errands Form</h2>
       <button class="btn" data-toggle="modal" data-target="#vacation3"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
-      <button class="btn" onclick="printJS({printable:'https://unico-egypt.com/assets/forms/nmozg_mamoryat.pdf', type:'pdf', showModal:true})"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
+      <button class="btn" (click)="printPdf('nmozg_mamoryat.pdf')"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
     </div>
   </div>
   <!--Modal-->
@@ -128,7 +128,7 @@
     <div class="content">
       <h2 class="title">إقرار بالمخالصة <br> Quittance Form</h2>
       <button class="btn" data-toggle="modal" data-target="#vacation4"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
-      <button class="btn" onclick="printJS({printable:'https://unico-egypt.com/assets/forms/ekrar_nehay_belmokhalsa.pdf', type:'pdf', showModal:true})"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
+      <button class="btn" (click)="printPdf('ekrar_nehay_belmokhalsa.pdf')"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
     </div>
   </div>
   <!--Modal-->
@@ -157,12 +157,12 @@
   <div class="card">
     <div class="content">
       <h2 class="title">طلب تحويلات <br> Transfers Request</h2>
-      <button class="btn" data-toggle="modal" data-target="#vacation3"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
-      <button class="btn" onclick="printJS({printable:'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf', type:'pdf', showModal:true})"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
+      <button class="btn" data-toggle="modal" data-target="#Transfers"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
+      <a class="btn" href="https://unico-egypt.com/assets/forms/Transfer_Request.xlsx" download="Transfer_Request.xlsx">Download Form</a>
     </div>
   </div>
   <!--Modal-->
-  <div class="modal fade" id="vacation3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="Transfers" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -172,11 +172,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <embed
-          type="application/pdf"
-          src="https://unico-egypt.com/assets/img/dashboard/internal_work_reg.pdf#toolbar=0"
-          width="100%"
-          height="400px" />
+          <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://unico-egypt.com/assets/forms/Transfer_Request.xlsx#toolbar=0' width='100%' height='565px' frameborder='0'></iframe>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -187,12 +183,12 @@
   <div class="card">
     <div class="content">
       <h2 class="title">تسوية العهدة<br>Adjustment Request</h2>
-      <button class="btn" data-toggle="modal" data-target="#vacation3"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
-      <button class="btn" onclick="printJS({printable:'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf', type:'pdf', showModal:true})"><img src="https://img.icons8.com/small/16/ffffff/print.png"/>Print Form</button>
+      <button class="btn" data-toggle="modal" data-target="#Adjustment"><img src="../../../../assets/img/dashboard/preview-icon.png" />Preview Form</button>
+      <a class="btn" href="https://unico-egypt.com/assets/forms/ADJUSTMENT.xls" download="ADJUSTMENT.xls">Download Form</a>
     </div>
   </div>
   <!--Modal-->
-  <div class="modal fade" id="vacation3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="Adjustment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -202,9 +198,10 @@
           </button>
         </div>
         <div class="modal-body">
+          <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://unico-egypt.com/assets/forms/ADJUSTMENT.xls#toolbar=0' width='100%' height='565px' frameborder='0'></iframe>
           <embed
           type="application/pdf"
-          src="https://unico-egypt.com/assets/img/dashboard/internal_work_reg.pdf#toolbar=0"
+          src="https://unico-egypt.com/assets/forms/ADJUSTMENT.xls#toolbar=0"
           width="100%"
           height="400px" />
         </div>

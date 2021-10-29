@@ -2,15 +2,18 @@
   .contact{
     margin-top: 0px;
   }
+  .contact .contact-header{
+    height: 70vh;
+  }
   .contact .contact-header .text .title{
   text-align: center;
   left: 0;
   }
 .contact .contact-header .text .title h1{
-  font-size: 40px;
+  font-size: 37px;
   }
 .contact .contact-content .title h3{
-  font-size: 40px;
+  font-size: 37px;
   }
 .contact .contact-content .title h4{
   font-size: 25px;
@@ -27,15 +30,18 @@
   .contact{
     margin-top: 0px;
   }
+  .contact .contact-header{
+    height: 70vh;
+  }
   .contact .contact-header .text .title{
   text-align: center;
   left: 0;
   }
 .contact .contact-header .text .title h1{
-  font-size: 45px;
+  font-size: 40px;
   }
 .contact .contact-content .title h3{
-  font-size: 45px;
+  font-size: 40px;
   }
 .contact .contact-content .title h4{
   font-size: 26px;

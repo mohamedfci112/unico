@@ -17,6 +17,13 @@ export class AppComponent {
 
   }
 
+  // tslint:disable-next-line:typedef
+  onActivate(event) {
+    window.scroll(0, 0);
+    // or document.body.scrollTop = 0;
+    // or document.querySelector('body').scrollTo(0,0)
+}
+
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit(): void {
     AOS.init();

@@ -14,7 +14,7 @@ export class NotesService {
 
   constructor(public afs: AngularFirestore) {
     const email = localStorage.getItem('email');
-    this.notesCollection = this.afs.collection('note', x => x.where('user' , '==', email.toString()));
+    this.notesCollection = this.afs.collection('note', x => x.where('user' , '==', email.toString()).orderBy('date', 'desc'));
     this.notes = this.notesCollection.snapshotChanges().pipe(map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Notes;
@@ -35,5 +35,11 @@ export class NotesService {
   deleteItem(note: Notes){
     this.notesDoc = this.afs.doc(`note/${note.id}`);
     this.notesDoc.delete();
+  }
+  // tslint:disable-next-line:typedef
+  updateNote(params: Notes) {
+    // return this.http.post('../../../angular-calendar-php-backend/api/backend_move.php', params) as Observable<BackendResult>;
+    this.notesDoc = this.afs.doc(`note/${params.id}`);
+    this.notesDoc.update(params);
   }
 }

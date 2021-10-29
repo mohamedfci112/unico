@@ -3,4 +3,5 @@ export interface Todo {
   title?: string;
   isChecked?: any;
   user?: string;
+  date?: string;
 }

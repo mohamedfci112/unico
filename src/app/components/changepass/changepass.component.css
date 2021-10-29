@@ -1,0 +1,12 @@
+form{
+  padding: 40px;
+  margin: 20px;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  top: 15%;
+}
+form label{
+  color: #bf1e2d;
+  font-weight: 600;
+}

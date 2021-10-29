@@ -16,7 +16,7 @@ export class DataService {
   notes: Observable<Calendar[]>;
 
   usersinfo: Observable<EventData[]>;
-  calendarDoc: AngularFirestoreDocument<MoveEventParams>;
+  calendarDoc: AngularFirestoreDocument<Calendar>;
   constructor(private http: HttpClient, public afs: AngularFirestore) {
     this.calendarCollection = this.afs.collection('calendar');
   }
@@ -50,7 +50,7 @@ export class DataService {
   }
 
   // tslint:disable-next-line:typedef
-  moveEvent(params: MoveEventParams) {
+  moveEvent(params: Calendar) {
     // return this.http.post('../../../angular-calendar-php-backend/api/backend_move.php', params) as Observable<BackendResult>;
     this.calendarDoc = this.afs.doc(`calendar/${params.id}`);
     this.calendarDoc.update(params);
@@ -67,6 +67,7 @@ export interface MoveEventParams {
   id?: string | number;
   start?: string;
   end?: string;
+  text: string;
 }
 
 export interface BackendResult {

@@ -52,6 +52,7 @@
 @media (min-width: 320px) and (max-width: 480px){
   .videoContainer{
     margin-top: 0;
+    height: 71vh;
   }
   .videoContainer .content{
     margin: 0;

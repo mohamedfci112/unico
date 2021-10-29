@@ -35,7 +35,7 @@ a:focus {
 }
 .navbar-nav .nav-item{
   margin-right: 0%;
-  margin-left: 0%;
+  margin-left: 6%;
   min-width: 25%;
   text-transform: uppercase;
   font-weight: 700;
@@ -102,6 +102,7 @@ a:focus {
 a[aria-expanded="true"] {
     color: #fff;
     background: #BF1E2D;
+    font-weight: 700;
 }
 
 a[data-toggle="collapse"] {
@@ -109,7 +110,7 @@ a[data-toggle="collapse"] {
 }
 
 .dropdown-toggle::after {
-    display: block;
+    display: none;
     position: absolute;
     top: 50%;
     right: 20%;
@@ -151,7 +152,7 @@ a.article:hover {
 
 #content {
     width: 100%;
-    padding: 20px;
+    /*padding: 20px;*/
     min-height: 100vh;
     transition: all 0.3s;
     background: url("https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?size=626&ext=jpg") fixed center center;
@@ -179,7 +180,7 @@ a.article:hover {
   padding: 3px;
   position: relative;
   top: 0px;
-  border-radius: 30%;
+  border-radius: 15%;
   background-color: #bf1e2d;
 }
 .btn-link{
@@ -204,4 +205,20 @@ a.article:hover {
   font-size: 11px;
   cursor: pointer;
   text-decoration: underline;
+}
+.dropdown-menu-notfy{
+  width: 200%;
+}
+
+/*media*/
+@media (min-width: 320px) and (max-width: 480px){
+  .dropdown-menu-notfy{
+    width: 100%;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  .dropdown-menu-notfy{
+    width: 100%;
+  }
 }

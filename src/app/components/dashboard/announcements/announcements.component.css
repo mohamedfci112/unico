@@ -1,12 +1,21 @@
 .card{
-    margin-top: 20px;
+    margin: 20px;
 }
 
 .card-header{
   font-size: 20px;
   font-weight: 800;
+  color: #1F567C;
+  font-family: 'Allerta Stencil', sans-serif;
+
 }
 .card-text{
   font-size: 18px;
-  font-weight: 600;
+  font-family: 'Cairo';
+}
+
+.e-rte-image.e-imginline{
+  display: flex!important;
+  align-items: center!important;
+  justify-content: center!important;
 }

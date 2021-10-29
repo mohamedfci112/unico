@@ -2,12 +2,15 @@
   .cen{
     margin-top: 0px;
   }
+  .cen-header{
+    height: 70vh;
+  }
   .cen .cen-header .text .title{
     left: 0;
     text-align: center;
   }
   .cen .cen-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .cen .cen-content .title h3{
     font-size: 35px;
@@ -28,6 +31,9 @@
 @media (min-width:481px) and (max-width: 760px){
   .cen{
     margin-top: 0px;
+  }
+  .cen-header{
+    height: 70vh;
   }
   .cen .cen-header .text .title{
     left: 0;

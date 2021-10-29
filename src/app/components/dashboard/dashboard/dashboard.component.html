@@ -1,0 +1,146 @@
+<div class="container">
+  <div class="text-center">
+    <h1 class="cal-title">Calendar</h1>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modalcalendar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 style="color: #bf1e2d;font-family: 'Allerta Stencil', sans-serif;" class="modal-title" id="exampleModalLabel"><img src="https://img.icons8.com/material-outlined/24/bf1e2d/add.png"/> Add Event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <form [formGroup]="form">
+        <div class="modal-body text-center">
+          <h3 style="color: #bf1e2d;font-family: 'Allerta Stencil', sans-serif;text-decoration: underline;">New Event</h3>
+          <div class="form-item form-group text-left">
+            <label for="example1" style="font-weight: 500;">EVENT NAME</label>
+            <input id="example1" class="form-control" formControlName="name" type="text" placeholder="Event Name" #text [(ngModel)] = "item.text" name="text">
+            <small *ngIf="!form.controls.name.valid" style="color: red;">Event name required</small>
+          </div>
+          <div class="form-item form-group text-left">
+              <label for="example2" style="font-weight: 500;">EVENT START</label>
+              <input disabled id="example2" class="form-control" formControlName="start" type="text" placeholder="Start" #start [(ngModel)] = "item.start" name="start">
+              <small *ngIf="!form.controls.start.valid" style="color: red;">Invalid Event start</small>
+          </div>
+          <div class="form-item form-group text-left">
+              <label for="example3" style="font-weight: 500;">EVENT END</label>
+              <input disabled id="example3" class="form-control" formControlName="end" type="text" placeholder="End" #end [(ngModel)] = "item.end" name="end">
+              <small *ngIf="!form.controls.end.valid" style="color: red;">Invalid Event end</small>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-item">
+            <button id="save" class="btn btn-primary" (click)="submit()" data-dismiss="modal" [disabled]="!form.valid">Create</button>
+            &nbsp;
+            <button class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+        </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Update -->
+  <div class="modal fade" id="modalcalendarupdate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 style="color: #bf1e2d;font-family: 'Allerta Stencil', sans-serif;" class="modal-title" id="exampleModalLabel"><img src="https://img.icons8.com/material-outlined/24/bf1e2d/add.png"/> Add Event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <form [formGroup]="form1">
+        <div class="modal-body text-center">
+          <h3 style="color: #bf1e2d;font-family: 'Allerta Stencil', sans-serif;text-decoration: underline;">New Event</h3>
+          <div class="form-item form-group text-left">
+            <input class="form-control" formControlName="id" type="hidden" #id >
+          </div>
+          <div class="form-item form-group text-left">
+            <label for="example1" style="color: #bf1e2d;">EVENT NAME</label>
+            <input id="example1" class="form-control" formControlName="name1" type="text" placeholder="Event Name" #text1 >
+            <small *ngIf="!form.controls.name.valid" style="color: red;">Event name required</small>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-item">
+            <button id="save" class="btn btn-primary" (click)="update(id.value, text1.value)" data-dismiss="modal">Update</button>
+            &nbsp;
+            <button class="close" data-dismiss="modal" aria-label="Close">Cancel</button>
+        </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <!--Agenda Modal-->
+  <div class="modal fade" id="modalcalendar1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 style="color: #bf1e2d;font-family: 'Allerta Stencil', sans-serif;"><img src="https://img.icons8.com/cute-clipart/64/000000/agenda.png"/> AGENDA</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal__content">
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="searchString"
+                  placeholder="Type to search for any event name ..."
+                  [(ngModel)]="searchString"
+                />
+              </div>
+            </div>
+          </form>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Event</th>
+                <th scope="col">Date</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ag of agendaEvents | filter:searchString;let i=index;">
+                <td style="word-break: break-all;"><img src="https://img.icons8.com/color/15/000000/circled-dot.png"/> {{ag.text}}</td>
+                <td><img src="https://img.icons8.com/ios-filled/15/000000/calendar--v1.png"/> {{ag.start | date: 'fullDate'}}</td>
+                <td><a class="btn btn-danger" (click)="delete(ag)"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/30/ffffff/external-delete-miscellaneous-kiranshastry-solid-kiranshastry.png"/></a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="modal__footer">
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column-main">
+  <div class="container">
+    <div class="buttons row">
+      <a class="btn btn-primary cal col-md-3 col-sm-12" id="addEventBtn"  data-toggle="modal" data-target="#modalcalendar"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Event</a>
+      <div class="col-md-6 col-sm-12 date">
+        <a href="#" (click)="navigatePrevious($event)"><img src="https://img.icons8.com/material-rounded/24/ffffff/left-squared.png"/></a>
+        <b>{{monthname | date: 'MMMM'}}, {{monthname | date: 'y'}}</b>
+        <a href="#" (click)="navigateNext($event)"><img src="https://img.icons8.com/material-rounded/24/ffffff/right-squared.png"/></a>
+      </div>
+      <a class="btn btn-primary col-md-3 col-sm-12" id="agendaBtn" data-toggle="modal" data-target="#modalcalendar1"><img src="https://img.icons8.com/external-those-icons-fill-those-icons/22/ffffff/external-agenda-business-those-icons-fill-those-icons.png"/> Your Events</a>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center alrt">
+        <span class="alert alert-danger">Please Drag or Click On The Calendar To Create Event</span>
+      </div>
+    </div>
+  </div>
+  <daypilot-month id="calend" [config]="config" [events]="events" (viewChange)="viewChange()" #calendar></daypilot-month>
+</div>

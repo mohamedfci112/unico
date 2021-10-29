@@ -87,3 +87,75 @@
   align-items: center;
   text-align:center;
 }
+
+/**/
+@media (min-width: 320px) and (max-width: 480px){
+  .norm{
+    margin-top: 0px;
+  }
+  .norm-header{
+    height: 70vh;
+  }
+  .norm .norm-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .norm .norm-header .text .title h1{
+    font-size: 37px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 35px;
+  }
+  .norm .norm-content .content .text p{
+    font-size: 19px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .norm .norm-content .content .img img{
+    padding: 10px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 37px;
+  }
+  #main2{
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width:481px) and (max-width: 760px){
+  .norm{
+    margin-top: 0px;
+  }
+  .norm-header{
+    height: 70vh;
+  }
+  .norm .norm-header .text .title{
+    left: 0;
+    text-align: center;
+  }
+  .norm .norm-header .text .title h1{
+    font-size: 45px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 45px;
+  }
+  .norm .norm-content .content .text p{
+    font-size: 21px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .norm .norm-content .content .img img{
+    padding: 10px;
+  }
+  .norm .norm-content .title h3{
+    font-size: 39px;
+  }
+  .main-timeline .description{
+    padding: 0 10px;
+    font-size: 20px;
+  }
+  #main2{
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}

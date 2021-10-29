@@ -64,6 +64,9 @@
   .norm{
     margin-top: 0px;
   }
+  .norm .norm-header{
+    height: 70vh;
+  }
   .norm .norm-header .text .title{
     left: 0;
     text-align: center;
@@ -76,7 +79,8 @@
   }
   .norm .norm-content .content .text p{
     font-size: 18px;
-    text-align: center;
+    text-align: left;
+    padding: 0 10px;
   }
   .norm .card{
     margin-left: 0;
@@ -87,6 +91,9 @@
 @media (min-width:481px) and (max-width: 760px){
   .norm{
     margin-top: 0px;
+  }
+  .norm .norm-header{
+    height: 70vh;
   }
   .norm .norm-header .text .title{
     left: 0;
@@ -100,7 +107,8 @@
   }
   .norm .norm-content .content .text p{
     font-size: 19px;
-    text-align: center;
+    text-align: left;
+    padding: 0 10px;
   }
   .norm .card{
     margin-left: 0;

@@ -90,6 +90,8 @@ logout(){
     localStorage.removeItem('type');
     localStorage.removeItem('notifycalnum');
     localStorage.removeItem('notifyannounum');
+    //
+    localStorage.removeItem('loginDate');
   }
 
   // tslint:disable-next-line:typedef

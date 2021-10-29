@@ -37,13 +37,19 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
   calendarConfig = {
     startDate: DayPilot.Date.today(),
     viewType: 'Week',
+    cellHeight: 90,
+    timeHeaderCellDuration: 60,
+    cellDuration: 60,
+    hourWidth: 0,
     eventDeleteHandling: 'Update',
     onEventDeleted: args => {
       this.ds.deleteEvent(args.e.id());
     },
     onTimeRangeSelected: args => {
       this.show(args);
-      document.querySelector<HTMLElement>('.cal').style.display = 'block';
+      document.querySelector<HTMLElement>('.cal').style.pointerEvents = 'visible';
+      document.querySelector<HTMLElement>('.cal').style.backgroundColor = 'blue';
+      document.querySelector<HTMLElement>('.cal').style.color = 'white';
     }
   };
 
@@ -179,13 +185,15 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
           }
         }
       }
-      document.querySelector<HTMLElement>('.modal').style.display = 'none';
       this.ds.createEvent(this.item);
       this.item.text = '';
       this.item.start = '';
       this.item.end = '';
       this.item.user = '';
-      document.querySelector<HTMLElement>('.cal').style.display = 'none';
+      document.querySelector<HTMLElement>('.modal').style.display = 'none';
+      document.querySelector<HTMLElement>('.cal').style.pointerEvents = 'none';
+      document.querySelector<HTMLElement>('.cal').style.backgroundColor = '#edf1f2';
+      document.querySelector<HTMLElement>('.cal').style.color = 'black';
       this.calendar.control.clearSelection();
     }
   }
@@ -210,6 +218,20 @@ export class CalenderComponent implements OnInit, AfterViewInit  {
   // tslint:disable-next-line:typedef
   viewChange() {
     this.ds.getEvents(this.calendar.control.visibleStart(), this.calendar.control.visibleEnd()).subscribe(result => this.events = result);
+  }
+  navigatePrevious(event): void {
+    event.preventDefault();
+    this.calendarConfig.startDate = (this.calendarConfig.startDate as DayPilot.Date).addDays(-7);
+  }
+
+  navigateNext(event): void {
+    event.preventDefault();
+    this.calendarConfig.startDate = (this.calendarConfig.startDate as DayPilot.Date).addDays(7);
+  }
+
+  navigateToday(event): void {
+    event.preventDefault();
+    this.calendarConfig.startDate = DayPilot.Date.today();
   }
 
 }

@@ -1,7 +1,18 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <button type="button" (click)="show1($event, text.value, start.value, end.value)" data-toggle="modal" data-target="#modalcalendar" class="btn btn-primary cal"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Event</button>
+    <div class="col-md-12 text-center">
+      <div class="row" style="padding: 0 30px;">
+        <div class="col-md-6 col-sm-12">
+          <button type="button" (click)="show1($event, text.value, start.value, end.value)" data-toggle="modal" data-target="#modalcalendar" class="btn btn-primary cal"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Add Event</button>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <button type="button" class="btn btn-primary"><img src="https://img.icons8.com/material-outlined/24/ffffff/add.png"/> Agenda</button>
+        </div>
+        <div class="col-md-12" style="padding: 0 200px;margin-top: 14px;">
+          <span class="alert alert-danger" style="padding: 0;color: #1F567C;font-size: 15px;display: block;">Please Drag To Create Event</span>
+        </div>
+      </div>
+
       <!-- Modal -->
       <div class="modal fade" id="modalcalendar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -16,16 +27,16 @@
             <div class="modal-body">
               <h3>New Event</h3>
               <div class="form-item">
-                <input formControlName="name" type="text" placeholder="Appointment Name" #text [(ngModel)] = "item.text" name="text"> <span
-                    *ngIf="!form.controls.name.valid">Event name required</span>
+                <input formControlName="name" type="text" placeholder="Appointment Name" #text [(ngModel)] = "item.text" name="text"><br>
+                <span *ngIf="!form.controls.name.valid">Event name required</span>
             </div>
             <div class="form-item">
-                <input formControlName="start" type="text" placeholder="Start" #start [(ngModel)] = "item.start" name="start"> <span
-                    *ngIf="!form.controls.start.valid">Invalid Event start</span>
+                <input formControlName="start" type="text" placeholder="Start" #start [(ngModel)] = "item.start" name="start"><br>
+                <span *ngIf="!form.controls.start.valid">Invalid Event start</span>
             </div>
             <div class="form-item">
-                <input formControlName="end" type="text" placeholder="End" #end [(ngModel)] = "item.end" name="end"> <span
-                    *ngIf="!form.controls.end.valid">Invalid Event end</span>
+                <input formControlName="end" type="text" placeholder="End" #end [(ngModel)] = "item.end" name="end"><br>
+                <span *ngIf="!form.controls.end.valid">Invalid Event end</span>
             </div>
             </div>
             <div class="modal-footer">
@@ -42,12 +53,17 @@
     </div>
   </div>
 </div>
-<hr>
+<hr style="margin: 0;">
 
-<div class="column-left">
+<!--<div class="column-left">
   <daypilot-navigator [config]="navigatorConfig" [(date)]="calendarConfig.startDate"></daypilot-navigator>
-</div>
+</div>-->
 <div class="column-main">
+  <div class="buttons">
+    <a href="#" (click)="navigatePrevious($event)">Prev Month</a>
+    <a href="#" (click)="navigateToday($event)">Current</a>
+    <a href="#" (click)="navigateNext($event)">Next Month</a>
+  </div>
   <daypilot-calendar #calendar [events]="events" [config]="calendarConfig" (viewChange)="viewChange()"></daypilot-calendar>
 </div>
 

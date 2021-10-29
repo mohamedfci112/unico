@@ -16,7 +16,7 @@ export class TodoService {
 
   constructor(public afs: AngularFirestore) {
     const email = localStorage.getItem('email');
-    this.announceCollection = this.afs.collection('todolist', ref => ref.where('user' , '==', email.toString()));
+    this.announceCollection = this.afs.collection('todolist', ref => ref.where('user' , '==', email.toString()).orderBy('date', 'desc'));
     this.announces = this.announceCollection.snapshotChanges().pipe(map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Todo;
@@ -26,7 +26,7 @@ export class TodoService {
     }));
     // limit announce
     // tslint:disable-next-line:max-line-length
-    this.announcelimitCollection = this.afs.collection('todolist', ref => ref.where('user' , '==', email.toString()).where('isChecked' , '==', false).limit(3));
+    this.announcelimitCollection = this.afs.collection('todolist', ref => ref.where('user' , '==', email.toString()).where('isChecked' , '==', false).orderBy('date', 'desc').limit(3));
     this.announceslimit = this.announcelimitCollection.snapshotChanges().pipe(map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as Todo;

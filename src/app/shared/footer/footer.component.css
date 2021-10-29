@@ -25,3 +25,18 @@ padding: 50px;
 .copy-link{
   color: #fff;
 }
+.bordr{
+  border-right: 1px groove;
+}
+/**/
+@media (min-width: 320px) and (max-width: 480px){
+  .bordr{
+    border-right: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 760px){
+  .bordr{
+    border-right: none;
+  }
+}

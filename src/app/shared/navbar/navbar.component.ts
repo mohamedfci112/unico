@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from '../../components/dashboard/sidebar/sidebar.component';
+declare var $;
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +16,10 @@ export class NavbarComponent implements OnInit {
     if (localStorage.getItem('user')){
       this.islogin = true;
     }
+  }
+  // tslint:disable-next-line:typedef
+  openMail(){
+    window.open('mailto:test@example.com?subject=subject&body=body');
   }
 
   ngOnInit(): void {

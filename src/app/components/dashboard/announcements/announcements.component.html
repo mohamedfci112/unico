@@ -1,12 +1,13 @@
 <app-addannounc></app-addannounc>
-<div *ngIf="announces?.length > 0;else noItems">
+<hr>
+<div *ngIf="announces?.length > 0;else noItems" style="margin-bottom: 30px;">
   <div *ngFor="let announce of announces">
     <div class="card">
       <div class="card-header">
         {{ announce.title }}
       </div>
       <div class="card-body">
-        <p class="card-text">{{ announce.description }}</p>
+        <p class="card-text" [innerHTML] = "announce.description"></p>
         <a class="btn btn-primary">
           <i class="fa fa-pencil" (click)="editItem($event,announce)" style="margin-right:10px;"></i>
           <i *ngIf="editState && itemToEdit.id == announce.id" class="fa fa-compress" (click)="clearState()"></i>
@@ -17,7 +18,14 @@
               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Add Announcement Title" [(ngModel)] = "announce.title" name="title">
             </div>
             <div class="form-group">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add Announcement Description" [(ngModel)] = "announce.description" name="description"></textarea>
+              <div>
+                <ejs-richtexteditor id='apiRTE1' #apiRTE1  [value]='announce.description' [toolbarSettings]='tools1' [iframeSettings]='iframe' [height]='height'>
+                  <ng-template #valueTemplate1>
+                    <p [innerHTML]="announce.description"></p>
+                  </ng-template>
+                </ejs-richtexteditor>
+              </div>
+              <!--<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Add Announcement Description" [(ngModel)] = "announce.description" name="description"></textarea>-->
               </div>
               <input type="submit" value="Update Announcement" class="btn btn-success">
               <button (click)="deleteAnnounce($event, announce)" class="btn btn-danger">Delete Announcement</button>
@@ -25,7 +33,7 @@
         </div>
       </div>
       <div class="card-footer text-muted">
-        {{ announce.date }}
+        {{announce.date | date:'EEE'}}, {{ announce.date | date: 'medium' }}
       </div>
     </div>
   </div>

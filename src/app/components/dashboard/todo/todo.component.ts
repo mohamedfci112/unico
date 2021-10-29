@@ -14,7 +14,8 @@ export class TodoComponent implements OnInit {
   item: Todo = {
     title: '',
     isChecked: '',
-    user: ''
+    user: '',
+    date: ''
   };
 
   constructor(private toDoService: TodoService) { }
@@ -26,9 +27,9 @@ export class TodoComponent implements OnInit {
       this.toDoListArray = item;
 
       // sort array isChecked false  -> true
-      this.toDoListArray.sort((a, b) => {
+      /*this.toDoListArray.sort((a, b) => {
           return a.isChecked - b.isChecked;
-        });
+        });*/
     });
   }
   // tslint:disable-next-line:typedef
@@ -37,6 +38,7 @@ export class TodoComponent implements OnInit {
     if (itemTitle.value != ''){
       this.item.title = itemTitle.value;
       this.item.user = localStorage.getItem('email');
+      this.item.date = (new Date()).toString();
       this.item.isChecked = false;
       this.toDoService.addTitle(this.item);
       this.item.title = '';

@@ -2,12 +2,15 @@
   .well{
     margin-top: 0px;
   }
+  .well .well-header{
+    height: 70vh;
+  }
   .well .well-header .text .title{
     left: 0;
     text-align: center;
   }
   .well .well-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .well .well-content .content .img span{
     font-size: 18px;
@@ -27,12 +30,15 @@
   .well{
     margin-top: 0px;
   }
+  .well .well-header{
+    height: 70vh;
+  }
   .well .well-header .text .title{
     left: 0;
     text-align: center;
   }
   .well .well-header .text .title h1{
-    font-size: 45px;
+    font-size: 40px;
   }
   .well .well-content .content .img span{
     font-size: 19px;

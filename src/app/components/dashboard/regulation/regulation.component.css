@@ -3,7 +3,7 @@
 }
 .reg{
   position: relative;
-  top: 8%;
+  top: 5%;
 }
 h1{
   font-weight: bolder;
@@ -102,6 +102,7 @@ h5{
   font-size: 25px;
   font-family: 'Cairo';
   margin-top: 1rem;
+  color: #1F567C;
 }
 
 
@@ -169,5 +170,41 @@ h5{
 .card:focus-within .content,
 .card:focus-within .content > *:not(.title) {
     transition-duration: 0s;
+  }
+}
+
+/*Media*/
+@media (min-width: 320px) and (max-width: 480px){
+  .reg{
+    top: 0%;
+  }
+  h1{
+    font-size: 25px;
+  }
+  h5{
+    font-size: 15px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .content > * + *{
+    margin: 5px;
+    padding: .75rem 1rem;
+  }
+}
+
+@media (min-width:481px) and (max-width: 760px){
+  h1{
+    font-size: 35px;
+  }
+  h5{
+    font-size: 17px;
+  }
+  .title{
+    font-size: 22px;
+  }
+  .content > * + *{
+    margin: 5px;
+    padding: .75rem 1rem;
   }
 }

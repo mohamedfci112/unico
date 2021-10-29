@@ -2,6 +2,9 @@
   .ltraining{
     margin-top: 0px;
   }
+  .ltraining .ltraining-header{
+    height: 70vh;
+  }
   .ltraining .ltraining-header .text .title{
     left: 0;
     text-align: center;
@@ -13,7 +16,7 @@
     font-size: 18px;
   }
   .ltraining .ltraining-content .title h3{
-    font-size: 40px;
+    font-size: 35px;
   }
   .ltraining .ltraining-content .content1 .left p{
     font-size: 18px;
@@ -31,6 +34,9 @@
   .ltraining{
     margin-top: 0px;
   }
+  .ltraining .ltraining-header{
+    height: 70vh;
+  }
   .ltraining .ltraining-header .text .title{
     left: 0;
     text-align: center;
@@ -42,7 +48,7 @@
     font-size: 19px;
   }
   .ltraining .ltraining-content .title h3{
-    font-size: 45px;
+    font-size: 40px;
   }
   .ltraining .ltraining-content .content1 .left p{
     font-size: 19px;

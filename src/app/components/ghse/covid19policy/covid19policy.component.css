@@ -2,15 +2,18 @@
   .covid{
     margin-top: 0px;
   }
+  .covid .covid-header {
+    height: 70vh;
+  }
   .covid .covid-header .text .title{
     left: 0;
     text-align: center;
   }
   .covid .covid-header .text .title h1{
-    font-size: 40px;
+    font-size: 37px;
   }
   .covid .covid-content .title h3{
-    font-size: 40px;
+    font-size: 37px;
   }
   .covid .covid-content .left p{
     font-size: 18px;
@@ -21,15 +24,18 @@
   .covid{
     margin-top: 0px;
   }
+  .covid .covid-header {
+    height: 70vh;
+  }
   .covid .covid-header .text .title{
     left: 0;
     text-align: center;
   }
   .covid .covid-header .text .title h1{
-    font-size: 45px;
+    font-size: 40px;
   }
   .covid .covid-content .title h3{
-    font-size: 45px;
+    font-size: 40px;
   }
   .covid .covid-content .left p{
     font-size: 19px;

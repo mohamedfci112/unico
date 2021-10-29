@@ -20,7 +20,11 @@ export class ChangepassComponent implements OnInit {
     }
     this.firebaseservice.resetPasswordInit(email)
     .then(
-      () => {alert('A password reset link has been sent to your email address'); this.firebaseservice.logout(); },
+      () => {
+        alert('A password reset link has been sent to your email address');
+        this.firebaseservice.logout();
+        this.router.navigate(['/']);
+      },
       (rejectionReason) => alert(rejectionReason))
     .catch(e => alert('An error occurred while attempting to reset your password'));
   }

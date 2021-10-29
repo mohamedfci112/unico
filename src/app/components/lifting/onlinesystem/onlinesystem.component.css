@@ -1,0 +1,134 @@
+.slider{
+  margin-top: 0!important;
+}
+iframe{
+  position: relative;
+  top: -48px;
+  height: 100vh;
+}
+p {
+    line-height: 150%;
+    font-family: Roboto, sans-serif;
+    font-size: 0.9375em;
+    color: #999;
+  }
+  .bg-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  }
+
+
+  .certificate{
+    margin-top: -48px;
+  }
+  .certificate-header{
+    background: url(../../../../assets/img/lifting/cert_back.jpg) fixed center center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+  }
+  .logo{
+    width: 42%;
+    height: unset;
+    margin: 0 0 30px 0;
+  }
+  section.signinwrapper{
+    height: 100%;
+      position: relative;
+  }
+  .signinpanel{
+    position: absolute;
+      left: 0;
+      right: 0;
+      top: 30%;
+      transform: translateY(0%);
+  }
+  .form-welcome-wrapper{
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 15px;
+    position: relative;
+  }
+  .form-welcome-wrapper h1{
+    color: #636E7B;
+  }
+  .form-welcome-wrapper:after{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    left: -15px;
+    bottom: -15px;
+    content: '';
+    background: rgba(251,162,27,0.82);
+    z-index: -1;
+  }
+  .system-btn{
+    text-decoration: none;
+    position: relative;
+    top: 27%;
+    padding: 30px;
+    background: #f7af43;
+    color: #183065;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  /*
+  background: rgba(251,162,27,0.82);
+  */
+
+  /**/
+  .righ-quo{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    color: #202e31;
+    text-transform: uppercase;
+  }
+@media (min-width: 320px) and (max-width: 480px){
+  .certificate{
+    margin-top: 0;
+  }
+  .certificate-header{
+    height: 70vh;
+  }
+  .signinpanel{
+    top: 10%;
+  }
+  .form-welcome-wrapper h1{
+    font-size: 30px;
+  }
+  .system-btn{
+    top: 20%;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .righ-quo{
+    font-size: 15px;
+    margin-top: 20px;
+  }
+}
+@media (min-width:481px) and (max-width: 760px){
+  .certificate{
+    margin-top: 0;
+  }
+  .certificate-header{
+    height: 70vh;
+  }
+  .signinpanel{
+    top: 10%;
+  }
+  .form-welcome-wrapper h1{
+    font-size: 30px;
+  }
+  .system-btn{
+    top: 20%;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .righ-quo{
+    font-size: 15px;
+    margin-top: 20px;
+  }
+}
